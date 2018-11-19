@@ -1,6 +1,5 @@
 ---
 title: Windows driver samples
-author: windows-driver-content
 description: Starting with Windows 10, the Windows driver samples repository is available on GitHub.
 ms.assetid: 4c51f6c3-a84d-4790-82df-a50570af02bd
 ms.author: windowsdriverdev
@@ -51,9 +50,9 @@ Starting with Windows 10, the [Windows driver samples repository](http://go.mic
 -   [Windows Management Instrumentation (WMI) driver samples](windows-management-instrumentation--wmi--driver-samples.md)
 -   [Windows Portable Device (WPD) driver samples](windows-portable-device--wpd--driver-samples.md)
 
- 
+ 
 
- 
+ 
 
 
 

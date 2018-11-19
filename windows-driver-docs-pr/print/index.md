@@ -1,6 +1,5 @@
 ---
 title: Printer driver design guide
-author: windows-driver-content
 description: This section provides information on designing, testing, and debugging printer drivers.
 ms.assetid: ff6b9c2e-920a-4cfc-8872-38976ed872f9
 keywords:
@@ -52,12 +51,12 @@ This section provides information on designing, testing, and debugging printer d
 -   [Print Spooler Components](print-spooler-components.md)
 -   [Printer Driver Testing and Debugging](printer-driver-testing-and-debugging.md)
 
- 
+ 
 ## Related sections
 
 
 -   [Print DDI reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_print)
- 
+ 
 
 
 

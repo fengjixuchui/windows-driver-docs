@@ -1,6 +1,5 @@
 ---
 title: Windows Hardware Error Architecture (WHEA) design guide
-author: windows-driver-content
 description: Windows Hardware Error Architecture (WHEA) design guide
 ms.assetid: 7a42bacd-cafe-48e0-8568-402738fd6e7c
 keywords:
@@ -33,7 +32,7 @@ For more detailed information about WHEA and how to implement WHEA on a hardware
 
 **Note**   WHEA is supported in Windows Vista, Windows Server 2008, and later versions of the Windows operating system. For hardware error reporting that is supported on versions of Microsoft Windows prior to Windows Vista, see [Machine Check Architecture (MCA)](https://msdn.microsoft.com/library/windows/hardware/ff540685).
 
- 
+ 
 
 ## In this section
 
