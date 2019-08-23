@@ -3,7 +3,6 @@ title: vad_reload
 description: The vad_reload extension reloads the user-mode modules for a specified process by using the virtual address descriptors (VADs) of that process.
 ms.assetid: B5500227-DDC5-43aa-987B-EB02C59B3AC6
 keywords: ["vad_reload Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -34,7 +33,7 @@ Specifies the hexadecimal address of the process for which the modules will be l
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about VADs, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about VADs, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. 
 
 Remarks
 -------
@@ -64,19 +63,9 @@ fffffa80`04fd2e70: VAD maps 00000000`72a50000 - 00000000`72a6cfff, file userenv.
 Requirements
 ------------
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p>DLL</p></td>
-<td align="left">Kdextx86.dll (Windows 2000);
-Kdexts.dll (Windows XP and later)</td>
-</tr>
-</tbody>
-</table>
+**DLL**
+
+Kdexts.dll
 
 ## <span id="see_also"></span>See also
 

@@ -3,7 +3,6 @@ title: ndiskd.help
 description: The ndiskd.help command displays a list of available ndiskd commands with a brief description of each one.
 ms.assetid: ba9a1364-173b-4258-9894-09271e47786e
 keywords: ["ndiskd.help Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -122,9 +121,9 @@ NDIS KD EXTENSIONS
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

@@ -3,7 +3,6 @@ title: usbkd._ehciep
 description: The usbkd._ehciep command displays information from a usbehci _ENDPOINT_DATA structure. Use this command to display information about asynchronous endpoints (that is, control and bulk endpoints).
 ms.assetid: 0DA42FDD-41D6-4234-9D9C-36872F0CE0C1
 keywords: ["usbkd._ehciep Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -51,7 +50,7 @@ This example shows one way to get the address of a **usbehci!\_ENDPOINT\_DATA** 
         Port 4: !port2_info ffffe000026df1c0 
 ```
 
-In the preceding output, the address of the device extension of the FDO is displayed as the argument of the [DML](debugger-markup-language-commands.md) command **!ehci\_info ffffe0000206e1a0**. Either click the DML command or pass the address of the device extension to [**!usbhcdext**](https://msdn.microsoft.com/library/windows/hardware/dn367072).
+In the preceding output, the address of the device extension of the FDO is displayed as the argument of the [DML](debugger-markup-language-commands.md) command **!ehci\_info ffffe0000206e1a0**. Either click the DML command or pass the address of the device extension to [**!usbhcdext**](https://docs.microsoft.com/windows-hardware/drivers/debugger/-usbkd-usbhcdext).
 
 ```dbgcmd
 0: kd> !usbkd.usbhcdext ffffe0000206e1a0

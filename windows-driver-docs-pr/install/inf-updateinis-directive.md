@@ -23,13 +23,17 @@ ms.localizationpriority: medium
 
 An **UpdateInis** directive references one or more named sections, specifying an INI file from which a particular section or line is to be read and applied to an existing INI file of the same name on the target computer. Optionally, line-by-line modifications from and to such INI files can be specified in the *update-ini-section*.
 
-```cpp
+```ini
 [DDInstall] | 
 [DDInstall.CoInstallers] | 
 [ClassInstall32] | 
 [ClassInstall32.ntx86] | 
 [ClassInstall32.ntia64] |  (Windows XP and later versions of Windows)
 [ClassInstall32.ntamd64]  (Windows XP and later versions of Windows)
+[ClassInstall32.ntarm]  (Windows 8 and later versions of Windows)
+[ClassInstall32.ntarm64]  (Windows 10 and later versions of Windows)
+
+
   
 UpdateInis=update-ini-section[,update-ini-section]...
 ```
@@ -38,7 +42,7 @@ This directive is almost never specified in INF files for installation on Window
 
 Each named section referenced by an **UpdateInis** directive has the following form:
 
-```cpp
+```ini
 [update-ini-section]
  
 ini-file,ini-section[,old-ini-entry][,new-ini-entry][,flags]
@@ -59,7 +63,7 @@ Specifies the name of the section within the given INI file. If the next two val
 <a href="" id="old-ini-entry"></a>*old-ini-entry*  
 This optional value specifies the name of an entry in the given *ini-section*, usually expressed in the following form:
 
-```cpp
+```ini
 "key=value"
 ```
 

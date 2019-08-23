@@ -25,7 +25,7 @@ class MPIO_DRIVE_INFO
     [WmiDataId(2), MaxLen(63)] string Name;
 
     //
-    // The real device&#39;s serial number.
+    // The real device's serial number.
     //
     [WmiDataId(3), MaxLen(63)] string SerialNumber;
 
@@ -36,7 +36,7 @@ class MPIO_DRIVE_INFO
 };
 ```
 
-When this class definition is compiled by the WMI tool suite, it produces the [**MPIO\_DRIVE\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff562377) data structure. There are no methods associated with this WMI class.
+When this class definition is compiled by the WMI tool suite, it produces the [**MPIO\_DRIVE\_INFO**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/mpiowmi/ns-mpiowmi-_mpio_drive_info) data structure. There are no methods associated with this WMI class.
 
  
 

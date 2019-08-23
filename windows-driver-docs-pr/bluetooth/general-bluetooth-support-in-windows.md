@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 
 **Note**  
-Looking for drivers for your Bluetooth audio device? See [Fix connections to Bluetooth audio devices and wireless displays](http://go.microsoft.com/fwlink/p/?LinkID=623629).
+Looking for drivers for your Bluetooth audio device? See [Fix connections to Bluetooth audio devices and wireless displays](https://go.microsoft.com/fwlink/p/?LinkID=623629).
 
  
 
@@ -220,7 +220,7 @@ Windows 10 (Version 1803) supports Bluetooth version 5.0 and the following Bluet
 ## <span id="New_features_and_recommendations_for_Windows_10_and_later"></span><span id="new_features_and_recommendations_for_windows_10_and_later"></span><span id="NEW_FEATURES_AND_RECOMMENDATIONS_FOR_WINDOWS_10_AND_LATER"></span>New features and recommendations for Windows 10 and later
 
 
-To learn more about the new features and hardware developer recommendations for the different versions of Windows 10, see [Bluetooth](https://msdn.microsoft.com/library/windows/hardware/dn915047) in the [Hardware component guidelines](https://msdn.microsoft.com/library/windows/hardware/dn915049) section.
+To learn more about the new features and hardware developer recommendations for the different versions of Windows 10, see [Bluetooth](https://docs.microsoft.com/windows-hardware/design/component-guidelines/bluetooth) in the [Hardware component guidelines](https://docs.microsoft.com/windows-hardware/design/component-guidelines/components) section.
 
 ## <span id="related_topics"></span>Related topics
 

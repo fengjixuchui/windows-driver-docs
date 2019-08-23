@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 # OID\_GEN\_UNKNOWN\_PROTOS
 
 
-As a query, use the OID\_GEN\_UNKNOWN\_PROTOS OID to determine the unknown-protocol packet count of a network interface (*ifInUnknownProtos* from [RFC 2863](http://go.microsoft.com/fwlink/p/?linkid=84054)).
+As a query, use the OID\_GEN\_UNKNOWN\_PROTOS OID to determine the unknown-protocol packet count of a network interface (*ifInUnknownProtos* from [RFC 2863](https://go.microsoft.com/fwlink/p/?linkid=84054)).
 
 **Version Information**
 
@@ -24,7 +24,7 @@ Not requested. For NDIS interface providers only.
 Remarks
 -------
 
-Only [NDIS network interface](https://msdn.microsoft.com/library/windows/hardware/ff566527) providers, and therefore not miniport drivers or filter drivers, must support this OID as an OID request.
+Only [NDIS network interface](https://docs.microsoft.com/windows-hardware/drivers/network/ndis-network-interfaces2) providers, and therefore not miniport drivers or filter drivers, must support this OID as an OID request.
 
 The unknown-protocol statistics counter specifies the number of packets that were received through the interface that were discarded because the associated protocol was unknown or unsupported.
 
@@ -49,7 +49,7 @@ Requirements
 ## See also
 
 
-[NDIS Network Interface OIDs](https://msdn.microsoft.com/library/windows/hardware/ff566545)
+[NDIS Network Interface OIDs](https://docs.microsoft.com/windows-hardware/drivers/network/ndis-network-interface-oids)
 
  
 

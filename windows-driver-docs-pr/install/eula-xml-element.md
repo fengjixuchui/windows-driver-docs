@@ -16,7 +16,7 @@ ms.date: 10/17/2018
 # eula XML Element
 
 
-\[DIFx is deprecated, for more info, see [DIFx Guidelines](https://msdn.microsoft.com/windows/hardware/drivers/install/difx-guidelines).\]
+\[DIFx is deprecated, for more info, see [DIFx Guidelines](https://docs.microsoft.com/windows-hardware/drivers/install/difx-guidelines).\]
 
 The **eula** XML element is an empty XML element that includes two attributes that specify a EULA text file that contains custom text for a DPInst EULA page.
 
@@ -36,7 +36,7 @@ The **eula** XML element is an empty XML element that includes two attributes th
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>Type</strong></p></td>
-<td align="left"><p>The type of vendor-supplied EULA. The value of this attribute must be set to the string &quot;txt&quot;, which indicates a plain-text file.</p></td>
+<td align="left"><p>The type of vendor-supplied EULA. The value of this attribute must be set to the string "txt", which indicates a plain-text file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>Path</strong></p></td>

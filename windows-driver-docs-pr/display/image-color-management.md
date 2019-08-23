@@ -19,15 +19,15 @@ ms.localizationpriority: medium
 ## <span id="ddk_image_color_management_gg"></span><span id="DDK_IMAGE_COLOR_MANAGEMENT_GG"></span>
 
 
-An image displayed on a computer monitor often appears differently when it is printed on a color printer. In recognition of this problem, Windows 2000 and later incorporates Image Color Management ([*ICM*](https://msdn.microsoft.com/library/windows/hardware/ff556290#wdkgloss-icm)) to perform color correction on images so that their appearance is consistent across a variety of output devices.
+An image displayed on a computer monitor often appears differently when it is printed on a color printer. In recognition of this problem, Windows 2000 and later incorporates Image Color Management (*ICM*) to perform color correction on images so that their appearance is consistent across a variety of output devices.
 
 To find out more about Image Color Management and a particular class of output device, follow the appropriate link:
 
 [Color Management for Displays](color-management-for-displays.md)
 
-[Color Management for Printers](https://msdn.microsoft.com/library/windows/hardware/ff546064)
+[Color Management for Printers](https://docs.microsoft.com/windows-hardware/drivers/print/color-management-for-printers)
 
-[Color Management for Still Image Devices](https://msdn.microsoft.com/library/windows/hardware/ff539516)
+[Color Management for Still Image Devices](https://docs.microsoft.com/windows-hardware/drivers/image/color-management-for-still-image-devices)
 
 For a general discussion about Image Color Management, see the Microsoft Windows SDK documentation.
 

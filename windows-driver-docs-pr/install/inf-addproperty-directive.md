@@ -19,22 +19,28 @@ ms.localizationpriority: medium
 
 An **AddProperty** directive references one or more INF file sections that modify the [device properties](device-properties.md) that are set for a device instance, a [device setup class](device-setup-classes.md), a [device interface class](device-interface-classes.md), or a device interface.
 
-```cpp
+```ini
 [DDInstall] |
 [DDInstall.nt] |
 [DDInstall.ntx86] |
 [DDInstall.ntia64] |
-[DDInstall.ntamd64]
+[DDInstall.ntamd64] |
+[DDInstall.ntarm] |
+[DDInstall.ntarm64]
 [ClassInstall32] | 
 [ClassInstall32.nt] | 
 [ClassInstall32.ntx86] |
 [ClassInstall32.ntia64] |  (Windows XP and later versions of Windows)
 [ClassInstall32.ntamd64]  |  (Windows XP and later versions of Windows)
+[ClassInstall32.ntarm]  |  (Windows 8 and later versions of Windows)
+[ClassInstall32.ntarm64]  |  (Windows 10 and later versions of Windows)
 [interface-install-section] | 
 [interface-install-section.nt] | 
 [interface-install-section.ntx86] | 
 [interface-install-section.ntia64] |  (Windows XP and later versions of Windows)
-[interface-install-section.ntamd64]  (Windows XP and later versions of Windows)
+[interface-install-section.ntamd64]  (Windows XP and later versions of Windows) |
+[interface-install-section.ntarm]  (Windows 8 and later versions of Windows) |
+[interface-install-section.ntarm64]  (Windows 10 and later versions of Windows)
 [add-interface-section]
 
 AddProperty=add-property-section[,add-property-section]...  (Windows Vista and later versions of Windows)
@@ -48,7 +54,7 @@ Each *add-property-section* can have entries to do the following:
 
 An *add-property-section* that is referenced by an **AddProperty** directive has the following format:
 
-```cpp
+```ini
 [add-property-section]
 (property-name, , , [flags], value]) | 
 ({property-category-guid}, property-pid, type, [flags], value)
@@ -79,7 +85,7 @@ The GUID value can also be a custom GUID value that identifies a custom property
 The property identifier that indicates the specific property within the property category that is indicated by the *property-category-guid* value. For internal system reasons, a property identifier must be greater than or equal to two.
 
 <a href="" id="type"></a>type  
-The numeric value, in decimal or hexadecimal format, of the [property-data-type identifier](https://msdn.microsoft.com/library/windows/hardware/ff541476) for the property that is specified by the *property-category-guid* value and the *property-pid* value. Only the following [**base data types**](https://msdn.microsoft.com/library/windows/hardware/ff537793) are supported:
+The numeric value, in decimal or hexadecimal format, of the [property-data-type identifier](https://docs.microsoft.com/previous-versions/ff541476(v=vs.85)) for the property that is specified by the *property-category-guid* value and the *property-pid* value. Only the following [**base data types**](https://docs.microsoft.com/previous-versions/ff537793(v=vs.85)) are supported:
 
 -   DEVPROP_TYPE_STRING
 -   DEVPROP_TYPE_STRING_LIST
@@ -130,7 +136,7 @@ The second line entry sets a custom property in a custom property category. The 
 
 The optional *flags* entry value is not present, and the type entry value is "18" (DEVPROP_TYPE_STRING). The value entry value is "String value for property 1."
 
-```cpp
+```ini
 [SampleAddPropertySection]
 DeviceModel,,,,"Sample Device Model Name"
 {c22189e4-8bf3-4e6d-8467-8dc6d95e2a7e}, 2, 18,, "String value for property 1"

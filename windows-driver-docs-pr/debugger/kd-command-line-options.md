@@ -3,7 +3,6 @@ title: KD Command-Line Options
 description: First-time users of KD should begin with the Debugging Using KD and NTKD section.
 ms.assetid: 76c11b45-8469-4f27-840d-06477d8922b8
 keywords: ["KD Command-Line Options Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -99,7 +98,7 @@ The **-iu** parameter must not be used with any other parameters. This command w
 Tells the debugger how to connect to the target. For details, see [Debugging Using KD and NTKD](debugging-using-kd-and-ntkd.md).
 
 <span id="_______-kl______"></span><span id="_______-KL______"></span> **-kl**   
-(Windows XP and later) Starts a kernel debugging session on the same machine as the debugger.
+Starts a kernel debugging session on the same machine as the debugger.
 
 <span id="_______-kqm______"></span><span id="_______-KQM______"></span> **-kqm**   
 Starts KD in quiet mode.

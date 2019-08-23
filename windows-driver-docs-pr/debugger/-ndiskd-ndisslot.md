@@ -3,7 +3,6 @@ title: ndiskd.ndisslot
 description: The **!ndiskd.ndisslot** extension displays the contents of an NDIS per-processor variable.
 ms.assetid: 0EF37FE7-31A1-4A71-9CAC-E2A43F0EEBCF
 keywords: ["ndiskd.ndisslot Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -94,9 +93,9 @@ Clicking on one of the handles for the per-processor slot variables will show yo
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

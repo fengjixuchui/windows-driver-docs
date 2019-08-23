@@ -3,7 +3,6 @@ title: Bug Check 0x79 MISMATCHED_HAL
 description: The MISMATCHED_HAL bug check has a value of 0x00000079 that indicates that the HAL revision level or configuration does not match that of the kernel or the computer.
 ms.assetid: 2d063c2a-c647-4436-b005-04f71a4d2b66
 keywords: ["Bug Check 0x79 MISMATCHED_HAL", "MISMATCHED_HAL"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The MISMATCHED\_HAL bug check has a value of 0x00000079. This bug check indicates that the Hardware Abstraction Layer (HAL) revision level or configuration does not match that of the kernel or the computer.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## MISMATCHED\_HAL Parameters
 
@@ -85,7 +86,7 @@ Cause
 
 The MISMATCHED\_HAL bug check often occurs when a user manually updates Ntoskrnl.exe or Hal.dll.
 
-The error can also indicate that one of those two files is out of date. For example, the HAL might be designed for Microsoft Windows 2000 and the kernel is designed for Windows XP. Or the computer might erroneously have a multiprocessor HAL and a single-processor kernel installed, or vice versa.
+The error can also indicate that one of those two files is out of date. Or the computer might erroneously have a multiprocessor HAL and a single-processor kernel installed, or vice versa.
 
 The Ntoskrnl.exe kernel file is for single-processor systems and Ntkrnlmp.exe is for multiprocessor systems. However, these file names correspond to the files on the installation media.After you have installed the Windows operating system, the file is renamed to Ntoskrnl.exe, regardless of the source file that is used. The HAL file also uses the name Hal.dll after installation, but there are several possible HAL files on the installation media. For more information, see "Installing the Checked Build" in the Windows Driver Kit (WDK).
 

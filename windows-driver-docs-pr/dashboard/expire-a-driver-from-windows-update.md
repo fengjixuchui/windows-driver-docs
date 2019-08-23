@@ -14,17 +14,17 @@ To expire a driver from Windows Update, follow the steps below.
 
 1.  [Find the hardware submission](manage-your-hardware-submissions.md) that contains driver you want to expire.
 
-2.  Go to the **Distribution** section and select the shipping label that you want to modify.
+2.  Go to the **Distribution** section and select the shipping label to modify.
 
-3.  Go to the **Targeting** section.
+3.  Locate the **Targeting** section.
 
-4.  Under **Select PNPs**, choose the hardware IDs you want to expire.
+4.  Under **Select PNPs**, choose the hardware IDs to expire.
 
-    If you want to expire all hardware IDs, select **Expire All**.
-
-    To expire specific hardware IDs, find each hardware ID and select **Expire**.
-
-5.  Select **Publish**.
+    To expire specific hardware IDs, select **Expire** for each specific hardware ID.
+    
+    To expire the entire shipping label, click **Expire All**.
+    
+5.  To finalize your changes you must click **Publish** at the very bottom of the page.
 
  
 

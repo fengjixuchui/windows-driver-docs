@@ -3,7 +3,6 @@ title: ate
 description: The ate extension displays the alternate page table entry (ATE) for the specified address.
 ms.assetid: 8ec98fa5-4939-49cb-8678-e412b9cbe7e3
 keywords: ["ate Windows Debugging"]
-ms.author: domars
 ms.date: 09/17/2018
 topic_type:
 - apiref
@@ -56,7 +55,7 @@ Specifies the ATE to display.
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about page tables and page directories, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about page tables and page directories, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

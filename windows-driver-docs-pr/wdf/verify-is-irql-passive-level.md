@@ -43,9 +43,9 @@ The **VERIFY_IS_IRQL_PASSIVE_LEVEL** code breaks into a kernel debugger if one o
 -   **VerifierOn** is set to a non-zero value and **DbgBreakOnError** is not set.
 -   Driver Verifier is enabled, the driver was built with framework version 1.9 or later, and neither **VerifierOn** nor **DbgBreakOnError** is set.
 
-For more information about registry entries that you can use to debug your driver, see [Registry Entries for Debugging Framework-Based Drivers](https://msdn.microsoft.com/library/windows/hardware/ff544573).
+For more information about registry entries that you can use to debug your driver, see [Registry Entries for Debugging Framework-Based Drivers](https://docs.microsoft.com/windows-hardware/drivers/wdf/registry-values-for-debugging-kmdf-drivers).
 
-For more information about debugging your driver, see [Debugging a KMDF Driver](https://msdn.microsoft.com/library/windows/hardware/ff540790).
+For more information about debugging your driver, see [Debugging a KMDF Driver](https://docs.microsoft.com/windows-hardware/drivers/wdf/debugging-a-wdf-driver).
 
 Examples
 --------
@@ -67,7 +67,7 @@ Requirements
 <tbody>
 <tr class="odd">
 <td><p>Target platform</p></td>
-<td><a href="http://go.microsoft.com/fwlink/p/?linkid=531356" data-raw-source="[Universal](http://go.microsoft.com/fwlink/p/?linkid=531356)">Universal</a></td>
+<td><a href="https://go.microsoft.com/fwlink/p/?linkid=531356" data-raw-source="[Universal](https://go.microsoft.com/fwlink/p/?linkid=531356)">Universal</a></td>
 </tr>
 <tr class="even">
 <td><p>Minimum KMDF version</p></td>

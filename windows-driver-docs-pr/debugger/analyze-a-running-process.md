@@ -3,7 +3,6 @@ title: Analyze a Running Process
 description: Use the following commands to record and analyze the heap memory allocations in a running process. This analysis focuses on stack traces.
 ms.assetid: 65a8b510-f5f1-4622-87ff-b44d5855787d
 keywords: ["Analyze a Running Process Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -29,7 +28,7 @@ umdh -p:PID [-f:LogFile] [-v[:MsgFile]] | [-g] | [-h]
 <span id="_______-p_PID______"></span><span id="_______-p_pid______"></span><span id="_______-P_PID______"></span> **-p:**<em>PID</em>   
 Specifies the process to analyze. *PID* is the process ID of the process. This parameter is required.
 
-To find the PID of a running process, use Task Manager, Tasklist (Windows XP and later operating systems), or [TList](tlist.md).
+To find the PID of a running process, use Task Manager, Tasklist, or [TList](tlist.md).
 
 <span id="_______-f_LogFile______"></span><span id="_______-f_logfile______"></span><span id="_______-F_LOGFILE______"></span> **-f:**<em>LogFile</em>   
 Saves the log contents in a text file. By default, UMDH writes the log to stdout (command window).

@@ -1,12 +1,13 @@
 ---
-title: Direct3D Runtime Functions Called by User Mode Display Drivers
+title: D3D Runtime Functions called by User-Mode Display Drivers
 description: This topic references the functions that the Microsoft Direct3D runtime supplies to the user-mode display driver.
 ms.assetid: CB6A0314-E410-4865-8833-801BDB24AA25
-ms.date: 10/10/2018
+ms.date: 12/06/2018
 ms.localizationpriority: medium
+ms.custom: seodec18
 ---
 
-# Direct3D Runtime Functions Called by User Mode Display Drivers
+# Direct3D Runtime Functions Called by User-Mode Display Drivers
 
 This topic references the functions that the Microsoft Direct3D runtime supplies to the user-mode display driver. These include the Direct3D runtime kernel-services accessing functions and the Direct3D runtime version 10 and 11 functions. Theses functions are part of the user-mode Direct3D display driver interfaces that the operating system implements through the Direct3D runtime.
 
@@ -47,8 +48,8 @@ The **Microsoft Direct3D version 10** or later runtime supplies pointers to adap
 |[PFND3DDDI_UPDATEALLOCATIONPROPERTYCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_updateallocationpropertycb) |[PFND3DDDI_UPDATEOVERLAYCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_updateoverlaycb) |
 |[PFND3DDDI_UPDATEGPUVIRTUALADDRESSCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_updategpuvirtualaddresscb) |[PFND3DDDI_WAITFORSYNCHRONIZATIONOBJECT2CB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_waitforsynchronizationobject2cb) |
 |[PFND3DDDI_WAITFORSYNCHRONIZATIONOBJECTCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_waitforsynchronizationobjectcb) |[PFND3DDDI_WAITFORSYNCHRONIZATIONOBJECTFROMCPUCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_waitforsynchronizationobjectfromcpucb) |
-|[PFND3DDDI_WAITFORSYNCHRONIZATIONOBJECTFROMGPUCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_waitforsynchronizationobjectfromgpucb) |[PFND3DWDDM2_0DDI_DECODEJPEG](https://msdn.microsoft.com/library/windows/hardware/dn937733.aspx) |
-|[PFND3DWDDM2_0DDI_ENCODEJPEG](https://msdn.microsoft.com/library/windows/hardware/dn937735.aspx) ||
+|[PFND3DDDI_WAITFORSYNCHRONIZATIONOBJECTFROMGPUCB](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dumddi/nc-d3dumddi-pfnd3dddi_waitforsynchronizationobjectfromgpucb) |[PFND3DWDDM2_0DDI_DECODEJPEG](https://docs.microsoft.com/previous-versions/windows/hardware/drivers/dn937733(v=vs.85)) |
+|[PFND3DWDDM2_0DDI_ENCODEJPEG](https://docs.microsoft.com/previous-versions/windows/hardware/drivers/dn937735(v=vs.85)) ||
 
 ### Direct3D Parameter Structures
 

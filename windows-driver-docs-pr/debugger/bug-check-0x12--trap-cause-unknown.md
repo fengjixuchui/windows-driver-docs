@@ -3,7 +3,6 @@ title: Bug Check 0x12 TRAP_CAUSE_UNKNOWN
 description: The TRAP_CAUSE_UNKNOWN bug check has a value of 0x00000012. This indicates that an unknown exception has occurred.
 ms.assetid: 43cbcc34-9df0-4d5f-b823-1cc3cafaa811
 keywords: ["Bug Check 0x12 TRAP_CAUSE_UNKNOWN", "TRAP_CAUSE_UNKNOWN"]
-ms.author: domars
 ms.date: 06/26/2018
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The TRAP\_CAUSE\_UNKNOWN bug check has a value of 0x00000012. This indicates that an unknown exception has occurred.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## TRAP\_CAUSE\_UNKNOWN Parameters
 
@@ -63,7 +64,7 @@ The TRAP\_CAUSE\_UNKNOWN bug check has a value of 0x00000012. This indicates tha
 Resolution
 ----------
 
-The [**!analyze**](-analyze.md) debug extension displays information about the bug check and can be very helpful in determining the root cause.
+The [**!analyze**](-analyze.md) debug extension displays information about the bug check and can be helpful in determining the root cause.
 
 To start, examine the stack trace using the [**k, kb, kc, kd, kp, kP, kv (Display Stack Backtrace)**](k--kb--kc--kd--kp--kp--kv--display-stack-backtrace-.md) command. You can specify the processor number to examine the stacks on all processors. 
 

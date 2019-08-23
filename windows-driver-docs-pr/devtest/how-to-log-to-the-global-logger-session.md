@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 Use the following procedure to configure a driver to log to the Global Logger trace session:
 
-1. Add the following definition to the driver code. Insert the definition between the [WPP\_CONTROL\_GUIDS](https://msdn.microsoft.com/library/windows/hardware/ff556186) macro definition and the include statement for the [trace message header file](trace-message-header-file.md).
+1. Add the following definition to the driver code. Insert the definition between the [WPP\_CONTROL\_GUIDS](https://docs.microsoft.com/previous-versions/windows/hardware/previsioning-framework/ff556186(v=vs.85)) macro definition and the include statement for the [trace message header file](trace-message-header-file.md).
    ```
    #define WPP_GLOBALLOGGER
    ```
@@ -38,7 +38,7 @@ Use the following procedure to configure a driver to log to the Global Logger tr
 
    For example, to configure the Tracedrv sample driver to log to the Global Logger trace session on a computer running Windows XP, add a subkey named for the Tracedrv control GUID, d58c126f-b309-11d1-969e-0000f875a5bc: **HKLM\\SYSTEM\\CurrentControlSet\\Control\\WMI\\GlobalLogger\\d58c126f-b309-11d1-969e-0000f875a5bc**.
 
-   [TraceDrv](http://go.microsoft.com/fwlink/p/?LinkId=617726), a sample driver that was designed for software tracing, is available in the [Windows driver samples](http://go.microsoft.com/fwlink/p/?LinkId=616507 ) repository on GitHub.
+   [TraceDrv](https://go.microsoft.com/fwlink/p/?LinkId=617726), a sample driver that was designed for software tracing, is available in the [Windows driver samples](https://go.microsoft.com/fwlink/p/?LinkId=616507 ) repository on GitHub.
 
 4. To configure the trace provider, add the following registry entries to the **ControlGUID** subkey. These entries are optional and their values are defined by the driver.
 

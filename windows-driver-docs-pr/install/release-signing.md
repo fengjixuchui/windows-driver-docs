@@ -15,7 +15,7 @@ Release-signing identifies the publisher of a kernel-mode or user-mode binaries 
 
 Kernel-mode binaries are release-signed through either:
 
-1.  Windows Hardware Quality Lab (WHQL also known as Winqual) to release sign a driver package. A WHQL Release Signature is obtained through the Windows Certification Program. The link below describes the five steps from start to finish on Windows Certification Program. See [Windows hardware certification: start here](https://msdn.microsoft.com/windows/hardware/hh833792) for more details about this option. Any questions on the steps in the link above should be directed to <sysdev@microsft.com> alias.
+1.  Windows Hardware Quality Lab (WHQL also known as Winqual) to release sign a driver package. A WHQL Release Signature is obtained through the Windows Certification Program. The link below describes the five steps from start to finish on Windows Certification Program. See [Windows hardware certification: start here](https://docs.microsoft.com/previous-versions/hh833792(v=msdn.10)) for more details about this option. Any questions on the steps in the link above should be directed to <sysdev@microsft.com> alias.
 2.  Instead of using the WHQL program, a driver package can be release signed by driver developers and vendors. This program has started from the Vista OS release. A release signature is created through a Software Publisher Certificate (SPC). The SPC is obtained from a third-party certificate authority (CA) that is authorized by Microsoft to issue such certificates. Signatures generated with this type of SPC also comply with the PnP driver signing requirements for 64-bit and 32-bit versions of Windows Vista and later versions of Windows
 
 The steps needed to release sign a driver package for method 2 are described next.
@@ -60,7 +60,7 @@ Microsoft provides a specific cross-certificate for each CA that issues SPCs for
 
 In order to use an SPC to sign a driver in a manner that complies with the [kernel-mode code signing policy](kernel-mode-code-signing-policy--windows-vista-and-later-.md), the certificate information must first be contained in a Personal Information Exchange (*.pfx*) file. The information that is contained in the *.pfx* file must then be added to the Personal certificate store of the local computer that signs a driver.
 
-A CA might issue a *.pfx* file that contains the necessary certificate information. If so, you can add the .*pfx* file to the Personal certificate store by following the instructions described in [Installing a .pfx File in the Personal Certificate Store](software-publisher-certificate.md#installing-a--pfx-file-in-the-personal-certificate-store).
+A CA might issue a *.pfx* file that contains the necessary certificate information. If so, you can add the .*pfx* file to the Personal certificate store by following the instructions described in [Installing a .pfx File in the Personal Certificate Store](software-publisher-certificate.md#installing-a-pfx-file-in-the-personal-certificate-store).
 
 However, a CA might issue the following pairs of files:
 
@@ -72,7 +72,7 @@ In this case, the pair of files (a *.pvk* and an *.spc,* or a *.pvk* and a *.cer
 
 To create a .*pfx* file from the pair of files issued by the CA, follow these instructions:
 
--   To convert a *.pvk* file and an *.spc* file to a *.pfx* file, use the following [**Pvk2Pfx**](https://msdn.microsoft.com/library/windows/hardware/ff550672) command at a command prompt:
+-   To convert a *.pvk* file and an *.spc* file to a *.pfx* file, use the following [**Pvk2Pfx**](https://docs.microsoft.com/windows-hardware/drivers/devtest/pvk2pfx) command at a command prompt:
 
     ```cpp
     Pvk2Pfx -pvk mypvkfile.pvk -pi mypvkpassword -spc myspcfile.spc -pfx mypfxfile.pfx -po pfxpassword -f
@@ -84,7 +84,7 @@ To create a .*pfx* file from the pair of files issued by the CA, follow these in
     Pvk2Pfx -pvk mypvkfile.pvk -pi mypvkpassword -spc mycerfile.cer -pfx mypfxfile.pfx -po pfxpassword -f
     ```
 
-The following describes the parameters that are used in the [**Pvk2Pfx**](https://msdn.microsoft.com/library/windows/hardware/ff550672) command:
+The following describes the parameters that are used in the [**Pvk2Pfx**](https://docs.microsoft.com/windows-hardware/drivers/devtest/pvk2pfx) command:
 
 -   The **-pvk**  *mypvkfile.pvk* parameter specifies a *.pvk* file.
 
@@ -117,7 +117,7 @@ After obtaining a *.pfx* file from a CA, or creating a *.pfx* file from a *.pvk*
 
 *Excerpt from* [Importing an SPC into a Certificate Store](importing-an-spc-into-a-certificate-store.md):
 
-Starting with Windows Vista, an alternative way to import the *.pfx* file into the local Personal certificate store is with the [CertUtil](http://go.microsoft.com/fwlink/p/?linkid=168888) command-line utility. The following command-line example uses CertUtil to import the *abc.pfx* file into the Personal certificate store:
+Starting with Windows Vista, an alternative way to import the *.pfx* file into the local Personal certificate store is with the [CertUtil](https://go.microsoft.com/fwlink/p/?linkid=168888) command-line utility. The following command-line example uses CertUtil to import the *abc.pfx* file into the Personal certificate store:
 
 ```cpp
 certutil -user -p pfxpassword -importPFX abc.pfx

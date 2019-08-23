@@ -3,7 +3,6 @@ title: Debugging Windows Setup and the OS Loader
 description: Debugging Windows Setup and the OS Loader
 ms.assetid: 5195b1c5-2478-4faf-8f1e-ed5341d39ac4
 keywords: ["Windows setup debugging", "OS Loader debugging", "setup debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -16,8 +15,8 @@ ms.localizationpriority: medium
 
 For information about debugging a computer as it boots, see the following topics.
 
--   [**BCDEdit /bootdebug**](https://msdn.microsoft.com/library/windows/hardware/ff542183)
--   [BCD Boot Options Reference](https://msdn.microsoft.com/library/windows/hardware/ff542205)
+-   [**BCDEdit /bootdebug**](https://docs.microsoft.com/windows-hardware/drivers/devtest/bcdedit--bootdebug)
+-   [BCD Boot Options Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index)
 
  
 

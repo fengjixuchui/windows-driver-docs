@@ -24,7 +24,7 @@ Typically, for Windows 2000 and later, vendors do not distribute Microsoft's pri
 
  
 
-Microsoft's printer INF file, Ntprint.inf, contains the following [**INF DDInstall sections**](https://msdn.microsoft.com/library/windows/hardware/ff547344) that can be referenced by vendor INF files:
+Microsoft's printer INF file, Ntprint.inf, contains the following [**INF DDInstall sections**](https://docs.microsoft.com/windows-hardware/drivers/install/inf-ddinstall-section) that can be referenced by vendor INF files:
 
 -   \[PSCRIPT.OEM\]
 
@@ -36,7 +36,7 @@ Microsoft's printer INF file, Ntprint.inf, contains the following [**INF DDInsta
 
 -   \[UNIDRV\_BIDI.OEM\]
 
-    Installs the Microsoft Universal Printer Driver and Pjlmon.dll, the [*language monitor*](https://msdn.microsoft.com/library/windows/hardware/ff556305#wdkgloss-language-monitor) that supports Printer Job Language (PJL) and provides bidirectional communication for PJL printers.
+    Installs the Microsoft Universal Printer Driver and Pjlmon.dll, the *language monitor* that supports Printer Job Language (PJL) and provides bidirectional communication for PJL printers.
 
 -   \[TTFSUB.OEM\]
 

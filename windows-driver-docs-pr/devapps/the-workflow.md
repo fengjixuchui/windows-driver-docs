@@ -28,7 +28,7 @@ At the most basic level, a *UWP device app* is a UWP app that's associated with 
 </tr>
 <tr class="even">
 <td align="left"><strong>App</strong></td>
-<td align="left">A UWP device app is a UWP app that provides a customized user experience for the device, enabling the user to access the device&#39;s unique features. A device app contains a file named <strong>StoreManifest.xml</strong> that specifies the experience ID. The <em>experience ID</em> is a GUID that uniquely identifies a device metadata package.</td>
+<td align="left">A UWP device app is a UWP app that provides a customized user experience for the device, enabling the user to access the device's unique features. A device app contains a file named <strong>StoreManifest.xml</strong> that specifies the experience ID. The <em>experience ID</em> is a GUID that uniquely identifies a device metadata package.</td>
 </tr>
 <tr class="odd">
 <td align="left"><strong>Device metadata</strong></td>
@@ -38,7 +38,7 @@ At the most basic level, a *UWP device app* is a UWP app that's associated with 
 <td align="left"><strong>Driver</strong></td>
 <td align="left">All UWP device apps use drivers, indirectly, to access devices. For example, the Windows Runtime device protocol APIs, introduced in Windows 8.1, use in-box drivers to let your app communicate over USB, HID, and Bluetooth. For more info about the drivers used by these APIs, see <a href="step-1--create-a-uwp-device-app.md" data-raw-source="[Step 1: Create a UWP device app](step-1--create-a-uwp-device-app.md)">Step 1: Create a UWP device app</a>.
 <div class="alert">
-<strong>Important</strong>  Device access using custom drivers requires approval from Microsoft. For more info, see <a href="http://go.microsoft.com/fwlink/p/?LinkId=306693" data-raw-source="[UWP device app Design Guide for Specialized Devices Internal to the PC](http://go.microsoft.com/fwlink/p/?LinkId=306693)">UWP device app Design Guide for Specialized Devices Internal to the PC</a>.
+<strong>Important</strong>  Device access using custom drivers requires approval from Microsoft. For more info, see <a href="https://go.microsoft.com/fwlink/p/?LinkId=306693" data-raw-source="[UWP device app Design Guide for Specialized Devices Internal to the PC](https://go.microsoft.com/fwlink/p/?LinkId=306693)">UWP device app Design Guide for Specialized Devices Internal to the PC</a>.
 </div>
 <div>
  
@@ -112,7 +112,7 @@ The first time you submit your app and device metadata to the various dashboards
 </tr>
 <tr class="even">
 <td align="left">4</td>
-<td align="left"><strong>Finish:</strong> Users can benefit from all features of the Microsoft Store device app. Note that device app features like <a href="auto-install-for-uwp-device-apps.md" data-raw-source="[automatic installation](auto-install-for-uwp-device-apps.md)">automatic installation</a>, <a href="autoplay-for-uwp-device-apps.md" data-raw-source="[AutoPlay](autoplay-for-uwp-device-apps.md)">AutoPlay</a>, and <a href="device-sync-and-update-for-uwp-device-apps.md" data-raw-source="[device update](device-sync-and-update-for-uwp-device-apps.md)">device update</a> won&#39;t work until the user has the device metadata and the app on the PC. If the app requires a driver that&#39;s not supplied by Microsoft, that driver will also need to be present for the app to work.</td>
+<td align="left"><strong>Finish:</strong> Users can benefit from all features of the Microsoft Store device app. Note that device app features like <a href="auto-install-for-uwp-device-apps.md" data-raw-source="[automatic installation](auto-install-for-uwp-device-apps.md)">automatic installation</a>, <a href="autoplay-for-uwp-device-apps.md" data-raw-source="[AutoPlay](autoplay-for-uwp-device-apps.md)">AutoPlay</a>, and <a href="device-sync-and-update-for-uwp-device-apps.md" data-raw-source="[device update](device-sync-and-update-for-uwp-device-apps.md)">device update</a> won't work until the user has the device metadata and the app on the PC. If the app requires a driver that's not supplied by Microsoft, that driver will also need to be present for the app to work.</td>
 <td align="left"></td>
 </tr>
 </tbody>

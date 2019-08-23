@@ -3,7 +3,6 @@ title: ndiskd.nbpool
 description: The ndiskd.nbpool extension displays information about a NET_BUFFER (NB) pool. 
 ms.assetid: 4FCD48B7-C469-4057-A279-20522B00E80B
 keywords: ["ndiskd.nbpool Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -17,7 +16,7 @@ ms.localizationpriority: medium
 # !ndiskd.nbpool
 
 
-The **!ndiskd.nbpool** extension displays information about a [**NET\_BUFFER**](https://msdn.microsoft.com/windows/hardware/drivers/network/net-buffer-structure) (NB) pool. If you run this extension with no parameters, !ndiskd will display a list of all allocated NB pools in the system.
+The **!ndiskd.nbpool** extension displays information about a [**NET\_BUFFER**](https://docs.microsoft.com/windows-hardware/drivers/network/net-buffer-structure) (NB) pool. If you run this extension with no parameters, !ndiskd will display a list of all allocated NB pools in the system.
 
 ```console
 !ndiskd.nbpool [-handle <x>] [-allocations] [-find <str>] [-findva <x>] [-findpa <x>] 
@@ -133,9 +132,9 @@ ALL ALLOCATED NBs
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 
@@ -143,7 +142,7 @@ ALL ALLOCATED NBs
 
 [**!ndiskd.help**](-ndiskd-help.md)
 
-[**NET\_BUFFER**](https://msdn.microsoft.com/windows/hardware/drivers/network/net-buffer-structure)
+[**NET\_BUFFER**](https://docs.microsoft.com/windows-hardware/drivers/network/net-buffer-structure)
 
  
 

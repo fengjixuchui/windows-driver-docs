@@ -1,7 +1,6 @@
 ---
 title: DEBUG\_ATTACH\_XXX
 description: The DEBUG\_ATTACH\_*XXX* bit-flags described in this topic control how the debugger engine attaches to a user-mode process.
-ms.author: domars
 ms.date: 08/10/2018
 topic_type:
 - apiref
@@ -51,7 +50,7 @@ The possible values include the following.
 </dl>
 </td>
 <td align="left" width="60%">
-<p>Do not suspend the target&#39;s threads when attaching noninvasively.</p>
+<p>Do not suspend the target's threads when attaching noninvasively.</p>
 <p>If this flag is set, then the flag DEBUG_ATTACH_NONINVASIVE must also be set.</p>
 </td>
 </tr>
@@ -61,7 +60,7 @@ The possible values include the following.
 </dl>
 </td>
 <td align="left" width="60%">
-<p>(Windows XP and later)  Do not request an initial break-in when attaching to the target.</p>
+<p>Do not request an initial break-in when attaching to the target.</p>
 <p>If this flag is set, then the flags DEBUG_ATTACH_NONINVASIVE and DEBUG_ATTACH_EXISTING must not be set.</p>
 </td>
 </tr>
@@ -71,7 +70,7 @@ The possible values include the following.
 </dl>
 </td>
 <td align="left" width="60%">
-<p>Resume all of the target&#39;s threads when attaching invasively.</p>
+<p>Resume all of the target's threads when attaching invasively.</p>
 <p>If this flag is set, then the flags DEBUG_ATTACH_NONINVASIVE and DEBUG_ATTACH_EXISTING must not be set.</p>
 </td>
 </tr>

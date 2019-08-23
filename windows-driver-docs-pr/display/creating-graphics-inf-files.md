@@ -54,13 +54,13 @@ You cannot use *geninf.exe* to generate:
 
 -   An INF file that supports Windows 95/98/Me or Windows NT version 4.0 or previous.
 
--   A [*mirror driver*](https://msdn.microsoft.com/library/windows/hardware/ff556308#wdkgloss-mirror-driver) INF file. Use the INF file provided with the *mirror* sample driver as a template. See [Mirror Driver INF File](mirror-driver-inf-file.md) for more details.
+-   A *mirror driver* INF file. Use the INF file provided with the *mirror* sample driver as a template. See [Mirror Driver INF File](mirror-driver-inf-file.md) for more details.
 
 -   A monitor INF file. Use the INF named *monsamp.inf* as a template. See [Monitor INF File Sections](monitor-inf-file-sections.md) for more details.
 
 These sample INF files are both shipped with the Windows Driver Kit (WDK).
 
-See [Creating an INF File](https://msdn.microsoft.com/library/windows/hardware/ff549520) and [INF File Sections and Directives](https://msdn.microsoft.com/library/windows/hardware/ff547433) for detailed information when updating a sample INF file.
+See [Creating an INF File](https://docs.microsoft.com/windows-hardware/drivers/install/overview-of-inf-files) and [INF File Sections and Directives](https://docs.microsoft.com/windows-hardware/drivers/install/inf-file-sections-and-directives) for detailed information when updating a sample INF file.
 
  
 

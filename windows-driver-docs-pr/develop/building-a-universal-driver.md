@@ -7,7 +7,7 @@ ms.localizationpriority: medium
 
 # Building a Universal Windows driver
 
-You can use Microsoft Visual Studio 2015 in conjunction with Windows Driver Kit (WDK) 10 to build drivers for desktop, mobile, or universal. You can download kits and tools from the [Windows Hardware Dev Center](http://go.microsoft.com/fwlink/p/?LinkId=524487).
+You can use Microsoft Visual Studio 2015 in conjunction with Windows Driver Kit (WDK) 10 to build drivers for desktop, mobile, or universal. You can download kits and tools from the [Windows Hardware Dev Center](https://go.microsoft.com/fwlink/p/?LinkId=524487).
 
 In many cases, you can recompile a legacy kernel-mode driver as a Universal Windows driver, as long as the driver does not work with any user-mode components. Legacy WDM and KMDF drivers should recompile as Universal Windows drivers targeting Windows 10 with no conversion required.
 
@@ -31,7 +31,7 @@ In contrast, existing user-mode drivers may require modification to compile as U
     To change driver model manually, right-click the driver project and choose Properties. Under **Configuration Properties-&gt;Driver Settings-&gt;General**, find the **Target Platform** entry. Choose **Universal**, **Desktop**, or **Mobile**. Microsoft Visual Studio uses this setting to determine what libraries to link against.
 
     **Note**  You cannot build a Universal Windows driver for Windows versions earlier than Windows 10.
-3.  You might need to modify the .inf file to specify the provider, specified as an %*ManufacturerName*% token that is expanded later in the INF file's [**Strings**](https://msdn.microsoft.com/Library/Windows/Hardware/Ff547485) section. For example:
+3.  You might need to modify the .inf file to specify the provider, specified as an %*ManufacturerName*% token that is expanded later in the INF file's [**Strings**](https://docs.microsoft.com/windows-hardware/drivers/install/inf-strings-section) section. For example:
 
     ```cpp
     Provider="Contoso"

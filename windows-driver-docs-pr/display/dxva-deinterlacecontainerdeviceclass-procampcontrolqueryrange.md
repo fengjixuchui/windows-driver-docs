@@ -1,6 +1,6 @@
 ---
-title: DXVA\_DeinterlaceContainerDeviceClass ProcAmpControlQueryRange method
-description: The sample ProcAmpControlQueryRange function allows the VMR to query the driver to determine the minimum, maximum, step size, and default value for each ProcAmp property.
+title: ProcAmpControlQueryRange method
+description: The sample DXVA\_DeinterlaceContainerDeviceClass::ProcAmpControlQueryRange function allows the VMR to query the driver to determine the minimum, maximum, step size, and default value for each ProcAmp property.
 ms.assetid: 13fd5d4b-f753-4a2c-80e0-c9614d7ebd3d
 keywords: ["ProcAmpControlQueryRange method Display Devices", "ProcAmpControlQueryRange method Display Devices , DXVA_DeinterlaceContainerDeviceClass interface", "DXVA_DeinterlaceContainerDeviceClass interface Display Devices , ProcAmpControlQueryRange method"]
 topic_type:
@@ -11,19 +11,20 @@ api_location:
 - N/A
 api_type:
 - COM
-ms.date: 01/05/2018
+ms.date: 12/06/2018
 ms.localizationpriority: medium
+ms.custom: seodec18
 ---
 
 # DXVA\_DeinterlaceContainerDeviceClass::ProcAmpControlQueryRange method
 
 
-The sample **ProcAmpControlQueryRange** function allows the [*VMR*](https://msdn.microsoft.com/library/windows/hardware/ff556344#wdkgloss-vmr) to query the driver to determine the minimum, maximum, step size, and default value for each ProcAmp property.
+The sample **ProcAmpControlQueryRange** function allows the *VMR* to query the driver to determine the minimum, maximum, step size, and default value for each ProcAmp property.
 
 Syntax
 ------
 
-```ManagedCPlusPlus
+```cpp
 HRESULT ProcAmpControlQueryRange(
   [in]  DWORD                   VideoProperty,
   [in]  DXVA_VideoDes           *lpVideoDescription,
@@ -71,10 +72,10 @@ Identifies the ProcAmp control property for which the driver should return infor
  
 
 *lpVideoDescription* \[in\]
-Supplies a pointer to a [**DXVA\_VideoDesc**](https://msdn.microsoft.com/library/windows/hardware/ff564070) structure. This structure provides the driver with a description of the video to which the ProcAmp adjustment will be applied. Drivers can adjust their ProcAmp support for particular video streams.
+Supplies a pointer to a [**DXVA\_VideoDesc**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videodesc) structure. This structure provides the driver with a description of the video to which the ProcAmp adjustment will be applied. Drivers can adjust their ProcAmp support for particular video streams.
 
 *lpPropRange* \[out\]
-Receives a pointer to a [**DXVA\_VideoPropertyRange**](https://msdn.microsoft.com/library/windows/hardware/ff564083) structure that specifies the range, step size, and default value for the ProcAmp.
+Receives a pointer to a [**DXVA\_VideoPropertyRange**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videopropertyrange) structure that specifies the range, step size, and default value for the ProcAmp.
 
 Return value
 ------------
@@ -86,9 +87,9 @@ Remarks
 
 For each ProcAmp property, the VMR queries the driver to determine the minimum, maximum, step size, and default value. If the hardware does not support a particular ProcAmp control property, the driver should return E\_NOTIMPL from the **ProcAmpControlQueryRange** function.
 
-For more information regarding ProcAmp properties, see [ProcAmp Properties](https://msdn.microsoft.com/library/windows/hardware/ff569189).
+For more information regarding ProcAmp properties, see [ProcAmp Properties](https://docs.microsoft.com/windows-hardware/drivers/display/procamp-properties).
 
-The sample **ProcAmpControlQueryRange** function maps directly to a call to the **RenderMoComp** member of the [**DD\_MOTIONCOMPCALLBACKS**](https://msdn.microsoft.com/library/windows/hardware/ff551660) structure. The **RenderMoComp** member points to the driver-supplied [**DdMoCompRender**](https://msdn.microsoft.com/library/windows/hardware/ff550248) callback that references the [**DD\_RENDERMOCOMPDATA**](https://msdn.microsoft.com/library/windows/hardware/ff551693) structure. The DD\_RENDERMOCOMPDATA structure is filled as follows.
+The sample **ProcAmpControlQueryRange** function maps directly to a call to the **RenderMoComp** member of the [**DD\_MOTIONCOMPCALLBACKS**](https://docs.microsoft.com/windows/desktop/api/ddrawint/ns-ddrawint-dd_motioncompcallbacks) structure. The **RenderMoComp** member points to the driver-supplied [**DdMoCompRender**](https://docs.microsoft.com/windows/desktop/api/ddrawint/nc-ddrawint-pdd_mocompcb_render) callback that references the [**DD\_RENDERMOCOMPDATA**](https://docs.microsoft.com/windows/desktop/api/ddrawint/ns-ddrawint-_dd_rendermocompdata) structure. The DD\_RENDERMOCOMPDATA structure is filled as follows.
 
 <table>
 <colgroup>
@@ -116,11 +117,11 @@ The sample **ProcAmpControlQueryRange** function maps directly to a call to the 
 </tr>
 <tr class="even">
 <td align="left"><p>lpInputData</p></td>
-<td align="left"><p>Pointer to a <a href="https://msdn.microsoft.com/library/windows/hardware/ff564032" data-raw-source="[&lt;strong&gt;DXVA_ProcAmpControlQueryRange&lt;/strong&gt;](https://msdn.microsoft.com/library/windows/hardware/ff564032)"><strong>DXVA_ProcAmpControlQueryRange</strong></a> structure.</p></td>
+<td align="left"><p>Pointer to a <a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_procampcontrolqueryrange" data-raw-source="[&lt;strong&gt;DXVA_ProcAmpControlQueryRange&lt;/strong&gt;](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_procampcontrolqueryrange)"><strong>DXVA_ProcAmpControlQueryRange</strong></a> structure.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>lpOutputData</p></td>
-<td align="left"><p>Pointer to a <a href="https://msdn.microsoft.com/library/windows/hardware/ff564083" data-raw-source="[&lt;strong&gt;DXVA_VideoPropertyRange&lt;/strong&gt;](https://msdn.microsoft.com/library/windows/hardware/ff564083)"><strong>DXVA_VideoPropertyRange</strong></a> structure.</p></td>
+<td align="left"><p>Pointer to a <a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videopropertyrange" data-raw-source="[&lt;strong&gt;DXVA_VideoPropertyRange&lt;/strong&gt;](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videopropertyrange)"><strong>DXVA_VideoPropertyRange</strong></a> structure.</p></td>
 </tr>
 </tbody>
 </table>
@@ -142,8 +143,8 @@ DXVA_DeinterlaceContainerDeviceClass::ProcAmpControlQueryRange(
     )
 {
     // only the YUY2 and YV12 formats can be operated on
-    if (lpVideoDesc->d3dFormat != &#39;2YUY&#39; &amp;&amp;
-        lpVideoDesc->d3dFormat != &#39;21VY&#39;) {
+    if (lpVideoDesc->d3dFormat != '2YUY' &&
+        lpVideoDesc->d3dFormat != '21VY') {
         return E_INVALIDARG;
     }
     // the following are the recommended settings for each property
@@ -200,11 +201,11 @@ Requirements
 ## <span id="see_also"></span>See also
 
 
-[**DXVA\_ProcAmpControlQueryRange**](https://msdn.microsoft.com/library/windows/hardware/ff564032)
+[**DXVA\_ProcAmpControlQueryRange**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_procampcontrolqueryrange)
 
-[**DXVA\_VideoDesc**](https://msdn.microsoft.com/library/windows/hardware/ff564070)
+[**DXVA\_VideoDesc**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videodesc)
 
-[**DXVA\_VideoPropertyRange**](https://msdn.microsoft.com/library/windows/hardware/ff564083)
+[**DXVA\_VideoPropertyRange**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/dxva/ns-dxva-_dxva_videopropertyrange)
 
  
 

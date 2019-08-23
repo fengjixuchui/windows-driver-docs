@@ -2,7 +2,6 @@
 title: Create a new WLK device certification submission
 description: Create a new WLK device certification submission
 ms.assetid: e812eee1-768d-42d6-918e-c716b5c29ea2
-ms.author: EliotSeattle
 ms.topic: article
 ms.localizationpriority: medium
 ms.date: 10/17/2018
@@ -13,15 +12,15 @@ ms.date: 10/17/2018
 
 To prepare your Windows Server 2008 (and below) hardware for certification, you must create and submit a **WQReady.xml** file. Submitting this file allows the dashboard to test your device and return a report on its performance. The report includes a detailed list of how the device compares to Windows standards.
 
-# Creating a WQReady.xml file
+## Creating a WQReady.xml file
 
-1.  Download the [Windows Logo Kit (WLK)](http://go.microsoft.com/fwlink/p/?LinkId=219237). Be sure to test your driver or drivers with the appropriate certification kit on each operating system that you want certification for.
+1.  Download the [Windows Logo Kit (WLK)](https://go.microsoft.com/fwlink/p/?LinkId=219237). Be sure to test your driver or drivers with the appropriate certification kit on each operating system that you want certification for.
 
 2.  Open the Winqual Submission Tool (WST) and click **Add**.
 
 3.  Browse to the **.cpk** file (WLK test results) and click **Load**.
 
-4.  If the device isn't inbox, enter the **Driver Package**, **Driver Locales**, and **Symbols (optional)**.
+4.  If the device isn't inbox, enter the **Driver Package**, **Driver Locales**, and **Symbols (optional)**. **Note**: The relative path plus filenames for your driver package must be less than 160 characters. Submissions will fail to process if this is exceeded.
 
 5.  Close the **Add DTM Results** dialog box.
 
@@ -36,18 +35,16 @@ To prepare your Windows Server 2008 (and below) hardware for certification, you 
     **Note**  
     **WQReady.xml** is the default file name, but you can rename it.
 
-     
-
 ## Submitting your file
 
-1.  Sign in to the Windows Hardware Dev Center dashboard, and then select **Submit new hardware**. This loads the submission creation wizard.
+1. Sign in to the Partner Center, and then select **Submit new hardware**. This loads the submission creation wizard.
 
-2.  In the **Packages and signing properties** section, choose a name for your driver submission. This name can be used to search for and organize your driver submissions.
+2. In the **Packages and signing properties** section, choose a name for your driver submission. This name can be used to search for and organize your driver submissions.
 
 3. Either drag and drop, or browse to the **.cab** file that you created using the Winqual Submission Tool that you want to submit. The file will begin to upload.
 
 ![screenshot that shows WLK cab file uploading and WQReadyXML upload control](images/upload-wlk.png)
 
-3. Now drag and drop or browse to the **WQReady.xml** file you want to submit. This will complete your upload
+4. Now drag and drop or browse to the **WQReady.xml** file you want to submit. This will complete your upload
 
-4. Continue from step 6 in [Create a new hardware submission](create-a-new-hardware-submission.md) to finish your submission.
+5. Continue from step 6 in [Create a new hardware submission](create-a-new-hardware-submission.md) to finish your submission.

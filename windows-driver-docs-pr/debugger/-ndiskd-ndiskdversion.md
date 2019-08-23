@@ -3,7 +3,6 @@ title: ndiskd.ndiskdversion
 description: The ndiskd.ndiskdversion extension displays information about ndiskd itself.
 ms.assetid: 12EB9E0F-7D2F-447B-B678-1E23EFF522FE
 keywords: ["ndiskd.ndiskdversion Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -51,9 +50,9 @@ The following example shows output for **!ndiskd.ndiskdversion**.
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

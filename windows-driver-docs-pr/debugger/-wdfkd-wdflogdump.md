@@ -3,7 +3,6 @@ title: wdfkd.wdflogdump
 description: The wdfkd.wdflogdump extension displays the WDF In-flight Recorder log records, if available, for a KMDF driver or a UMDF 2 driver. 
 ms.assetid: da03fafe-4cc8-4da6-9795-828e69e0df20
 keywords: ["wdfkd.wdflogdump Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -82,7 +81,7 @@ For information about setting information that the debugger needs to format WPP 
 
 **Additional Information**
 
-For information about enabling the inflight trace recorder for your driver, see [Using Inflight Trace Recorder (IFR) in KMDF and UMDF 2 Drivers](https://msdn.microsoft.com/library/windows/hardware/dn940485). For more information about debugging WDF drivers, see [Debugging WDF Drivers](https://msdn.microsoft.com/library/windows/hardware/ff540790). For information about KMDF debugging, see [Kernel-Mode Driver Framework Debugging](kernel-mode-driver-framework-debugging.md).
+For information about enabling the inflight trace recorder for your driver, see [Using Inflight Trace Recorder (IFR) in KMDF and UMDF 2 Drivers](https://docs.microsoft.com/windows-hardware/drivers/wdf/using-wpp-software-tracing-in-kmdf-and-umdf-2-drivers). For more information about debugging WDF drivers, see [Debugging WDF Drivers](https://docs.microsoft.com/windows-hardware/drivers/wdf/debugging-a-wdf-driver). For information about KMDF debugging, see [Kernel-Mode Driver Framework Debugging](kernel-mode-driver-framework-debugging.md).
 
 ## <span id="see_also"></span>See also
 

@@ -2,7 +2,6 @@
 title: Download  Windows Symbol Packages for Debugging
 description: This page provides downloads for Windows Symbol Packages which are used for debugging.
 keywords: ["Windows Debugging Downloads", "WinDbg", "Download", "Symbols","Download Symbols"]
-ms.author: domars
 ms.date: 04/26/2018
 ms.localizationpriority: medium
 ---
@@ -35,10 +34,10 @@ We are interested in your feedback about symbols. Please mail suggestions or bug
 
 - [Download Windows Debugging Tools](debugger-download-tools.md)
 
-- [Download the Windows Driver Kit (WDK)](https://developer.microsoft.com/windows/hardware/windows-driver-kit)
+- [Download the Windows Driver Kit (WDK)](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk)
 
-- [Download the Windows Assessment and Deployment Kit (Windows ADK)](https://developer.microsoft.com/windows/hardware/windows-assessment-deployment-kit)
+- [Download the Windows Assessment and Deployment Kit (Windows ADK)](https://docs.microsoft.com/windows-hardware/get-started/adk-install)
 
-- [Download the Windows HLK, HCK, or Logo Kit](https://developer.microsoft.com/windows/hardware/windows-hardware-lab-kit)
+- [Download the Windows HLK, HCK, or Logo Kit](https://docs.microsoft.com/windows-hardware/test/hlk/windows-hardware-lab-kit)
 
 - [Download Windows Insider Preview builds](https://insider.windows.com/)

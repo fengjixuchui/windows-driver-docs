@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 # Troubleshooting the Implementation of Container IDs
 
 
-If more than one instance of a device in the Devices and Printers user interface (UI) appears when you expect only one, the device does not correctly implement the container ID requirements. This incorrect implementation causes the Plug and Play (PnP) manager to group one or more device nodes ([*devnodes*](https://msdn.microsoft.com/library/windows/hardware/ff556277#wdkgloss-devnode)) into additional device containers for the device.
+If more than one instance of a device in the Devices and Printers user interface (UI) appears when you expect only one, the device does not correctly implement the container ID requirements. This incorrect implementation causes the Plug and Play (PnP) manager to group one or more device nodes (*devnodes*) into additional device containers for the device.
 
 In such a case, you should examine the following:
 
@@ -36,7 +36,7 @@ In such a case, you should examine the following:
 
     Make sure that the format of the container ID or unique identifier in the hardware complies with the format requirements for the given bus. For more information, see [Container IDs Generated from a Bus-Specific Unique ID](container-ids-generated-from-a-bus-specific-unique-id.md).
 
-    If devnodes for the device are enumerated by a custom bus driver, check that the bus driver correctly responds to the [**IRP_MN_QUERY_ID**](https://msdn.microsoft.com/library/windows/hardware/ff551679) request for **BusQueryContainerID**.
+    If devnodes for the device are enumerated by a custom bus driver, check that the bus driver correctly responds to the [**IRP_MN_QUERY_ID**](https://docs.microsoft.com/windows-hardware/drivers/kernel/irp-mn-query-id) request for **BusQueryContainerID**.
 
 -   Is the device concurrently connected to the computer by more than one bus?
 

@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 # Code integrity checking
 
-[Device Guard](https://blogs.msdn.microsoft.com/windows_hardware_certification/2015/05/22/driver-compatibility-with-device-guard-in-windows-10/) can use hardware technology and virtualization to isolate the Code Integrity (CI) decision-making function from the rest of the Windows operating system. When using virtualization-based security to isolate Code Integrity, the only way kernel memory can become executable is through a Code Integrity verification. This means that kernel memory pages can never be Writable and Executable (W+X) and executable code cannot be directly modified. The code integrity checks ensure compatibility of these code integrity rules, and detects the following violations:
+[Device Guard](https://techcommunity.microsoft.com/t5/Windows-Hardware-Certification/bg-p/WindowsHardwareCertification) can use hardware technology and virtualization to isolate the Code Integrity (CI) decision-making function from the rest of the Windows operating system. When using virtualization-based security to isolate Code Integrity, the only way kernel memory can become executable is through a Code Integrity verification. This means that kernel memory pages can never be Writable and Executable (W+X) and executable code cannot be directly modified. The code integrity checks ensure compatibility of these code integrity rules, and detects the following violations:
 
 <table>
   <tr>
@@ -20,7 +20,7 @@ ms.localizationpriority: medium
   <tr>
     <td>0x2000:
         <ul>
-            <li>2 - The address in the driver&#39;s code where the error was detected.</li>
+            <li>2 - The address in the driver's code where the error was detected.</li>
             <li>3 - Pool Type.</li>
             <li>4 - Pool Tag (if provided).</li>
         </ul><br/>    </td>
@@ -28,15 +28,15 @@ ms.localizationpriority: medium
   </tr>
   <tr>
     <td>0x2001:
-        <ul><li>2 - The address in the driver&#39;s code where the error was detected.</li>
+        <ul><li>2 - The address in the driver's code where the error was detected.</li>
         <li>3 - Page Protection (WIN32_PROTECTION_MASK).
     </td>
     <td>The caller specified an executable page protection. (Expected: cleared PAGE_EXECUTE* bits)</td>
   </tr>
   <tr>
     <td>0x2002:
-        <ul><li>2 - The address in the driver&#39;s code where the error was detected.</li>
-            <li>3 - Page Priority (MM_PAGE_PRIORITY logically OR&#39;d with MdlMapping*).</li></ul>
+        <ul><li>2 - The address in the driver's code where the error was detected.</li>
+            <li>3 - Page Priority (MM_PAGE_PRIORITY logically OR'd with MdlMapping*).</li></ul>
     </td>
     <td>The caller specified an executable MDL mapping. (Expected: MdlMappingNoExecute).</td>
   </tr>

@@ -2,11 +2,11 @@
 title: UWP device apps
 description: UWP device apps are device companions, have capabilities beyond regular UWP apps, and perform privileged operations, such as firmware updates
 ms.assetid: fb64bad6-aa3d-4718-b62e-68da59a07ced
-ms.author: windowsdriverdev
 ms.date: 04/20/2017
 ms.topic: article
 ms.prod: windows-hardware
 ms.technology: windows-devices
+author: EliotSeattle
 ---
 
 # UWP device apps
@@ -19,26 +19,26 @@ Device manufacturers can create a UWP device app that serves as a companion to t
 
 This section describes what UWP device apps are and how device manufacturers can create them. If you're new to UWP device apps, take a look at [Getting started](getting-started.md).
 
-If you're looking for info about UWP mobile broadband apps, see [Mobile Broadband](http://go.microsoft.com/fwlink/p/?LinkID=301754).
+If you're looking for info about UWP mobile broadband apps, see [Mobile Broadband](https://go.microsoft.com/fwlink/p/?LinkID=301754).
 
 ## <span id="in_this_section"></span>In this section
 
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">Topic</th>
+<table>  
+<colgroup>  
+<col width="50%" />  
+<col width="50%" />  
+</colgroup>  
+<thead>  
+<tr class="header">  
+<th align="left">Topic</th>  
 <th align="left">Description</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="what-s-new.md" data-raw-source="[What&#39;s new](what-s-new.md)">What&#39;s new</a></p></td>
-<td align="left"><p>This section provides a glimpse of what&#39;s new for UWP device apps.</p></td>
+<td align="left"><p><a href="what-s-new.md" data-raw-source="[What's new](what-s-new.md)">What's new</a></p></td>
+<td align="left"><p>This section provides a glimpse of what's new for UWP device apps.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="getting-started.md" data-raw-source="[Getting started](getting-started.md)">Getting started</a></p></td>

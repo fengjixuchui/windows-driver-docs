@@ -3,7 +3,9 @@ title: C30031
 description: Warning C30031 Calling a memory allocating function and passing a parameter that indicates executable memory.
 ms.assetid: 5DBC7AC3-30CA-4BD4-BBCB-2275033FF505
 ms.date: 04/20/2017
-ms.localizationpriority: medium
+ms.localizationpriority: medium 
+f1_keywords: 
+  - "C30031"
 ---
 
 # C30031
@@ -11,7 +13,7 @@ ms.localizationpriority: medium
 
 warning C30031: Calling a memory allocating function and passing a parameter that indicates executable memory
 
-Code Analysis detected use of [POOL\_NX\_OPTIN](https://msdn.microsoft.com/library/windows/hardware/hh920402) and **ExInitializeDriverRuntime(*DrvRtPoolNxOptIn*)** was called before the entry function (for example, **DriverEntry()** or **DllInitialize()**). It is possible that the entry function indirectly calls **ExInitializeDriverRuntime(*DrvRtPoolNxOptIn*)**, in which case the error can be suppressed (see [Pragma Prefast to Suppress Warning Messages](https://msdn.microsoft.com/library/gg155764.aspx)).
+Code Analysis detected use of [POOL\_NX\_OPTIN](https://docs.microsoft.com/windows-hardware/drivers/kernel/single-binary-opt-in-pool-nx-optin) and **ExInitializeDriverRuntime(*DrvRtPoolNxOptIn*)** was called before the entry function (for example, **DriverEntry()** or **DllInitialize()**). It is possible that the entry function indirectly calls **ExInitializeDriverRuntime(*DrvRtPoolNxOptIn*)**, in which case the error can be suppressed (see [Pragma Prefast to Suppress Warning Messages](https://docs.microsoft.com/previous-versions/windows/embedded/gg155764(v=winembedded.70))).
 
 BANNED\_MEM\_ALLOCATION\_MAYBE\_SAFE
 

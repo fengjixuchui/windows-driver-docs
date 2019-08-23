@@ -3,7 +3,6 @@ title: Reading Bug Check Callback Data
 description: Reading Bug Check Callback Data
 ms.assetid: 638074bb-5133-4edc-86c5-33aafa837a0c
 keywords: ["callback data for bug checks", "callback data for bug checks, displaying callback data", "callback data for bug checks, displaying secondary data", "secondary bug check callback data", "bug check, callback routines", "dbgeng.h header file, IDebugDataSpaces3", "dbgeng.h header file, ReadTagged", "dbgeng.h header file, StartEnumTagged", "dbgeng.h header file, GetNextTagged"]
-ms.author: domars
 ms.date: 10/25/2018
 ms.localizationpriority: medium
 ---
@@ -16,7 +15,7 @@ Many drivers supply *bug check callback routines*. When Windows issues a bug che
 <span id="BugCheckCallback"></span><span id="bugcheckcallback"></span><span id="BUGCHECKCALLBACK"></span>[BugCheckCallback](https://go.microsoft.com/fwlink/p/?LinkID=254479)  
 Data written by this routine becomes part of callback data. The data is not included in the crash dump file. 
 
-<span id="BugCheckSecondaryDumpDataCallback"></span><span id="bugchecksecondarydumpdatacallback"></span><span id="BUGCHECKSECONDARYDUMPDATACALLBACK"></span>[BugCheckSecondaryDumpDataCallback](https://go.microsoft.com/fwlink/p/?LinkID=254481)  
+<span id="BugCheckSecondaryDumpDataCallback"></span><span id="bugchecksecondarydumpdatacallback"></span><span id="BUGCHECKSECONDARYDUMPDATACALLBACK"></span>[BugCheckSecondaryDumpDataCallback](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nc-wdm-kbugcheck_reason_callback_routine)  
 Data written by this routine becomes part of secondary callback data. The data is included in the crash dump file.
 
 <span id="BugCheckAddPagesCallback"></span><span id="bugcheckaddpagescallback"></span><span id="BUGCHECKADDPAGESCALLBACK"></span>[BugCheckAddPagesCallback](https://go.microsoft.com/fwlink/p/?LinkID=254480)  
@@ -26,7 +25,7 @@ The amount of callback and secondary callback data that is available to the debu
 
 -   If you are performing live debugging of a crashed system, callback data that has already been written by [BugCheckCallback](https://go.microsoft.com/fwlink/p/?LinkID=254479) or specified by [BugCheckAddPagesCallback](https://go.microsoft.com/fwlink/p/?LinkID=254480) will be available. Secondary callback data will not be available, because it is not stored in any fixed memory location.
 
--   If you are debugging a Complete Memory Dump or Kernel Memory Dump, callback data specified by [BugCheckAddPagesCallback](https://go.microsoft.com/fwlink/p/?LinkID=254480) and secondary callback data written by [BugCheckSecondaryDumpDataCallback](https://go.microsoft.com/fwlink/p/?LinkID=254481) will be available. Callback data written by [BugCheckCallback](https://go.microsoft.com/fwlink/p/?LinkID=254479) will not be available. 
+-   If you are debugging a Complete Memory Dump or Kernel Memory Dump, callback data specified by [BugCheckAddPagesCallback](https://go.microsoft.com/fwlink/p/?LinkID=254480) and secondary callback data written by [BugCheckSecondaryDumpDataCallback](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nc-wdm-kbugcheck_reason_callback_routine) will be available. Callback data written by [BugCheckCallback](https://go.microsoft.com/fwlink/p/?LinkID=254479) will not be available. 
 
 -   If you are debugging a Small Memory Dump, callback data will not be available. Secondary callback data will be available.
 
@@ -48,7 +47,7 @@ To view data for one specific callback routine, use [**!bugdump**](-bugdump.md)*
 
 There are two methods for displaying secondary callback data. You can use the **.enumtag** command or you can write your own debugger extension.
 
-Each block of secondary callback data is identified by a GUID tag. This tag is specified by the **Guid** field of the **(KBUGCHECK\_SECONDARY\_DUMP\_DATA)ReasonSpecificData** parameter passed to [BugCheckSecondaryDumpDataCallback](https://go.microsoft.com/fwlink/p/?LinkID=254481).
+Each block of secondary callback data is identified by a GUID tag. This tag is specified by the **Guid** field of the **(KBUGCHECK\_SECONDARY\_DUMP\_DATA)ReasonSpecificData** parameter passed to [BugCheckSecondaryDumpDataCallback](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nc-wdm-kbugcheck_reason_callback_routine).
 
 The [**.enumtag (Enumerate Secondary Callback Data)**](-enumtag--enumerate-secondary-callback-data-.md) command is not a very precise instrument. It displays every secondary data block, showing the tag and then showing the data in hexadecimal and ASCII format. It is generally useful only to determine what tags are actually being used for secondary data blocks.
 

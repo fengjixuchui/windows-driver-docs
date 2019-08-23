@@ -3,7 +3,6 @@ title: sx, sxd, sxe, sxi, sxn, sxr, sx- (Set Exceptions)
 description: The sx* commands control the action that the debugger takes when an exception occurs in the application that is being debugged, or when certain events occur.
 ms.assetid: fdb5059f-e7d9-4e14-aa3d-030e72c30732
 keywords: ["sx, sxd, sxe, sxi, sxn, sxr, sx- (Set Exceptions) Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -90,7 +89,7 @@ The **sxr** command resets all of the exception and event filter states to the d
 
 The **sx-** command does not change the handling status or the break status of the specified exception or event. This command can be used if you wish to change the first-chance command or second-chance command associated with a specific event, but do not wish to change anything else.
 
-If you include the **-h** option (or if the **cc**, **hc**, **bpec**, or **ssec** events are specified), the **sxe**, **sxd**, **sxn**, and **sxi** commands control the [handling status](https://msdn.microsoft.com/library/windows/hardware/ff541490#handling-status) of the exception or event. In all other cases, these commands control the [break status](https://msdn.microsoft.com/library/windows/hardware/ff541490#break-status) of the exception or event.
+If you include the **-h** option (or if the **cc**, **hc**, **bpec**, or **ssec** events are specified), the **sxe**, **sxd**, **sxn**, and **sxi** commands control the [handling status](https://docs.microsoft.com/windows-hardware/drivers/debugger/debug-filter-xxx#handling-status) of the exception or event. In all other cases, these commands control the [break status](https://docs.microsoft.com/windows-hardware/drivers/debugger/debug-filter-xxx#break-status) of the exception or event.
 
 When you are setting the break status, these commands have the following effects.
 

@@ -3,7 +3,6 @@ title: Bug Check 0x8B MBR_CHECKSUM_MISMATCH
 description: The MBR_CHECKSUM_MISMATCH bug check has a value of 0x0000008B. This bug check indicates that a mismatch has occurred in the MBR checksum.
 ms.assetid: 7db57605-b6ff-49b9-8a79-3325512825b9
 keywords: ["Bug Check 0x8B MBR_CHECKSUM_MISMATCH", "MBR_CHECKSUM_MISMATCH"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The MBR\_CHECKSUM\_MISMATCH bug check has a value of 0x0000008B. This bug check indicates that a mismatch has occurred in the MBR checksum.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## MBR\_CHECKSUM\_MISMATCH Parameters
 

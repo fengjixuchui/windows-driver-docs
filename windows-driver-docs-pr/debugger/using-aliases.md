@@ -2,7 +2,6 @@
 title: Using Aliases
 description: Using Aliases
 ms.assetid: ee0540d0-5bfd-47ef-92b1-ec1d6954aec7
-ms.author: domars
 ms.date: 11/28/2017
 ms.localizationpriority: medium
 ---
@@ -71,7 +70,7 @@ The debugger sets the following automatic aliases.
 <tbody>
 <tr class="odd">
 <td align="left"><p><strong>$ntnsym</strong></p></td>
-<td align="left"><p>The most appropriate module for NT symbols on the computer&#39;s native architecture. This alias can equal either <strong>ntdll</strong> or <strong>nt</strong>.</p></td>
+<td align="left"><p>The most appropriate module for NT symbols on the computer's native architecture. This alias can equal either <strong>ntdll</strong> or <strong>nt</strong>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>$ntwsym</strong></p></td>

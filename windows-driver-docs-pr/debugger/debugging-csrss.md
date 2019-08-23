@@ -3,7 +3,6 @@ title: Debugging CSRSS
 description: Debugging CSRSS
 ms.assetid: 9c3a8498-d9e4-4070-aee8-c038fa1666a4
 keywords: ["CSRSS debugging", "NTSD, debugging CSRSS", "controlling the user-mode debugger from the kernel debugger, debugging CSRSS"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -24,7 +23,7 @@ The easiest way to debug CSRSS is to use NTSD and [control it from the kernel de
 
 ### <span id="enabling_csrss_debugging"></span><span id="ENABLING_CSRSS_DEBUGGING"></span>Enabling CSRSS Debugging
 
-CSRSS debugging must be enabled before you can proceed. If the target computer is running a [*checked build*](https://msdn.microsoft.com/library/windows/hardware/ff556274#wdkgloss-checked-build) of Windows, CSRSS debugging is always enabled. If the target computer is running a [*free build*](https://msdn.microsoft.com/library/windows/hardware/ff556280#wdkgloss-free-build) of Windows, you will have to enable CSRSS debugging through the Global Flags Utility (GFlags).
+CSRSS debugging must be enabled before you can proceed. If the target computer is running a *checked build* of Windows, CSRSS debugging is always enabled. If the target computer is running a *free build* of Windows, you will have to enable CSRSS debugging through the Global Flags Utility (GFlags).
 
 To do this, start the GFlags utility, select the **System Registry** radio button, and select **Enable debugging of Win32 subsystem**.
 
@@ -58,7 +57,7 @@ You will have to set your symbol path to a location on your host computer or to 
 
 Note that you may see an "in page io error" message. This is another manifestation of a hardware failure.
 
-In Windows XP and later versions of Windows, when the debugging session ends, the debugger will detach from CSRSS while the CSRSS process is still running. This avoids termination of the CSRSS process itself.
+When the debugging session ends, the debugger will detach from CSRSS while the CSRSS process is still running. This avoids termination of the CSRSS process itself.
 
  
 

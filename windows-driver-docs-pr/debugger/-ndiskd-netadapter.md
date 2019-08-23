@@ -3,7 +3,6 @@ title: ndiskd.netadapter
 description: The ndiskd.netadapter extension displays information about NDIS miniports, or network adapters, that are active on the system. 
 ms.assetid: 7D55F7CE-5DDB-4C80-8C27-F619F2FB7F15
 keywords: ["ndiskd.netadapter Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -150,7 +149,7 @@ By running **!ndiskd.netadapter** with no parameters, you can get a list of all 
     ffffdf801418d650   ffffdf80140c71a0    Microsoft Kernel Debug Network Adapter
 ```
 
-By clicking on the handle for the miniport driver or entering the **!ndiskd.netadapter -handle**, you can now see all of NDIS's state on that device. This can be very helpful as a starting place for troubleshooting a network driver or for figuring out where an issue is in the network stack. For example, you can see the Datapath state for the driver and see whether it is connected or not.
+By clicking on the handle for the miniport driver or entering the **!ndiskd.netadapter -handle**, you can now see all of NDIS's state on that device. This can be helpful very as a starting place for troubleshooting a network driver or for figuring out where an issue is in the network stack. For example, you can see the Datapath state for the driver and see whether it is connected or not.
 
 At the bottom of the report for this net adapter, there are many other links you can click on to explore further information, such as any pending OIDs and the state of task offloads. These links correspond to many of the parameters for **!ndiskd.netadapter**.
 
@@ -266,9 +265,9 @@ You can now click the "bp" link to the right of each handler to set a breakpoint
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

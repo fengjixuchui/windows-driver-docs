@@ -2,7 +2,6 @@
 title: DBG\_DUMP\_FIELD\_XXX
 description: DBG\_DUMP\_FIELD\_XXX
 ms.assetid: c168c1b7-c4ef-4a70-9060-611b86120635
-ms.author: domars
 ms.date: 12/07/2017
 keywords: ["DBG_DUMP_FIELD_XXX Windows Debugging"]
 topic_type:
@@ -22,7 +21,7 @@ ms.localizationpriority: medium
 ## <span id="ddk_dbg_dump_xxx_dbx"></span><span id="DDK_DBG_DUMP_XXX_DBX"></span>
 
 
-The DBG\_DUMP\_FIELD\_*XXX* bit flags are used by the **fOptions** member of the [**FIELD\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff545316) structure to control the behavior of the [**IG\_DUMP\_SYMBOL\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff550906)[**Ioctl**](https://msdn.microsoft.com/library/windows/hardware/ff551084) operation.
+The DBG\_DUMP\_FIELD\_*XXX* bit flags are used by the **fOptions** member of the [**FIELD\_INFO**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/ns-wdbgexts-_field_info) structure to control the behavior of the [**IG\_DUMP\_SYMBOL\_INFO**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/ns-wdbgexts-_sym_dump_param)[**Ioctl**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/nc-wdbgexts-pwindbg_ioctl_routine) operation.
 
 The following flags can be present.
 
@@ -64,7 +63,7 @@ The following flags can be present.
 </tr>
 <tr class="odd">
 <td align="left"><p>DBG_DUMP_FIELD_RETURN_ADDRESS</p></td>
-<td align="left"><p>During a callback or when <strong>Ioctl</strong> returns, the FIELD_INFO.<strong>address</strong> member contains the address of the symbol&#39;s member.</p>
+<td align="left"><p>During a callback or when <strong>Ioctl</strong> returns, the FIELD_INFO.<strong>address</strong> member contains the address of the symbol's member.</p>
 <p>If no address is supplied for the type, FIELD_INFO.<strong>address</strong> contains total offset of the member from the beginning of the type.</p></td>
 </tr>
 <tr class="even">
@@ -105,11 +104,11 @@ Requirements
 ## <span id="see_also"></span>See also
 
 
-[**IG\_DUMP\_SYMBOL\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff550906)
+[**IG\_DUMP\_SYMBOL\_INFO**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/ns-wdbgexts-_sym_dump_param)
 
-[**Ioctl**](https://msdn.microsoft.com/library/windows/hardware/ff551084)
+[**Ioctl**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/nc-wdbgexts-pwindbg_ioctl_routine)
 
-[**FIELD\_INFO**](https://msdn.microsoft.com/library/windows/hardware/ff545316)
+[**FIELD\_INFO**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdbgexts/ns-wdbgexts-_field_info)
 
  
 

@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 # Creating a Single Driver Package for Windows XP and Windows Vista
 
 
-The Microsoft [Connect](http://go.microsoft.com/fwlink/p/?linkid=133880) Web site provides two groups of core driver updates:
+The Microsoft [Connect](https://go.microsoft.com/fwlink/p/?linkid=133880) Web site provides two groups of core driver updates:
 
 -   For Windows operating systems earlier than Windows Vista (including Windows Server 2003, Windows XP, and Windows 2000), a set of redistributable updates allows hardware manufacturers to incorporate the specific files they need to support these operating systems.
 
@@ -45,7 +45,7 @@ If your driver requires updated versions of the core driver package to work prop
 
 2.  Include the entire Windows Vista core driver package in a subdirectory of your driver package.
 
-3.  Use the [**INF CopyINF directive**](https://msdn.microsoft.com/library/windows/hardware/ff547317) to preload the updated core driver into the driver store.
+3.  Use the [**INF CopyINF directive**](https://docs.microsoft.com/windows-hardware/drivers/install/inf-copyinf-directive) to preload the updated core driver into the driver store.
 
 4.  Use the INF **InboxVersionRequired**=*&lt;version of the updated core driver&gt;* directive to ensure only the newer version of the core driver package is used.
 

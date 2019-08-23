@@ -3,7 +3,6 @@ title: ks.dump
 description: The ks.dump extension displays the specified object.
 ms.assetid: 7878c79f-9de6-4fd2-9641-c636212429eb
 keywords: ["ks.dump Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -129,7 +128,7 @@ Some important parts of this display are included in the following table.
 </tr>
 <tr class="odd">
 <td align="left"><p>State</p></td>
-<td align="left"><p>The internal state of the pin&#39;s transport to non-AVStream filters.</p></td>
+<td align="left"><p>The internal state of the pin's transport to non-AVStream filters.</p></td>
 </tr>
 </tbody>
 </table>

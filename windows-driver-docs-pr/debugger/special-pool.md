@@ -3,7 +3,6 @@ title: Special Pool
 description: Special Pool
 ms.assetid: 8904913d-78ed-4e5f-acef-3c21eeb87b8d
 keywords: ["Special Pool", "Special Pool, overview", "GFlags, Special Pool"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -133,7 +132,7 @@ On a computer with an AMD x86-64 processor, PAGE\_SIZE is 0x1000 and the allocat
 
  
 
-On a computer with any processor, you can use an asterisk ( **\\*** ) or 0x2A (decimal 42) to configure the Special Pool feature for all memory allocations on the system.
+On a computer with any processor, you can use an asterisk ( **\*** ) or 0x2A (decimal 42) to configure the Special Pool feature for all memory allocations on the system.
 
 ### <span id="comments"></span><span id="COMMENTS"></span>Comments
 

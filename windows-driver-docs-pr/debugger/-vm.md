@@ -3,7 +3,6 @@ title: vm
 description: The vm extension displays summary information about virtual memory use statistics on the target system.
 ms.assetid: 25e4f80c-d4ca-407c-991d-e8ee5dfbb309
 keywords: ["vm Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -36,13 +35,13 @@ Causes the display to omit process-specific statistics.
 Causes the display to include memory management thread stacks.
 
 <span id="Bit_2__0x4_"></span><span id="bit_2__0x4_"></span><span id="BIT_2__0X4_"></span>Bit 2 (0x4)  
-(Windows XP and later) Causes the display to include terminal server memory usage.
+Causes the display to include terminal server memory usage.
 
 <span id="Bit_3__0x8_"></span><span id="bit_3__0x8_"></span><span id="BIT_3__0X8_"></span>Bit 3 (0x8)  
-(Windows XP and later) Causes the display to include the page file write log.
+Causes the display to include the page file write log.
 
 <span id="Bit_4__0x10_"></span><span id="bit_4__0x10_"></span><span id="BIT_4__0X10_"></span>Bit 4 (0x10)  
-(Windows XP and later) Causes the display to include working set owner thread stacks.
+Causes the display to include working set owner thread stacks.
 
 <span id="Bit_5__0x20_"></span><span id="bit_5__0x20_"></span><span id="BIT_5__0X20_"></span>Bit 5 (0x20)  
 (Windows Vista and later) Causes the display to include kernel virtual address usage.

@@ -3,7 +3,6 @@ title: User-Mode Dump Files
 description: User-Mode Dump Files
 ms.assetid: bef29d75-6620-4219-b402-36fbddc4fe1f
 keywords: ["dump file, user-mode"]
-ms.author: domars
 ms.date: 08/01/2018
 ms.localizationpriority: medium
 ---
@@ -99,7 +98,7 @@ If you are creating a minidump file with the debugger, you can choose exactly wh
 </tr>
 <tr class="even">
 <td align="left"><p><strong>/mp</strong></p></td>
-<td align="left"><p>Adds process environment block (PEB) and thread environment block (TEB) data to the minidump. This can be useful if you need access to Windows system information regarding the application&#39;s processes and threads.</p></td>
+<td align="left"><p>Adds process environment block (PEB) and thread environment block (TEB) data to the minidump. This can be useful if you need access to Windows system information regarding the application's processes and threads.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>/mw</strong></p></td>
@@ -119,10 +118,10 @@ If you are creating a minidump file with the debugger, you can choose exactly wh
 </tr>
 <tr class="odd">
 <td align="left"><p><strong>/mR</strong></p></td>
-<td align="left"><p>Deletes the full module paths from the minidump. Only the module <em>names</em> will be included. This is a useful option if you wish to protect the privacy of the user&#39;s directory structure.</p></td>
+<td align="left"><p>Deletes the full module paths from the minidump. Only the module <em>names</em> will be included. This is a useful option if you wish to protect the privacy of the user's directory structure.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>/mk &quot;</strong> <em>FileName</em> <strong>&quot;</strong></p></td>
+<td align="left"><p><strong>/mk "</strong> <em>FileName</em> <strong>"</strong></p></td>
 <td align="left"><p>(Windows Vista only) Creates a kernel-mode minidump in addition to the user-mode minidump. The kernel-mode minidump will be restricted to the same threads that are stored in the user-mode minidump. <em>FileName</em> must be enclosed in quotation marks.</p></td>
 </tr>
 </tbody>
@@ -173,7 +172,7 @@ The following table shows the features of each tool.
 <td align="left"><p>Yes</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p>Creating a dump file when an application &quot;hangs&quot; (stops responding but does not actually crash)</p></td>
+<td align="left"><p>Creating a dump file when an application "hangs" (stops responding but does not actually crash)</p></td>
 <td align="left"><p>Yes</p></td>
 <td align="left"><p>No</p></td>
 <td align="left"><p>Yes</p></td>

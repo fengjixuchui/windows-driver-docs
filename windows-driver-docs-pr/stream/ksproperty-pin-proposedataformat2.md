@@ -11,14 +11,14 @@ api_location:
 - ks.h
 api_type:
 - HeaderDef
-ms.date: 11/28/2017
+ms.date: 12/28/2018
 ms.localizationpriority: medium
 ---
 
 # KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2
 
 
-The OS uses the **KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** property to determine if pins instantiated by the pin factory support specific data formats.
+The OS uses the **KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** property to determine if the driver has a preferred data format on a pin given the specified attribute.
 
 ## Usage Summary Table
 
@@ -46,7 +46,7 @@ The OS uses the **KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** property to determine if
 <td><p>No</p></td>
 <td><p>Filter</p></td>
 <td><p>See remarks</p></td>
-<td><p><a href="https://msdn.microsoft.com/library/windows/hardware/ff561656" data-raw-source="[&lt;strong&gt;KSDATAFORMAT&lt;/strong&gt;](https://msdn.microsoft.com/library/windows/hardware/ff561656)"><strong>KSDATAFORMAT</strong></a></p></td>
+<td><p><a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksdataformat" data-raw-source="[&lt;strong&gt;KSDATAFORMAT&lt;/strong&gt;](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksdataformat)"><strong>KSDATAFORMAT</strong></a></p></td>
 </tr>
 </tbody>
 </table>
@@ -56,15 +56,17 @@ The OS uses the **KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** property to determine if
 Remarks
 -------
 
-The property descriptor is a [**KSP\_PIN**](https://msdn.microsoft.com/library/windows/hardware/ff566722) followed by a [**KSMULTIPLE\_ITEM**](https://msdn.microsoft.com/library/windows/hardware/ff563441) specifying a count of variable size attributes that follow the **KSMULTIPLE\_ITEM**. Each attribute starts with a [**KSATTRIBUTE**](https://msdn.microsoft.com/library/windows/hardware/ff560987) header followed by data specific to the attribute. The attributes act as parameters for the property request, specifying the proposed data formats.
+The property descriptor is a [**KSP\_PIN**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksp_pin) followed by a [**KSMULTIPLE\_ITEM**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksmultiple_item) specifying a count of variable size attributes that follow the **KSMULTIPLE\_ITEM**. Each attribute starts with a [**KSATTRIBUTE**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksattribute) header followed by data specific to the attribute. The attributes act as parameters for the property request, specifying the proposed data formats.
 
-**KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** includes a structure of type [**KSMULTIPLE\_ITEM**](https://msdn.microsoft.com/library/windows/hardware/ff561656),
+**KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2** includes a structure of type [**KSMULTIPLE\_ITEM**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksdataformat),
 
-Although the attributes provide a highly extensible mechanism to parameterize the property request, Windows defines only a single attribute passed with the property request- the audio signal processing mode. The attribute ID is *KSATTRIBUTEID\_AUDIOSIGNALPROCESSING\_MODE* and is specified using the [**KSATTRIBUTE\_AUDIOSIGNALPROCESSING\_MODE**](https://msdn.microsoft.com/library/windows/hardware/mt727947) structure. Note that the **KSATTRIBUTE\_AUDIOSIGNALPROCESSING\_MODE** structure starts with a [**KSATTRIBUTE**](https://msdn.microsoft.com/library/windows/hardware/ff560987) member. For more information, see [Audio Signal Processing Modes](https://msdn.microsoft.com/library/windows/hardware/mt186386).
+The only attribute  supported for the property is *KSATTRIBUTEID\_AUDIOSIGNALPROCESSING\_MODE*
+and it is specified using the [**KSATTRIBUTE\_AUDIOSIGNALPROCESSING\_MODE**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-tagksattribute_audiosignalprocessing_mode) structure. Note that the **KSATTRIBUTE\_AUDIOSIGNALPROCESSING\_MODE** structure starts with a [**KSATTRIBUTE**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksattribute) member. For more information, see [Audio Signal Processing Modes](https://docs.microsoft.com/windows-hardware/drivers/audio/audio-signal-processing-modes).
 
-[**KSPROPERTY\_TYPE\_GET**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksidentifier) is only supported if the pin has proposed formats. This function allows the audio driver to provide information about the default data format on a pin given the specified attributes.
+[**KSPROPERTY\_TYPE\_GET**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksidentifier) is only supported if the pin has proposed formats. This function allows the audio driver to provide information about the default data format on a pin given the specified attribute.
 
-The KS filter returns STATUS\_SUCCESS, when the OS accepts the information about the pins instantiated by the pin factory supporting specific data formats, or an error code otherwise.
+The KS filter returns STATUS_SUCCESS if pin has preferred data format for the specified attribute. If pin does not have a preferred data format for the specified attribute it returns STATUS_NOT_SUPPORTED. For any other failures, an appropriate error is returned. If driver supports this property, OS will always use this format for the specific signal processing mode. 
+KSPROPERTY_TYPE_SET is not supported for this property.
 
 **KSPROPERTY\_PIN\_PROPOSEDATAFORMAT2 Input Structure**
 
@@ -120,7 +122,7 @@ The following table provides a description of the KSPROPERTY\_PIN\_PROPOSEDATAFO
 </tr>
 <tr class="odd">
 <td>SignalProcessingModeAttribute.AttributeHeader.Size</td>
-<td>The AttributeHeader.Size indicates the size of <a href="https://msdn.microsoft.com/library/windows/hardware/mt727947" data-raw-source="[&lt;strong&gt;KSATTRIBUTE_AUDIOSIGNALPROCESSING_MODE&lt;/strong&gt;](https://msdn.microsoft.com/library/windows/hardware/mt727947)"><strong>KSATTRIBUTE_AUDIOSIGNALPROCESSING_MODE</strong></a>. It can be calculated like this:
+<td>The AttributeHeader.Size indicates the size of <a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-tagksattribute_audiosignalprocessing_mode" data-raw-source="[&lt;strong&gt;KSATTRIBUTE_AUDIOSIGNALPROCESSING_MODE&lt;/strong&gt;](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ksmedia/ns-ksmedia-tagksattribute_audiosignalprocessing_mode)"><strong>KSATTRIBUTE_AUDIOSIGNALPROCESSING_MODE</strong></a>. It can be calculated like this:
 <p>sizeof(KSATTRIBUTE_AUDIOSIGNALPROCESSING_MODE)</p></td>
 </tr>
 <tr class="even">
@@ -186,9 +188,9 @@ Requirements
 ## See also
 
 
-[**KSP\_PIN**](https://msdn.microsoft.com/library/windows/hardware/ff566722)
+[**KSP\_PIN**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksp_pin)
 
-[**KSDATAFORMAT**](https://msdn.microsoft.com/library/windows/hardware/ff561656)
+[**KSDATAFORMAT**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ks/ns-ks-ksdataformat)
 
  
 

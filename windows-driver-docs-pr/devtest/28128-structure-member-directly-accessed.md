@@ -6,7 +6,9 @@ keywords:
 - warnings listed WDK PREfast for Drivers
 - errors listed WDK PREfast for Drivers
 ms.date: 04/20/2017
-ms.localizationpriority: medium
+ms.localizationpriority: medium 
+f1_keywords: 
+  - "C28128"
 ---
 
 # C28128
@@ -16,7 +18,7 @@ warning C28128: An access to a field has been made directly. It should be made b
 
 The driver directly accessed a structure member that should be accessed only by using specialized functions.
 
-For example, you should use the [**IoSetCancelRoutine**](https://msdn.microsoft.com/library/windows/hardware/ff549674) instead of directly modifying the **CancelRoutine** member of the [**IRP**](https://msdn.microsoft.com/library/windows/hardware/ff550694) structure.
+For example, you should use the [**IoSetCancelRoutine**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-iosetcancelroutine) instead of directly modifying the **CancelRoutine** member of the [**IRP**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/ns-wdm-_irp) structure.
 
 ### <span id="example"></span><span id="EXAMPLE"></span>Example
 

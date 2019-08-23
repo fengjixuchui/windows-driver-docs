@@ -3,7 +3,6 @@ title: ndiskd.wdiminidriver
 description: The ndiskd.wdiminidriver extension displays information about one or more CMiniportDriver structures. 
 ms.assetid: C7022CD7-6F3A-485B-8686-A686A5305DA5
 keywords: ["ndiskd.wdiminidriver Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,9 +18,9 @@ ms.localizationpriority: medium
 
 The **!ndiskd.wdiminidriver** extension displays information about one or more CMiniportDriver structures. If you run this extension with no parameters, !ndiskd will display a list of all CMiniportDriver structures.
 
-For more information about WDI miniport drivers, see the [WDI Miniport Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/wdi-miniport-driver-design-guide).
+For more information about WDI miniport drivers, see the [WDI Miniport Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/wdi-miniport-driver-design-guide).
 
-For more information about WDI miniport driver reference, see [WDI Miniport Driver Reference](https://msdn.microsoft.com/library/windows/hardware/dn926075).
+For more information about WDI miniport driver reference, see [WDI Miniport Driver Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/).
 
 ```console
 !ndiskd.wdiminidriver [-handle <x>] [-pm] [-rcvfilter] 
@@ -123,9 +122,9 @@ HANDLERS
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 
@@ -133,9 +132,9 @@ HANDLERS
 
 [**!ndiskd.help**](-ndiskd-help.md)
 
-[WDI Miniport Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/wdi-miniport-driver-design-guide)
+[WDI Miniport Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/wdi-miniport-driver-design-guide)
 
-[WDI Miniport Driver Reference](https://msdn.microsoft.com/library/windows/hardware/dn926075)
+[WDI Miniport Driver Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
  
 

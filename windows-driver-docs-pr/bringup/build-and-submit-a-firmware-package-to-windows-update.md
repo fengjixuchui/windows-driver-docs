@@ -5,22 +5,19 @@ ms.date: 05/15/2018
 ms.localizationpriority: medium
 ---
 
-
-
 # Build and submit a firmware package to Windows Update (WU)
-
 
 Because a firmware update is delivered as a driver package, it follows the same verification and signing process as a device driver package.
 
-1.  When the contents of the driver package are installed on the System Under Test (SUT), the device must pass the required Windows Hardware Lab Kit (HLK) tests. If there is not a test specifically for the firmware being tested, locate the most reasonable alternative and submit results with the HLK package as needed.
+1. When the contents of the driver package are installed on the System Under Test (SUT), the device must pass the required Windows Hardware Lab Kit (HLK) tests. If there is not a test specifically for the firmware being tested, locate the most reasonable alternative and submit results with the HLK package as needed.
 
-2.  The driver package can then be submitted to the [Windows Dev Center Hardware Dashboard](https://developer.microsoft.com/windows/hardware/dashboard-sign-in) for signing.
+2. The driver package can then be submitted to the [Partner Center](https://partner.microsoft.com/dashboard) for signing.
 
-3.  Once signed, the driver package is provided to the submitter where the submitter has the option to publish on Windows Update (WU) via the Hardware Dashboard (using the Driver Distribution feature).
+3. Once signed, the driver package is provided to the submitter where the submitter has the option to publish on Windows Update (WU) via the Hardware Dashboard (using the Driver Distribution feature).
 
-Publishing to Windows Update is done via the [Hardware Dashboard](https://developer.microsoft.com/windows/hardware/dashboard-sign-in) using the Driver Distribution feature.
+Publishing to Windows Update is done via the [Hardware Dashboard](https://partner.microsoft.com/dashboard) using the Driver Distribution feature.
 
-Signing of the driver package is different from signing the UEFI firmware, though both need to be signed. Signing is via Hardware Dashboard using the file signing services feature. The signature on the driver package, delivered via security catalog, is used by Windows to verify the integrity of firmware.bin before handing it to UEFI. Windows does not provide the security catalog to the firmware. The signature on the UEFI firmware or device firmware update is validated by the platform firmware and is not checked by Windows. The IHV or OEM is responsible for ensuring the integrity and security of the firmware through signature verification, encryption, or other means. Review the [Microsoft UEFI CA Signing policy updates](https://blogs.msdn.microsoft.com/windows_hardware_certification/2013/12/03/microsoft-uefi-ca-signing-policy-updates/) link below for additional details.
+Signing of the driver package is different from signing the UEFI firmware, though both need to be signed. Signing is via Hardware Dashboard using the file signing services feature. The signature on the driver package, delivered via security catalog, is used by Windows to verify the integrity of firmware.bin before handing it to UEFI. Windows does not provide the security catalog to the firmware. The signature on the UEFI firmware or device firmware update is validated by the platform firmware and is not checked by Windows. The IHV or OEM is responsible for ensuring the integrity and security of the firmware through signature verification, encryption, or other means. Review the [Microsoft UEFI CA Signing policy updates](https://techcommunity.microsoft.com/t5/Windows-Hardware-Certification/bg-p/WindowsHardwareCertification) link below for additional details.
 
 Next, sign the contents of the capsule. The capsule content itself is determined by the OEM. The capsule may just contain a catalog of firmware images to update in whatever format the OEM chooses, or it may be delivered in the form of an EFI Application image (PE/COFF file format). If the capsule is a PE/COFF file, then it must be signed by the OEM before submitting to Microsoft for Windows Firmware Update Package signing.
 
@@ -30,17 +27,19 @@ On ARM-based systems, with no keys other than the Microsoft Production CA 2011 a
 
 On non-ARM systems,
 
--   The capsule can be an EFI application as long as it is signed with a key chaining back to an entry in the UEFI Allowed Database.
+- The capsule can be an EFI application as long as it is signed with a key chaining back to an entry in the UEFI Allowed Database.
 
--   UEFI Secure Boot can then automatically be leveraged to verify the integrity of the capsule.
+- UEFI Secure Boot can then automatically be leveraged to verify the integrity of the capsule.
 
-**Note**  Windows does not allow OEM Verisign-signed firmware update packages, even in test environments. They must be test signed by Microsoft through the portal.
+> [!NOTE]
+> Windows does not allow OEM Verisign-signed firmware update packages, even in test environments. They must be test signed by Microsoft through the portal.
 
 Update the firmware on your SUT device by installing the firmware update package.
 
-Install the Windows Hardware Lab Kit (HLK) on the test system with the PTP and run all the tests applicable to the firmware device.Submit the *HLK logs and the driver package* to the Windows Dev Center Hardware Dashboard for signature.
+Install the Windows Hardware Lab Kit (HLK) on the test system with the PTP and run all the tests applicable to the firmware device.Submit the *HLK logs and the driver package* to the Partner Center for signature.
 
-**Note** While submitting the firmware update driver package, make sure to select Windows 8 or later as the applicable OS. If any down-level OS is chosen, then the Windows Dev Center Hardware Dashboard will sign the catalog in the driver package with SHA1 algorithm. Starting in Windows 8, all firmware update driver packages must be SHA256 signed.
+> [!NOTE]
+> While submitting the firmware update driver package, make sure to select Windows 8 or later as the applicable OS. If any down-level OS is chosen, then the Partner Center will sign the catalog in the driver package with SHA1 algorithm. Starting in Windows 8, all firmware update driver packages must be SHA256 signed.
 
 Though not recommended, it is possible to submit a package to Microsoft without first generating HLK test logs (or including HLK test logs when submitting). Use **Create driver signing submission** for driver signing without the HLK pass test log or for validation testing.
 
@@ -69,7 +68,7 @@ If you follow this format, the submission should pass. To confirm the parent fol
 
 [Driver Signing](https://docs.microsoft.com/windows-hardware/drivers/dashboard)
 
-[Microsoft UEFI CA Signing Policy updates](https://blogs.msdn.microsoft.com/windows_hardware_certification/2013/12/03/microsoft-uefi-ca-signing-policy-updates/)
+[Microsoft UEFI CA Signing Policy updates](https://techcommunity.microsoft.com/t5/Windows-Hardware-Certification/bg-p/WindowsHardwareCertification)
 
 [View test results and log files](https://docs.microsoft.com/windows-hardware/test/hlk/getstarted/step-7-view-test-results-and-log-files)
 
@@ -79,14 +78,10 @@ If you follow this format, the submission should pass. To confirm the parent fol
 
 [Troubleshooting Device Fundamentals Reliability Testing by using the Windows HLK](https://docs.microsoft.com/windows-hardware/test/hlk/testref/troubleshooting-device-fundamentals-reliability-testing-by-using-the-windows-hck)
 
-[Windows Hardware Certification blog](https://blogs.msdn.microsoft.com/windows_hardware_certification)
+[Windows Hardware Certification blog](https://techcommunity.microsoft.com/t5/Windows-Hardware-Certification/bg-p/WindowsHardwareCertification)
 
 [Windows UEFI firmware update platform](https://docs.microsoft.com/windows-hardware/drivers/bringup/windows-uefi-firmware-update-platform)
 
-[Windows Hardware Dev Center dashboard](https://developer.microsoft.com/windows/hardware/dashboard-sign-in)
+[Partner Center](https://partner.microsoft.com/dashboard)
 
 [ESRT table definition ](https://docs.microsoft.com/windows-hardware/drivers/bringup/esrt-table-definition)
-
-
-
-

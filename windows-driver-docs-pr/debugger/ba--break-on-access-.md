@@ -3,7 +3,6 @@ title: ba (Break on Access)
 description: The ba command sets a processor breakpoint (often called, less accurately, a data breakpoint). This breakpoint is triggered when the specified memory is accessed.
 ms.assetid: 0d39d883-363e-421b-a1b8-08bf2d216724
 keywords: ["ba (Break on Access) Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -69,7 +68,7 @@ Specifies the type of access that satisfies the breakpoint. This parameter can b
 </tr>
 <tr class="even">
 <td align="left"><p><strong>i</strong> (i/o)</p></td>
-<td align="left"><p>(Microsoft Windows XP and later versions, kernel mode only, x86-based systems only) Breaks into the debugger when the I/O port at the specified <em>Address</em> is accessed.</p></td>
+<td align="left"><p>(Kernel mode only, x86-based systems only) Breaks into the debugger when the I/O port at the specified <em>Address</em> is accessed.</p></td>
 </tr>
 </tbody>
 </table>

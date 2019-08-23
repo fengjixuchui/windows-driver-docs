@@ -3,7 +3,6 @@ title: Debug Detach Debuggee
 description: Debug Detach Debuggee
 ms.assetid: 9b1c20ff-e675-4d28-bafc-9880ae7c21e3
 keywords: ["Debug Detach Debuggee"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -18,7 +17,7 @@ Click **Detach Debuggee** on the **Debug** menu to detach from the target applic
 
 Detaching from the target is supported under one of the following conditions:
 
--   (Microsoft Windows XP and later versions of Windows) You are debugging a running user-mode target.
+-   You are debugging a running user-mode target.
 
 -   You are noninvasively debugging a user-mode target.
 

@@ -14,7 +14,7 @@ Follow these steps to install the sample driver and attach an ADXL345 accelerome
 ## Install Windows on the Sharks Cove board
 
 
-For information about how to get a Sharks Cove board and how to install Windows on the board, see [Sharks Cove hardware development board](https://msdn.microsoft.com/library/windows/hardware/dn745910) and [SharksCove.org](http://go.microsoft.com/fwlink/p/?linkid=403167).
+For information about how to get a Sharks Cove board and how to install Windows on the board, see [Sharks Cove hardware development board](https://docs.microsoft.com/windows-hardware/drivers/gettingstarted/sharks-cove-hardware-development-board) and [SharksCove.org](https://go.microsoft.com/fwlink/p/?linkid=403167).
 
 ## Modify the ADXL345 to work with the Sharks Cove
 
@@ -39,12 +39,12 @@ Attach the ADXL345 pins to the J1C1 header pins as shown here:
 
 A driver development environment has two computers: the *host computer* and the *target computer*. The target computer is also called the *test computer*. You develop and build your driver in Microsoft Visual Studio on the host computer. The debugger runs on the host computer and is available in the Visual Studio user interface. When you test and debug a driver, the driver runs on the target computer. In this case, the Sharks Cove board is the target computer.
 
-On your host computer, install kits and tools as described in [Sharks Cove hardware development board](https://msdn.microsoft.com/library/windows/hardware/dn745910).
+On your host computer, install kits and tools as described in [Sharks Cove hardware development board](https://docs.microsoft.com/windows-hardware/drivers/gettingstarted/sharks-cove-hardware-development-board).
 
 ## Download and extract the SpbAccelerometer sample
 
 
-On the host computer go to [this page](http://go.microsoft.com/fwlink/p?linkid=506965) and click the download button. Click **Save**, and then click **Open Folder**. Right click SpbAccelerometer Sample Driver (UMDF Version 1).zip, and choose **Extract All**. Specify or browse to a folder for the extracted files. For example, you could extract to c:\\SpbAccelerometer.
+On the host computer go to [this page](https://go.microsoft.com/fwlink/p?linkid=506965) and click the download button. Click **Save**, and then click **Open Folder**. Right click SpbAccelerometer Sample Driver (UMDF Version 1).zip, and choose **Extract All**. Specify or browse to a folder for the extracted files. For example, you could extract to c:\\SpbAccelerometer.
 
 ## Open the driver solution in Visual Studio
 

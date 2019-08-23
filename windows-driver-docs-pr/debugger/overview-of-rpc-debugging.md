@@ -3,7 +3,6 @@ title: Overview of RPC Debugging
 description: Overview of RPC Debugging
 ms.assetid: 21db61fe-a4a1-45d3-9026-f58aecd3a3bc
 keywords: ["RPC debugging, overview", "remote procedure call (RPC)"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -27,8 +26,6 @@ This information can then be accessed through either the debugger or the DbgRpc 
 In many cases, you can troubleshoot a problem by using the techniques outlined in [Common RPC Debugging Techniques](common-rpc-debugging-techniques.md).
 
 If you want to explore the mechanics of how this information is stored, or if you want to devise your own techniques for state information analysis, see [RPC State Information Internals](rpc-state-information-internals.md).
-
-These tools and techniques do not work on Windows 2000.
 
  
 

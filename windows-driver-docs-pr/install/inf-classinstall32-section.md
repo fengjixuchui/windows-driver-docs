@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 
 A **ClassInstall32** section installs a new [device setup class](device-setup-classes.md) (and possibly a class installer) for devices in the new class.
 
-```cpp
+```ini
 [ClassInstall32] | 
 [ClassInstall32.nt] | 
 [ClassInstall32.ntx86] |
@@ -118,13 +118,13 @@ For more information, see [**INF UpdateIniFields Directive**](inf-updateinifield
 Remarks
 -------
 
-You should include a **ClassInstall32** section in a device INF file only to install a new custom device setup class. INF files for devices in an installed class, whether a [system-supplied device setup class](https://msdn.microsoft.com/library/windows/hardware/ff553419) or a custom class, should not include a **ClassInstall32** section. Because the system processes a **ClassInstall32** section only if a class is not already installed, you cannot use a **ClassInstall32** section to reinstall or change the settings for a class that is already installed. In particular, you cannot use a **ClassInstall32** section to add a class co-installer or a class filter driver for a class that is already installed. For information about how to install co-installers and filter drivers, see [Writing a Co-installer](writing-a-co-installer.md) and [Installing a Filter Driver](installing-a-filter-driver.md).
+You should include a **ClassInstall32** section in a device INF file only to install a new custom device setup class. INF files for devices in an installed class, whether a [system-supplied device setup class](https://docs.microsoft.com/previous-versions/ff553419(v=vs.85)) or a custom class, should not include a **ClassInstall32** section. Because the system processes a **ClassInstall32** section only if a class is not already installed, you cannot use a **ClassInstall32** section to reinstall or change the settings for a class that is already installed. In particular, you cannot use a **ClassInstall32** section to add a class co-installer or a class filter driver for a class that is already installed. For information about how to install co-installers and filter drivers, see [Writing a Co-installer](writing-a-co-installer.md) and [Installing a Filter Driver](installing-a-filter-driver.md).
 
 Usually, a **ClassInstall32** section has one or more **AddReg** directives to add entries under a system-provided *SetupClassGUID* subkey in the registry. These entries can include a class-specific "friendly name," class installer path, class icon, property page provider, and so forth.
 
 Except for **AddReg** and **CopyFiles**, the other directives shown here are rarely used in a **ClassInstall32** section.
 
-To support a multiplatform distribution of driver files, construct platform-specific **ClassInstall32** sections. For example, all system SetupAPI functions that process a **ClassInstall32** section will search first for a **ClassInstall32.ntx86** section on an x86 platform and only examine an undecorated **ClassInstall32** section if they cannot find a **ClassInstall32.ntx86** section. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+To support a multiplatform distribution of driver files, construct platform-specific **ClassInstall32** sections. For example, all system SetupAPI functions that process a **ClassInstall32** section will search first for a **ClassInstall32.ntx86** section on an x86 platform and only examine an undecorated **ClassInstall32** section if they cannot find a **ClassInstall32.ntx86** section. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 **Note**  The **ClassInstall32** section name is also used for installations on 64-bit platforms.
 
@@ -138,7 +138,7 @@ Under this *SetupClassGUID* subkey, such an INF also provides registry informati
 
 Such a class-specific add-registry section has the following general form:
 
-```cpp
+```ini
 [SetupClassAddReg]
  
 HKR,,,,%DevClassName% ; device-class friendly name 
@@ -171,7 +171,7 @@ Examples
 
 This example shows the **ClassInstall32** section, along with the named section it references with the [**AddReg directive**](inf-addreg-directive.md), of the INF for the system display class installer.
 
-```cpp
+```ini
 [ClassInstall32] 
 AddReg=display_class_addreg
 
@@ -183,7 +183,7 @@ HKR,,Icon,,"-1"
 
 By contrast, this example shows the add-registry section referenced in the system CD-ROM INF's **ClassInstall32** section. It sets up a class-specific property-page provider for the CD-ROM devices/drivers that it installs. This INF also sets the **SilentInstall** and **NoInstallClass** value entries in the CD-ROM class key to **TRUE** (**1**).
 
-```cpp
+```ini
 [cdrom_class_addreg]
 HKR,,,,%CDClassName%
 HKR,,EnumPropPages32,,"SysSetup.Dll,CdromPropPageProvider"
@@ -217,7 +217,7 @@ HKR,,Icon,,"101"
 
 [**RenFiles**](inf-renfiles-directive.md)
 
-[**SetupDiBuildClassInfoListEx**](https://msdn.microsoft.com/library/windows/hardware/ff550911)
+[**SetupDiBuildClassInfoListEx**](https://docs.microsoft.com/windows/desktop/api/setupapi/nf-setupapi-setupdibuildclassinfolistexa)
 
 [**UpdateIniFields**](inf-updateinifields-directive.md)
 

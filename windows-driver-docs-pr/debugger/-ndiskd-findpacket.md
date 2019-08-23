@@ -3,7 +3,6 @@ title: ndiskd.findpacket
 description: Warning  This extension is for legacy NDIS 5.x drivers. The NDIS_PACKET structure and its associated architecture have been deprecated. The ndiskd.findpacket extension finds the specified packets.
 ms.assetid: fc07b2d8-85ca-4be1-ae9d-40b7c7f81b08
 keywords: ["ndiskd.findpacket Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -17,7 +16,7 @@ ms.localizationpriority: medium
 # !ndiskd.findpacket
 
 
-**Warning**  This extension is for legacy NDIS 5.x drivers. The [NDIS\_PACKET](https://msdn.microsoft.com/library/windows/hardware/ff557086) structure and its associated architecture have been deprecated.
+**Warning**  This extension is for legacy NDIS 5.x drivers. The [NDIS\_PACKET](https://docs.microsoft.com/previous-versions/windows/hardware/network/ff557086(v=vs.85)) structure and its associated architecture have been deprecated.
 
  
 
@@ -42,12 +41,7 @@ Ndiskd.dll
 
 ## <span id="see_also"></span>See also
 
-
-[Windows 2000 and Windows XP Networking Design Guide](https://msdn.microsoft.com/library/windows/hardware/ff565849)
-
-[Windows 2000 and Windows XP Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff565850)
-
-[NDIS\_PACKET](https://msdn.microsoft.com/library/windows/hardware/ff557086)
+[NDIS\_PACKET](https://docs.microsoft.com/previous-versions/windows/hardware/network/ff557086(v=vs.85))
 
  
 

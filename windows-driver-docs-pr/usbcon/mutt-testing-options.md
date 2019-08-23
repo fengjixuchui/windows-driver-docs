@@ -30,7 +30,7 @@ The instructions in this document are based on the following assumptions:
 
 1.  Connect the test system to a kernel debugger.
 
-    For more information, see [Download and Install Debugging Tools for Windows](http://go.microsoft.com/fwlink/p/?linkid=236405) and [Windows Debugging](http://go.microsoft.com/fwlink/p/?linkid=242503).
+    For more information, see [Download and Install Debugging Tools for Windows](https://go.microsoft.com/fwlink/p/?linkid=236405) and [Windows Debugging](https://go.microsoft.com/fwlink/p/?linkid=242503).
 
 2.  Attach MUTT devices into each available port of the host controller or hub to test.
 
@@ -64,7 +64,7 @@ The instructions in this document are based on the following assumptions:
 Go to https://aka.ms/usbtrace for instructions and to download a script for capturing ETW traces from the USB drivers.
 
 ## Related topics
-[USB](https://msdn.microsoft.com/library/windows/hardware/ff538930)  
+[USB](https://docs.microsoft.com/windows-hardware/drivers/)  
 [Microsoft USB Test Tool (MUTT) devices](microsoft-usb-test-tool--mutt--devices.md)  
 
 

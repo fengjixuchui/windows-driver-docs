@@ -3,7 +3,6 @@ title: reg
 description: The reg extension displays and searches through registry data.
 ms.assetid: 97944c84-da2e-4859-bf99-75d05413314d
 keywords: ["reg Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -87,7 +86,7 @@ Displays the security cache for a hive. *HiveAddress* specifies the address of t
 <span id="_______hashindex_______HiveAddress_HashKey______"></span><span id="_______hashindex_______hiveaddress_hashkey______"></span><span id="_______HASHINDEX_______HIVEADDRESS_HASHKEY______"></span> **hashindex** **** \[*HiveAddress*\] **** *HashKey*   
 Computes the hash index entry for a hash key. *HiveAddress* specifies the address of the hive. *HashKey* specifies the key.
 
-**Note**  *HiveAddress* is required if the target computer is running Windows 7 or later.
+**Note** *HiveAddress* is required if the target computer is running Windows 7 or later.
 
 
 
@@ -148,7 +147,7 @@ Kdexts.dll
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about the registry and its components, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about the registry and its components, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

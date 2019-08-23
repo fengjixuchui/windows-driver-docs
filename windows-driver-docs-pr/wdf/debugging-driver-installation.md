@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 The framework's co-installer creates debugging messages. You can see these messages in a debugger if you are running a checked build of Windows.
 
-Additionally, the co-installer writes its debugging messages to the [Setup action log](https://msdn.microsoft.com/library/windows/hardware/ff550900) (*%windir%\\setupact.log*) file. The Setup action log contains the version of the co-installer and the driver specified in the driver's INF file. You should verify that these are as expected.
+Additionally, the co-installer writes its debugging messages to the [Setup action log](https://docs.microsoft.com/windows-hardware/drivers/install/setupapi-text-logs) (*%windir%\\setupact.log*) file. The Setup action log contains the version of the co-installer and the driver specified in the driver's INF file. You should verify that these are as expected.
 
 ## Examining KMDF Installation
 
@@ -45,7 +45,7 @@ WdfCoInstaller: DIF_INSTALLDEVICE: Coinstaller version: 1.9.7100
 WdfCoInstaller: DIF_INSTALLDEVICE: KMDF in-memory version: 1.7.6000
 WdfCoInstaller: DIF_INSTALLDEVICE: KMDF on-disk version: 1.7.6000
 WdfCoInstaller: Service Wdf01000 is running
-WdfCoInstaller: DIF_INSTALLDEVICE: Reboot is required, because the in-memory KMDF version is older than the coinstaller&#39;s version.
+WdfCoInstaller: DIF_INSTALLDEVICE: Reboot is required, because the in-memory KMDF version is older than the coinstaller's version.
 WdfCoInstaller: DIF_INSTALLDEVICE: Update is required, because the on-disk KMDF version is older than the coinstaller
 WdfCoInstaller: VerifyMSRoot: exit: error(0) The operation completed successfully.
 WdfCoInstaller: Invoking "D:\Windows\system32\wusa.exe "D:\Windows\Temp\WdfTemp\Microsoft Kernel-Mode Driver Framework Install-v1.9-Vista.msu" /quiet /norestart".

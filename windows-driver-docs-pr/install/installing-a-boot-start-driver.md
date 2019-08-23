@@ -22,7 +22,7 @@ ms.localizationpriority: medium
 
 
 
-A [*boot-start driver*](https://msdn.microsoft.com/library/windows/hardware/ff556272#wdkgloss-boot-start-driver) is a driver for a device that must be installed to start the Microsoft Windows operating system. Most boot-start drivers are included "in-the-box" with Windows, and Windows automatically installs these boot-start drivers during the text-mode setup phase of Windows installation. If a boot-start driver for a device is not included "in-the-box" with Windows, a user can install an additional vendor-supplied boot-start driver for the device during text-mode setup.
+A *boot-start driver* is a driver for a device that must be installed to start the Microsoft Windows operating system. Most boot-start drivers are included "in-the-box" with Windows, and Windows automatically installs these boot-start drivers during the text-mode setup phase of Windows installation. If a boot-start driver for a device is not included "in-the-box" with Windows, a user can install an additional vendor-supplied boot-start driver for the device during text-mode setup.
 
 To install a device that is required to start Windows, but whose driver is not included with the operating system, a user must do the following:
 
@@ -69,7 +69,7 @@ When Windows fails to start, certain error messages that are displayed can indic
 
 ### <a href="" id="boot-start-driver-distribution-disk"></a> Boot-Start Driver Distribution Disk
 
-A *boot-start driver distribution disk* is a medium, such as a floppy disk or USB flash drive, that contains a *TxtSetup.oem* file and the related driver files. The *TxtSetup.oem* file is a text file that contains a list of hardware components, a list of files on the distribution disk that will be copied to the system, and a list of registry keys and values that will be created. A sample *TxtSetup.oem* file is provided with the Windows Driver Kit (WDK), under the \\src directory of the WDK. For details about the contents of a *TxtSetup.oem* file, see [TxtSetup.oem File Format](https://msdn.microsoft.com/library/windows/hardware/ff553509).
+A *boot-start driver distribution disk* is a medium, such as a floppy disk or USB flash drive, that contains a *TxtSetup.oem* file and the related driver files. The *TxtSetup.oem* file is a text file that contains a list of hardware components, a list of files on the distribution disk that will be copied to the system, and a list of registry keys and values that will be created. A sample *TxtSetup.oem* file is provided with the Windows Driver Kit (WDK), under the \\src directory of the WDK. For details about the contents of a *TxtSetup.oem* file, see [TxtSetup.oem File Format](https://docs.microsoft.com/previous-versions/ff553509(v=vs.85)).
 
 The following requirements and recommendations apply to platform-specific and cross-platform distributions disks:
 

@@ -3,7 +3,6 @@ title: Activating a Repeater
 description: To activate the repeater connection, you will usually first start the server, then start the repeater, then start the client.It is also possible to start the repeater first and then the server.
 ms.assetid: a2409b3d-48eb-46eb-8a53-7c4d505bb6ea
 keywords: ["Activating a Repeater Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -133,7 +132,7 @@ Prevents the server from appearing when another debugger displays all active ser
 Requires a client to supply the specified password in order to connect to the debugging session. *Password* can be any alphanumeric string.
 
 <span id="IcfEnable"></span><span id="icfenable"></span><span id="ICFENABLE"></span>**IcfEnable**  
-(Windows XP and later versions only) Causes the debugger to enable the necessary port connections for TCP or named pipe communication when the Internet Connection Firewall is active. By default, the Internet Connection Firewall disables the ports used by these protocols. When **IcfEnable** is used with a TCP connection, the debugger causes Windows to open the port specified by the *Socket* parameter. When **IcfEnable** is used with a named pipe connection, the debugger causes Windows to open the ports used for named pipes (ports 139 and 445). The debugger does not close these ports after the connection terminates.
+Causes the debugger to enable the necessary port connections for TCP or named pipe communication when the Internet Connection Firewall is active. By default, the Internet Connection Firewall disables the ports used by these protocols. When **IcfEnable** is used with a TCP connection, the debugger causes Windows to open the port specified by the *Socket* parameter. When **IcfEnable** is used with a named pipe connection, the debugger causes Windows to open the ports used for named pipes (ports 139 and 445). The debugger does not close these ports after the connection terminates.
 
 ### <span id="step_three__starting_the_client"></span><span id="STEP_THREE__STARTING_THE_CLIENT"></span>Step Three: Starting the Client
 

@@ -3,7 +3,6 @@ title: ndiskd.rcvqueue
 description: The ndiskd.rcvqueue command displays information about a receive queue.
 ms.assetid: 776A459F-A698-4BF6-8DAD-BEB15858AD7F
 keywords: ["ndiskd.rcvqueue Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -107,9 +106,9 @@ RECEIVE QUEUE
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

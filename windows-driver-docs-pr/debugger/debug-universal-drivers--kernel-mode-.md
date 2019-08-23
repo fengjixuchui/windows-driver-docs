@@ -3,8 +3,7 @@ title: Debug Drivers - Step-by-Step Lab (Sysvad Kernel Mode)
 description: This lab provides hands-on exercises that demonstrate how to debug the Sysvad audio kernel-mode device driver.
 ms.assetid: 4A31451C-FC7E-4C5F-B4EB-FBBAC8DADF9E
 keywords: ["debug lab", "step-by-step", "SYSVAD"]
-ms.author: domars
-ms.date: 10/12/2018
+ms.date: 02/21/2019
 ms.localizationpriority: medium
 ---
 
@@ -32,7 +31,7 @@ You will need the following software to be able to complete the lab.
 -   Windows Driver Kit (WDK) for Windows 10
 -   The sample Sysvad audio driver for Windows 10
 
-For information on downloading and installing the WDK, see [Download the Windows Driver Kit (WDK)](https://developer.microsoft.com/windows/hardware/windows-driver-kit).
+For information on downloading and installing the WDK, see [Download the Windows Driver Kit (WDK)](https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk).
 
 ## <span id="sysvad_debugging_walkthrough_overview"></span>Sysvad debugging walkthrough
 
@@ -72,7 +71,7 @@ This lab uses two computers. WinDbg runs on the *host* system and the Sysvad dri
 
 ![two pcs connected with a double arrow](images/debuglab-image-targethostdrawing1.png)
 
-To work with kernel-mode applications and use WinDbg, we recommend that you use the KDNET over Ethernet transport. For information about how to use the Ethernet transport protocol, see [Getting Started with WinDbg (Kernel-Mode)](getting-started-with-windbg--kernel-mode-.md). For more information about setting up the target computer, see [Preparing a Computer for Manual Driver Deployment](https://msdn.microsoft.com/windows-drivers/develop/preparing_a_computer_for_manual_driver_deployment) and [Setting Up KDNET Network Kernel Debugging Automatically](setting-up-a-network-debugging-connection-automatically.md).
+To work with kernel-mode applications and use WinDbg, we recommend that you use the KDNET over Ethernet transport. For information about how to use the Ethernet transport protocol, see [Getting Started with WinDbg (Kernel-Mode)](getting-started-with-windbg--kernel-mode-.md). For more information about setting up the target computer, see [Preparing a Computer for Manual Driver Deployment](https://docs.microsoft.com/windows-hardware/drivers) and [Setting Up KDNET Network Kernel Debugging Automatically](setting-up-a-network-debugging-connection-automatically.md).
 
 ### <span id="configure__kernel_mode_debugging_using_ethernet"></span>Configure kernel–mode debugging using ethernet
 
@@ -161,6 +160,7 @@ Key=2steg4fzbj2sz.23418vzkd4ko3.1g34ou07z4pev.1sp3yo9yz874p
 > [!IMPORTANT]
 > Before using BCDEdit to change boot information you may need to temporarily suspend Windows security features such as BitLocker and Secure Boot on the test PC.
 > Re-enable these security features when testing is complete and appropriately manage the test PC, when the security features are disabled.
+>
 
 5. Type this command to confirm that the dbgsettings are set properly.
 
@@ -321,13 +321,13 @@ To download and build the Sysvad sample audio driver, perform the following step
 
     In Visual Studio, click **File** &gt; **Open** &gt; **Project/Solution...** and navigate to the folder that contains the extracted files (for example, *C:\\WDK\_Samples\\Sysvad*). Double-click the *Syvad* solution file.
 
-    In Visual Studio locate the Solution Explorer. (If this is not already open, choose **Solution Explorer** from the **View** menu.) In Solution Explorer, you can see one solution that has four (4) projects. Note that the project titled SwapAPO is actually a folder that contains two projects - APO and PropPageExtensions.
-
+    In Visual Studio locate the Solution Explorer. (If this is not already open, choose **Solution Explorer** from the **View** menu.) In Solution Explorer, you can see one solution that has a number of projects and what is included in the sample changes from time to time. 
+        
     ![visual studio with the device.c file loaded from the sysvad project](images/sysvad-lab-visual-studio-solution.png)
 
 3.  **Set the sample's configuration and platform**
 
-    In Solution Explorer, right-click **Solution 'sysvad' (6 projects)**, and choose **Configuration Manager**. Make sure that the configuration and platform settings are the same for the four projects. By default, the configuration is set to "Win10 Debug", and the platform is set to "Win64" for all the projects. If you make any configuration and/or platform changes for one project, you must make the same changes for the remaining three projects.
+    In Solution Explorer, right-click **Solution 'sysvad' (7 projects)**, and choose **Configuration Manager**. Make sure that the configuration and platform settings are the same for the four projects. By default, the configuration is set to "Win10 Debug", and the platform is set to "Win64" for all the projects. If you make any configuration and/or platform changes for one project, you must make the same changes for the remaining three projects.
 
     **Note**  This lab assumes that 64 bit Windows is being used. If you are using 32 bit Windows, build the driver for 32 bit.
 
@@ -349,7 +349,7 @@ To download and build the Sysvad sample audio driver, perform the following step
 
     Navigate to the folder that contains the built files for the TabletAudioSample driver:
 
-    *C:\\WDK\_Samples\\Sysvad\\TabletAudioSample\\x64\\Debug*. The folder will contain the TabletAudioSample .SYS driver, symbol pdp file and the inf file. You will also need to locate the SwapAPO, PropPageExt and KeywordDetectorContosoAdapter dlls and symbol files.
+    *C:\\WDK\_Samples\\Sysvad\\TabletAudioSample\\x64\\Debug*. The folder will contain the TabletAudioSample .SYS driver, symbol pdp file and the inf file. You will also need to locate the SwapAPO, and KeywordDetectorContosoAdapter dlls and symbol files.
 
     To install the driver, you will need the following files.
 
@@ -362,8 +362,6 @@ To download and build the Sysvad sample audio driver, perform the following step
     | KeywordDetectorContosoAdapter.pdb | The sample keyword detector symbol file.                                          |
     | lSwapAPO.dll                      | A sample driver extension for a UI to manage APOs.                                |
     | lSwapAPO.pdb                      | The APO UI symbol file.                                                           |
-    | PropPageExt.dll                   | A sample driver extension for a property page.                                    |
-    | PropPageExt.pdb                   | The property page symbol file.                                                    |
     | TabletAudioSample.cer             | The TabletAudioSample certificate file.                                           |
 
      
@@ -423,15 +421,17 @@ To install the driver on the target system, perform the following steps.
 
     ![windows security warning - windows can't verify the publisher](images/debuglab-image-install-security-warning.png)
 
-    [!TIP] If you have any issues with the installation, check the following file for more information.
-    `%windir%\\inf\\setupapi.dev.log`
- 
+    >[!TIP]
+    > If you have any issues with the installation, check the following file for more information.
+    `%windir%\inf\setupapi.dev.log`
+    >
+     
     For more detailed instructions, see [Configuring a Computer for Driver Deployment, Testing, and Debugging](https://docs.microsoft.com/windows-hardware/drivers/gettingstarted/provision-a-target-computer-wdk-8-1).
 
     The INF file contains the hardware ID for installing the *tabletaudiosample.sys*. For the Syvad sample, the hardware ID is:
-    `root\\sysvad\_TabletAudioSample`
+    `root\sysvad_TabletAudioSample`
 
-    On the target computer, open a Command Prompt window as Administrator. Navigate to your driver package folder, and enter the following command: `devcon status root\\sysvad\_TabletAudioSample`
+    On the target computer, open a Command Prompt window as Administrator. Navigate to your driver package folder, and enter the following command: `devcon status root\sysvad_TabletAudioSample`
        
     Status information is displayed durring the devcon install.
 
@@ -634,7 +634,7 @@ For more information about the device node debug extension, see [**!devnode**](-
 
    ![find dialog box showing the term sysvad being searched for](images/sysvad-lab-audio-find-dialog.png)
 
-   A device node entry with a name of sysvad\_TabletAudioSample will be present in the !devnode output for Syvad.
+   A device node entry with a name of `sysvad_TabletAudioSample` will be present in the !devnode output for Syvad.
 
    ```dbgcmd
      DevNode 0xffffe00086e68190 for PDO 0xffffe00089c575a0
@@ -646,7 +646,7 @@ For more information about the device node debug extension, see [**!devnode**](-
 
    Note that the PDO address and the DevNode address are displayed.
 
-3. Use the **!devnode 0 1 sysvad\_TabletAudioSample** command to display Plug and Play information associated with our Sysvad device driver.
+3. Use the `!devnode 0 1 sysvad_TabletAudioSample` command to display Plug and Play information associated with our Sysvad device driver.
 
    ```dbgcmd 
    0: kd> !devnode 0 1 sysvad_TabletAudioSample
@@ -704,7 +704,7 @@ For more information about the device node debug extension, see [**!devnode**](-
    Device queue is not busy.
    ```
 
-5. The output displayed in the **!devobj** command includes the name of the attached device: *\\Driver\\sysvad\_tabletaudiosample*. Use the **!drvobj** command with a bit mask of 2, to display information associated with the attached device.
+5. The output displayed in the **!devobj** command includes the name of the attached device: \\Driver\\sysvad\_tabletaudiosample. Use the **!drvobj** command with a bit mask of 2, to display information associated with the attached device.
 
    ```dbgcmd 
    0: kd> !drvobj \Driver\sysvad_tabletaudiosample 2
@@ -765,7 +765,7 @@ This diagram shows a more complex device node tree.
 
 ![device node tree with about 20 nodes](images/debuglab-image-device-node-tree.png)
 
-**Note**  For more information about more complex driver stacks, see [Driver stacks](https://msdn.microsoft.com/library/windows/hardware/hh439632) and [Device nodes and device stacks](https://msdn.microsoft.com/library/windows/hardware/ff554721).
+**Note**  For more information about more complex driver stacks, see [Driver stacks](https://docs.microsoft.com/windows-hardware/drivers/gettingstarted/driver-stacks) and [Device nodes and device stacks](https://docs.microsoft.com/windows-hardware/drivers/gettingstarted/device-nodes-and-device-stacks).
 
  
 

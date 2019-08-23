@@ -48,7 +48,7 @@ If projected textures are being used, the D3DTTFF\_PROJECTED flag is set to indi
 
 ### <span id="ddk_fvf_vertex_data_components_gg"></span><span id="DDK_FVF_VERTEX_DATA_COMPONENTS_GG"></span>FVF Vertex Data Components
 
-The driver determines which components are present by analyzing the flags specified in the **dwVertexType** member of the [**D3DHAL\_DRAWPRIMITIVES2DATA**](https://msdn.microsoft.com/library/windows/hardware/ff545957) structure. The following table indicates the bitfields that can be set in **dwVertexType** and the components that they identify:
+The driver determines which components are present by analyzing the flags specified in the **dwVertexType** member of the [**D3DHAL\_DRAWPRIMITIVES2DATA**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/d3dhal/ns-d3dhal-_d3dhal_drawprimitives2data) structure. The following table indicates the bitfields that can be set in **dwVertexType** and the components that they identify:
 
 <table>
 <colgroup>
@@ -149,15 +149,5 @@ FVF data is always tightly packed; that is, no memory is wasted on components th
 
 In the preceding figure it is assumed that there are only two texture coordinates. The vertex data supplied to the driver is always transformed and lit. The driver never receives normals. All data in the FVF texture coordinate sets are single precision IEEE floats. For implementation details, see the *Perm3* sample driver. For more information about FVF, see the DirectX SDK documentation.
 
-**Note**   The Microsoft Windows Driver Kit (WDK) does not contain the 3Dlabs Permedia3 sample display driver (*Perm3.h*). You can get this sample driver from the Windows Server 2003 SP1 Driver Development Kit (DDK), which you can download from the DDK - Windows Driver Development Kit page of the WDHC website.
-
- 
-
- 
-
- 
-
-
-
-
-
+> [!NOTE] 
+> The Microsoft Windows Driver Kit (WDK) does not contain the 3Dlabs Permedia3 sample display driver (*Perm3.h*). You can get this sample driver from the Windows Server 2003 SP1 Driver Development Kit (DDK), which you can download from the DDK - Windows Driver Development Kit page of the WDHC website.

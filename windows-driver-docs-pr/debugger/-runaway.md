@@ -3,7 +3,6 @@ title: runaway
 description: The runaway extension displays information about the time consumed by each thread.
 ms.assetid: ea318d5b-60c6-4d1c-80c7-6bc418ad01ab
 keywords: ["runaway Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -67,7 +66,7 @@ The **!runaway** extension can only be used during live debugging or when debugg
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about threads in user mode, see [Controlling Processes and Threads](controlling-processes-and-threads.md). For more information about analyzing processes and threads, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about threads in user mode, see [Controlling Processes and Threads](controlling-processes-and-threads.md). For more information about analyzing processes and threads, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

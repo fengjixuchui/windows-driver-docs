@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 # IHV Guidance for Implementing Multimode and Multicarrier Capable MB Devices
 
 
-This topic provides information about implementing support for multiple Radio Access Technologies (RAT) and multiple operators in Windows. It supplements the [USB NCM Mobile Broadband Interface Model (MBIM) V1.0 specification](http://go.microsoft.com/fwlink/p/?linkid=320791) that outlines the CIDs required for supporting the multimode multicarrier scenario.
+This topic provides information about implementing support for multiple Radio Access Technologies (RAT) and multiple operators in Windows. It supplements the [USB NCM Mobile Broadband Interface Model (MBIM) V1.0 specification](https://go.microsoft.com/fwlink/p/?linkid=320791) that outlines the CIDs required for supporting the multimode multicarrier scenario.
 
 The information in this topic applies to:
 
@@ -235,7 +235,7 @@ Set = **InformationBuffer on MBIM\_COMMAND\_MSG contains MBIM\_LOCATION\_INFO**
 
 Unsolicited Event = **Unsupported**
 
-The country code specified by the host will be based on the Geographical Location GEOID available on Windows. For more information, see [Table of Geographical Locations (Windows)](https://msdn.microsoft.com/library/windows/desktop/dd374073).
+The country code specified by the host will be based on the Geographical Location GEOID available on Windows. For more information, see [Table of Geographical Locations (Windows)](https://docs.microsoft.com/windows/desktop/Intl/table-of-geographical-locations).
 
 <table>
 <colgroup>

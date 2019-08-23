@@ -3,7 +3,6 @@ title: usb3kd.ucx_endpoint
 description: The usb3kd.ucx_endpoint command displays information about an endpoint on a USB device in the USB 3.0 tree. The display is based on data maintained by UcxVersion.sys.
 ms.assetid: 37667665-ACA1-48D3-B79E-5B9BBD689034
 keywords: ["usb3kd.ucx_endpoint Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -37,7 +36,7 @@ Usb3kd.dll
 Remarks
 -------
 
-The USB host controller extension driver (Ucx*Version*.sys) provides a layer of abstraction between the USB 3.0 hub driver and the USB 3.0 host controller driver. The extension driver has its own representation of host controllers, devices, and endpoints. The output the **!ucx\_endpoint** command is based on the data structures maintained by the extension driver. For more information about the USB host controller extension driver and the USB 3.0 host controller driver, see [USB Driver Stack Architecture](https://msdn.microsoft.com/library/windows/hardware/hh406256).
+The USB host controller extension driver (Ucx*Version*.sys) provides a layer of abstraction between the USB 3.0 hub driver and the USB 3.0 host controller driver. The extension driver has its own representation of host controllers, devices, and endpoints. The output the **!ucx\_endpoint** command is based on the data structures maintained by the extension driver. For more information about the USB host controller extension driver and the USB 3.0 host controller driver, see [USB Driver Stack Architecture](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index).
 
 Examples
 --------

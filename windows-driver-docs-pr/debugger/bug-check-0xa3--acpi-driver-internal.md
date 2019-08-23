@@ -3,7 +3,6 @@ title: Bug Check 0xA3 ACPI_DRIVER_INTERNAL
 description: The ACPI_DRIVER_INTERNAL bug check has a value of 0x000000A3. This bug check indicates that the ACPI driver detected an internal inconsistency.
 ms.assetid: 599c09a9-5c13-404e-b68f-5fa68bd801ed
 keywords: ["Bug Check 0xA3 ACPI_DRIVER_INTERNAL", "ACPI_DRIVER_INTERNAL"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The ACPI\_DRIVER\_INTERNAL bug check has a value of 0x000000A3. This bug check indicates that the ACPI driver detected an internal inconsistency.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## ACPI\_DRIVER\_INTERNAL Parameters
 

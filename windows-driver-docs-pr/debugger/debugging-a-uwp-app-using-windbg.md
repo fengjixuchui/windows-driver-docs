@@ -2,7 +2,6 @@
 title: Debugging a UWP app using WinDbg
 description: You can debug Universal Windows Platform (UWP) app using WinDbg.
 ms.assetid: 1CE337AC-54C0-4EF5-A374-3ECF1D72BA60
-ms.author: domars
 ms.date: 11/28/2017
 ms.localizationpriority: medium
 ---
@@ -10,14 +9,14 @@ ms.localizationpriority: medium
 # Debugging a UWP app using WinDbg
 
 
-You can debug Universal Windows Platform (UWP) app using WinDbg. This approach would typically be used for advanced scenarios, where it is not possible to complete the debugging task using the built in Visual Studio debugger. For more information about debugging in Visual Studio, see [Debugging in Visual Studio](https://msdn.microsoft.com/library/sc65sadd.aspx).
+You can debug Universal Windows Platform (UWP) app using WinDbg. This approach would typically be used for advanced scenarios, where it is not possible to complete the debugging task using the built in Visual Studio debugger. For more information about debugging in Visual Studio, see [Debugging in Visual Studio](https://docs.microsoft.com/visualstudio/debugger/debugging-in-visual-studio?view=vs-2015).
 
 ## <span id="Attaching_to_a_UWP_app"></span><span id="attaching_to_a_uwp_app"></span><span id="ATTACHING_TO_A_UWP_APP"></span>Attaching to a UWP app
 
 
 Attaching to UWP process is the same as attaching to a user mode process. For example, in WinDbg you can attach to a running process by choosing **Attach to a Process from the File** menu or by pressing F6. For more information, see [Debugging a User-Mode Process Using WinDbg](debugging-a-user-mode-process-using-windbg.md).
 
-A UWP app will not be suspended in the same ways that it does when not being debugged. To explicitly suspend/resume a UWP app, you can use the .suspendpackage and .resumepackage commands (details below). For general information on Process Lifecycle Management (PLM) used by UWP apps, see [App lifecycle](https://msdn.microsoft.com/library/windows/apps/mt243287) and [Launching, resuming, and background tasks](https://msdn.microsoft.com/library/windows/apps/mt227652).
+A UWP app will not be suspended in the same ways that it does when not being debugged. To explicitly suspend/resume a UWP app, you can use the .suspendpackage and .resumepackage commands (details below). For general information on Process Lifecycle Management (PLM) used by UWP apps, see [App lifecycle](https://docs.microsoft.com/windows/uwp/launch-resume/app-lifecycle) and [Launching, resuming, and background tasks](https://docs.microsoft.com/windows/uwp/launch-resume/index).
 
 ## <span id="Launching_and_debugging__a_UWP_app"></span><span id="launching_and_debugging__a_uwp_app"></span><span id="LAUNCHING_AND_DEBUGGING__A_UWP_APP"></span>Launching and debugging a UWP app
 
@@ -47,7 +46,7 @@ Since multiple apps can be contained within a single package, both &lt;PLMPackag
 <tr class="odd">
 <td align="left">&lt;ApplicationId&gt;</td>
 <td align="left"><p>The ApplicationId is located in the application manifest file and can be viewed using the .querypackage or .querypackages command as discussed in this topic.</p>
-<p>For more information about the application manifest file, see <a href="https://msdn.microsoft.com/library/windows/apps/br211474" data-raw-source="[App package manifest](https://msdn.microsoft.com/library/windows/apps/br211474)">App package manifest</a>.</p></td>
+<p>For more information about the application manifest file, see <a href="https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest" data-raw-source="[App package manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)">App package manifest</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left">[&lt;parameters&gt;]</td>
@@ -60,7 +59,7 @@ Since multiple apps can be contained within a single package, both &lt;PLMPackag
 
 **HelloWorld Sample**
 
-To demonstrate UWP debugging, this topic uses the HelloWorld example described in [Create a "Hello, world" app (XAML)](https://msdn.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
+To demonstrate UWP debugging, this topic uses the HelloWorld example described in [Create a "Hello, world" app (XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal).
 
 To create a workable test app, it is only necessary to complete up to step three of the lab.
 
@@ -77,9 +76,9 @@ Package Full Name: e24caf14-8483-4743-b80c-ca46c28c75df_1.0.0.0_x86__97ghe447vaa
 Package Display Name: HelloWorld
 Version: 1.0.0.0
 Processor Architecture: x86
-Publisher: CN=domars
-Publisher Display Name: domars
-Install Folder: c:\users\domars\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
+Publisher: CN=user1
+Publisher Display Name: user1
+Install Folder: c:\users\user1\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
 Package State: Unknown
 AppId: App
 ...
@@ -146,7 +145,7 @@ windbg.exe -plmPackage <PLMPackageName> -plmBgTaskId <BackgroundTaskId>
 <tr class="odd">
 <td align="left">&lt;BackgroundTaskId&gt;</td>
 <td align="left"><p>The BackgroundTaskId can be located using the .querypackages command as described below.</p>
-<p>For more information about the application manifest file, see <a href="https://msdn.microsoft.com/library/windows/apps/br211474" data-raw-source="[App package manifest](https://msdn.microsoft.com/library/windows/apps/br211474)">App package manifest</a>.</p></td>
+<p>For more information about the application manifest file, see <a href="https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest" data-raw-source="[App package manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)">App package manifest</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -172,7 +171,7 @@ Version: 1.0.0.0
 Processor Architecture: x86
 Publisher: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
 Publisher Display Name: Microsoft Corporation
-Install Folder: C:\Users\DOMARS\Documents\Visual Studio 2015\Projects\Background_task_sample\C++\Debug\BackgroundTask.Windows\AppX
+Install Folder: C:\Users\user1\Documents\Visual Studio 2015\Projects\Background_task_sample\C++\Debug\BackgroundTask.Windows\AppX
 Package State: Running
 AppId: BackgroundTask.App
 Background Task Name: SampleBackgroundTask
@@ -227,9 +226,9 @@ Package Full Name: e24caf14-8483-4743-b80c-ca46c28c75df_1.0.0.0_x86__97ghe447vaa
 Package Display Name: HelloWorld
 Version: 1.0.0.0
 Processor Architecture: x86
-Publisher: CN=domars
-Publisher Display Name: domars
-Install Folder: c:\users\domars\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
+Publisher: CN=user1
+Publisher Display Name: user1
+Install Folder: c:\users\user1\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
 Package State: Running
 AppId: App
 Executable: HelloWorld.exe
@@ -262,9 +261,9 @@ Package Full Name: e24caf14-8483-4743-b80c-ca46c28c75df_1.0.0.0_x86__97ghe447vaa
 Package Display Name: HelloWorld
 Version: 1.0.0.0
 Processor Architecture: x86
-Publisher: CN=domars
-Publisher Display Name: domars
-Install Folder: c:\users\domars\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
+Publisher: CN=user1
+Publisher Display Name: user1
+Install Folder: c:\users\user1\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
 Package State: Running
 AppId: App
 Executable: HelloWorld.exe
@@ -275,7 +274,7 @@ Version: 1.0.0.0
 Processor Architecture: x86
 Publisher: CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US
 Publisher Display Name: Microsoft Corporation
-Install Folder: C:\Users\DOMARS\Documents\Visual Studio 2015\Projects\Background_task_sample\C++\Debug\BackgroundTask.Windows\AppX
+Install Folder: C:\Users\user1\Documents\Visual Studio 2015\Projects\Background_task_sample\C++\Debug\BackgroundTask.Windows\AppX
 Package State: Unknown
 AppId: BackgroundTask.App
 
@@ -311,7 +310,7 @@ This table lists the parameters for .createpackageapp.
 <tr class="odd">
 <td align="left">&lt;ApplicationId&gt;</td>
 <td align="left"><p>The ApplicationId can be located using .querypackage or .querypackages as discussed earlier in this topic.</p>
-<p>For more information about the application manifest file, see <a href="https://msdn.microsoft.com/library/windows/apps/br211474" data-raw-source="[App package manifest](https://msdn.microsoft.com/library/windows/apps/br211474)">App package manifest</a>.</p></td>
+<p>For more information about the application manifest file, see <a href="https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest" data-raw-source="[App package manifest](https://docs.microsoft.com/uwp/schemas/appxpackage/appx-package-manifest)">App package manifest</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left">[&lt;parameters&gt;]</td>
@@ -437,7 +436,7 @@ Package Full Name: e24caf14-8483-4743-b80c-ca46c28c75df_1.0.0.0_x86__97ghe447vaa
 Package Display Name: HelloWorld
 Version: 1.0.0.0
 Processor Architecture: x86
-Publisher: CN=domars
+Publisher: CN=user1
 Publisher Display Name: user1
 Install Folder: c:\users\user1\documents\visual studio 2015\Projects\HelloWorld\HelloWorld\bin\x86\Release\AppX
 Package State: Unknown

@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 <em>DDInstall</em>**.HW** sections are typically used for installing multifunction devices, for installing PnP filter drivers, and for setting up any user-accessible device-specific but driver-independent information in the registry, whether with explicit [**AddReg**](inf-addreg-directive.md) directives or with **Include** and **Needs** entries.
 
-```cpp
+```ini
 [install-section-name.HW] |
 [install-section-name.nt.HW] |
 [install-section-name.ntx86.HW] |
@@ -64,7 +64,7 @@ Is valid in this section, but almost never used. An **HKR** specification in a r
 Remarks
 -------
 
-The case-insensitive extensions to the *install-section-name* shown in the formal syntax statement can be inserted into such a <em>DDInstall</em>**.HW** section name in cross-platform INF files. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+The case-insensitive extensions to the *install-section-name* shown in the formal syntax statement can be inserted into such a <em>DDInstall</em>**.HW** section name in cross-platform INF files. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 Any <em>DDInstall</em>**.HW** section must have one of the following:
 
@@ -75,14 +75,14 @@ Each directive in a <em>DDInstall</em>**.HW** section can reference more than on
 
 Each such section name must be unique within the INF file and must follow the general rules for defining section names. For more information about these rules, see [General Syntax Rules for INF Files](general-syntax-rules-for-inf-files.md).
 
-For more information about how to install multifunction devices, see [Supporting Multifunction Devices](https://msdn.microsoft.com/library/windows/hardware/ff542743).
+For more information about how to install multifunction devices, see [Supporting Multifunction Devices](https://docs.microsoft.com/windows-hardware/drivers/multifunction/index).
 
 Examples
 --------
 
 This example shows how the CD-ROM device class installer uses <em>DDInstall</em>**.HW** sections and <em>DDInstall</em>**.Services** sections to support both CD audio and changer functionality by creating the appropriate registry sections, and setting these up as PnP upper filter drivers.
 
-```cpp
+```ini
 ;;
 ;; Installation section for cdaudio. Sets cdrom as the service 
 ;; and adds cdaudio as a PnP upper filter driver. 
@@ -104,7 +104,7 @@ CopyFiles=changer_copyfiles,cdrom_copyfiles
 [changer_install.HW]
 AddReg=changer_addreg
 
-; ... changer_install.Services section similar to cdaudio&#39;s
+; ... changer_install.Services section similar to cdaudio's
 
 ; ... some similar cdrom_install(.HW)/addreg sections omitted 
 
@@ -140,7 +140,7 @@ StartType      = 1
 ErrorControl   = 1
 ServiceBinary  = %12%\cdaudio.sys
 
-; ... changer_ServiceInstallSection similar to cdaudio&#39;s
+; ... changer_ServiceInstallSection similar to cdaudio's
 ```
 
 ## See also

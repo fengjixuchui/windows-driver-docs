@@ -19,7 +19,7 @@ To import a *.pfx* file into the local Personal certificate store, do the follow
 
 The certificate and private key are now available for SignTool to use.
 
-Starting with Windows Vista, an alternative way to import the *.pfx* file into the local Personal certificate store is with the [CertUtil](http://go.microsoft.com/fwlink/p/?linkid=168888) command-line utility. The following command-line example uses CertUtil to import the *abc.pfx* file into the Personal certificate store:
+Starting with Windows Vista, an alternative way to import the *.pfx* file into the local Personal certificate store is with the [CertUtil](https://go.microsoft.com/fwlink/p/?linkid=168888) command-line utility. The following command-line example uses CertUtil to import the *abc.pfx* file into the Personal certificate store:
 
 ```cpp
 certutil -user -p pfxpassword -importPFX abc.pfx
@@ -33,7 +33,7 @@ Where:
 
 -   The **-importPFX** option specifies name of the *.pfx* file (*abc.pfx*).
 
-Once the *.pfx* file is imported into the Personal certificate store on the signing computer, you can use [**SignTool**](https://msdn.microsoft.com/library/windows/hardware/ff551778) to release-sign [driver packages](driver-packages.md).
+Once the *.pfx* file is imported into the Personal certificate store on the signing computer, you can use [**SignTool**](https://docs.microsoft.com/windows-hardware/drivers/devtest/signtool) to release-sign [driver packages](driver-packages.md).
 
  
 

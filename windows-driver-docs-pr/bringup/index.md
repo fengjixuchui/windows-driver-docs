@@ -2,7 +2,6 @@
 title: Bring up
 description: This section of the partner documentation is designed for hardware engineers and developers who need to understand how to get started with bringing up hardware on Windows 10.
 ms.assetid: 019ABD43-601C-4C1B-A0D9-30A3A402650C
-ms.author: windowsdriverdev
 ms.date: 05/07/2018
 ms.topic: article
 ms.prod: windows-hardware
@@ -41,7 +40,7 @@ This section of the partner documentation is designed for hardware engineers and
 </tr>
 <tr>
 <td><p><a href="windows-acpi-design-guide-for-soc-platforms.md" data-raw-source="[Windows ACPI design guide for SoC platforms](windows-acpi-design-guide-for-soc-platforms.md)">Windows ACPI design guide for SoC platforms</a></p></td>
-<td><p>The Advanced Configuration and Power Interface Specification, Revision 5.0 (<a href="https://www.uefi.org/specifications" data-raw-source="[ACPI 5.0 specification](https://www.uefi.org/specifications)">ACPI 5.0 specification</a>), defines a new set of features to support low-power, mobile devices that are based on System on a Chip (SoC) integrated circuits and that implement the connected standby power model. Starting with Windows 8 and Windows 8.1, and Windows Server 2012 and 2012 R2, Windows supports the new ACPI 5.0 features for SoC-based platforms.</p></td>
+<td><p>The Advanced Configuration and Power Interface Specification, Revision 5.0 (<a href="https://uefi.org/specifications" data-raw-source="[ACPI 5.0 specification](https://uefi.org/specifications)">ACPI 5.0 specification</a>), defines a new set of features to support low-power, mobile devices that are based on System on a Chip (SoC) integrated circuits and that implement the connected standby power model. Starting with Windows 8 and Windows 8.1, and Windows Server 2012 and 2012 R2, Windows supports the new ACPI 5.0 features for SoC-based platforms.</p></td>
 </tr>
 <tr>
 <td><p><a href="security-overview.md" data-raw-source="[Security](security-overview.md)">Security</a></p></td>

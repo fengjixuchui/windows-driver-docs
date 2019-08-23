@@ -19,7 +19,7 @@ You define a new GUID for an item the driver exports to other system components,
 
     Choose a name that represents the purpose of the GUID. For example, the operating system uses such names as GUID\_BUS\_TYPE\_PCI and PARPORT\_WMI\_ALLOCATE\_FREE\_COUNTS\_GUID.
 
-2.  Generate a value for the GUID using Uuidgen.exe or Guidgen.exe. When you install the Microsoft Windows SDK, Uuidgen.exe is automatically installed. Guidgen.exe is available from the [Microsoft Exchange Server GUID Generator](http://go.microsoft.com/fwlink/p/?linkid=121586) download page.
+2.  Generate a value for the GUID using Uuidgen.exe or Guidgen.exe. When you install the Microsoft Windows SDK, Uuidgen.exe is automatically installed. Guidgen.exe is available from the [Microsoft Exchange Server GUID Generator](https://go.microsoft.com/fwlink/p/?linkid=121586) download page.
 
     These utilities generate a unique, formatted string that represents a 128-bit value. The "-s" switch on Uuidgen.exe outputs the GUID formatted as a C structure.
 
@@ -73,7 +73,7 @@ You define a new GUID for an item the driver exports to other system components,
 
     Putting a GUID definition outside statements that prevent multiple inclusion does not cause multiple instances of the GUID in a driver because **DEFINE\_GUID** defines the GUID as an EXTERN\_C variable. Multiple declarations of an EXTERN variable are allowed as long as the types match.
 
-4.  When creating a GUID for a new [device setup class](https://msdn.microsoft.com/library/windows/hardware/ff541509) or [device interface class](https://msdn.microsoft.com/library/windows/hardware/ff541339), the following rules apply:
+4.  When creating a GUID for a new [device setup class](https://docs.microsoft.com/windows-hardware/drivers/install/device-setup-classes) or [device interface class](https://docs.microsoft.com/windows-hardware/drivers/install/device-interface-classes), the following rules apply:
     -   Do not use a single GUID to identify both a device setup class and a device interface class.
 
     -   When creating a symbolic name to associate with the GUID, use the following convention:

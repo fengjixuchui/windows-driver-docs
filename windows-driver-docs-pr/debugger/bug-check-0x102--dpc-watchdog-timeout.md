@@ -3,7 +3,6 @@ title: Bug Check 0x102 DPC_WATCHDOG_TIMEOUT
 description: The DPC_WATCHDOG_TIMEOUT bug check has a value of 0x00000102. This indicates that The DPC watchdog routine was not executed within the allocated time interval.
 ms.assetid: 1BEC2701-3127-4FB9-AD0F-DD54A9F2C2C3
 keywords: ["Bug Check 0x102 DPC_WATCHDOG_TIMEOUT", "DPC_WATCHDOG_TIMEOUT"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The DPC\_WATCHDOG\_TIMEOUT bug check has a value of 0x00000102. This indicates that The DPC watchdog routine was not executed within the allocated time interval.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## DPC\_WATCHDOG\_TIMEOUT Parameters
 

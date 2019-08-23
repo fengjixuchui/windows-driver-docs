@@ -62,7 +62,7 @@ Requirements
 <tbody>
 <tr class="odd">
 <td align="left"><p>Target platform</p></td>
-<td align="left"><a href="http://go.microsoft.com/fwlink/p/?linkid=531356" data-raw-source="[Universal](http://go.microsoft.com/fwlink/p/?linkid=531356)">Universal</a></td>
+<td align="left"><a href="https://go.microsoft.com/fwlink/p/?linkid=531356" data-raw-source="[Universal](https://go.microsoft.com/fwlink/p/?linkid=531356)">Universal</a></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Version</p></td>
@@ -88,7 +88,7 @@ Requirements
 
 [**CcInitializeCacheMap**](https://msdn.microsoft.com/library/windows/hardware/ff539135)
 
-[**CcReadAhead**](https://msdn.microsoft.com/library/windows/hardware/ff539191)
+[**CcReadAhead**](https://docs.microsoft.com/previous-versions/ff539191(v=vs.85))
 
 [**CcScheduleReadAhead**](https://msdn.microsoft.com/library/windows/hardware/ff539200)
 

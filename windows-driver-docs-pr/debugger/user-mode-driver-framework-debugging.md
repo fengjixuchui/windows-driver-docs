@@ -3,7 +3,6 @@ title: User-Mode Driver Framework Debugging
 description: User-Mode Driver Framework Debugging
 ms.assetid: f59a420e-57d3-4ae0-84e3-58ec6e088b63
 keywords: ["User-Mode Driver Framework debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -19,7 +18,7 @@ User-Mode Driver Framework (UMDF) debugging extensions are implemented in the ex
 
 For a complete description of the extension commands in Wudfext.dll, see [User-Mode Driver Framework Extensions (Wudfext.dll)](user-mode-driver-framework-extensions--wudfext-dll-.md).
 
-These extensions can be used on Microsoft Windows XP and later operating systems. Some extensions have additional restrictions on the Windows version or UMDF version that is required; these restrictions are noted on the individual reference pages.
+Some extensions have additional restrictions on the Windows version or UMDF version that is required; these restrictions are noted on the individual reference pages.
 
 **Note**  When you create a new KMDF or UMDF driver, you must select a driver name that has 32 characters or less. This length limit is defined in wdfglobals.h. If your driver name exceeds the maximum length, your driver will fail to load.
 

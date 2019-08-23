@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 
 This optional section registers one or more device-specific co-installers supplied on the distribution media to supplement the operations of existing device class installers.
 
-```cpp
+```ini
 [install-section-name.CoInstallers] |
 [install-section-name.nt.CoInstallers] | 
 [install-section-name.ntx86.CoInstallers] | 
@@ -113,7 +113,7 @@ Remarks
 
 The specified *DDInstall* section must be referenced in a device/models-specific entry under the per-manufacturer *Models* section of the INF file.
 
-If an INF includes a <em>DDInstall</em>**.Coinstallers** section, there must be one for each platform-decorated and undecorated *DDInstall* section. For example, if an INF contains an **\[**<em>install-section-name</em>**.ntx86\]** section and an **\[**<em>install-section-name</em>**\]** section and it registers device-specific co-installers, then the INF must include both an **\[**<em>install-section-name</em>**.ntx86.Coinstallers\]** section and an **\[**<em>install-section-name</em>**.Coinstallers\]** section. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+If an INF includes a <em>DDInstall</em>**.Coinstallers** section, there must be one for each platform-decorated and undecorated *DDInstall* section. For example, if an INF contains an **\[**<em>install-section-name</em>**.ntx86\]** section and an **\[**<em>install-section-name</em>**\]** section and it registers device-specific co-installers, then the INF must include both an **\[**<em>install-section-name</em>**.ntx86.Coinstallers\]** section and an **\[**<em>install-section-name</em>**.Coinstallers\]** section. For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 Each directive in a <em>DDInstall</em>**.CoInstallers** section can reference more than one INF-writer-defined section name. However, each additional named section must be separated from the next with a comma (,).
 
@@ -131,7 +131,7 @@ All co-installer files must be copied into the *%SystemRoot%\\system32* director
 
 Registering one or more device-specific co-installers requires adding a [REG_MULTI_SZ](https://docs.microsoft.com/windows/desktop/SysInfo/registry-value-types)-typed value entry to the registry. Specify an *add-registry-section* referenced by the [**AddReg**](inf-addreg-directive.md) directive, by using the following general form:
 
-```cpp
+```ini
 [DDInstall.CoInstallers_DeviceAddReg]
  
 HKR,,CoInstallers32,0x00010000,"DevSpecificCoInstall.dll
@@ -149,7 +149,7 @@ For more information, see [Registering a Device-Specific Co-installer](registeri
 
 To add a value entry (and setup-class subkey, if it does not exist already) for one or more device-class co-installers to the registry, an *add-registry-section* referenced by the [**AddReg**](inf-addreg-directive.md) directive has the following general form:
 
-```cpp
+```ini
 [DDInstall.CoInstallers_ClassAddReg]
  
 HKLM,System\CurrentControlSet\Control
@@ -166,14 +166,14 @@ Such a supplemental device-class co-installer must not replace any already regis
 
  
 
-The INF for a supplemental device-class co-installer can be activated by a right-click install or through a call to [**SetupInstallFromInfSection**](https://msdn.microsoft.com/library/windows/desktop/aa377401) made by a [*device installation application*](https://msdn.microsoft.com/library/windows/hardware/ff556277#wdkgloss-device-installation-application).
+The INF for a supplemental device-class co-installer can be activated by a right-click install or through a call to **SetupInstallFromInfSection**.
 
 Examples
 --------
 
 This example shows the *DDInstall*.**CoInstallers** section for IrDA serial network adapters. The system-supplied INF for these IrDA (serial) NICs supplies a co-installer to the system IrDA class installer.
 
-```cpp
+```ini
 ; DDInstall section
 [PNP.NT]
 AddReg=ISIR.reg, Generic.reg, Serial.reg

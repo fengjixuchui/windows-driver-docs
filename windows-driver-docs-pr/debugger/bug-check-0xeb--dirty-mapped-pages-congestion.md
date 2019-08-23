@@ -3,7 +3,6 @@ title: Bug Check 0xEB DIRTY_MAPPED_PAGES_CONGESTION
 description: The DIRTY_MAPPED_PAGES_CONGESTION bug check has a value of 0x000000EB. This indicates that no free pages are available to continue operations.
 ms.assetid: 7a73dc74-fe40-4c0c-9c33-b0af3709bf43
 keywords: ["Bug Check 0xEB DIRTY_MAPPED_PAGES_CONGESTION", "DIRTY_MAPPED_PAGES_CONGESTION"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The DIRTY\_MAPPED\_PAGES\_CONGESTION bug check has a value of 0x000000EB. This indicates that no free pages are available to continue operations.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## DIRTY\_MAPPED\_PAGES\_CONGESTION Parameters
 

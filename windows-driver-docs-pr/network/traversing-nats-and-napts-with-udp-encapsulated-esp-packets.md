@@ -21,9 +21,9 @@ Network address translators (NATs) and network address port translators (NAPTs) 
 
 However, NATs and NAPTs can cause problems with Internet protocol security (IPsec). Because NATs and NAPTs modify the IP header of a packet, they cause AH-protected packets to fail checksum validation. NAPTs, which modify TCP and UDP ports, cannot modify the ports in the encrypted TCP header of an ESP-protected packet.
 
-UDP encapsulation solves this problem. In practice, UDP encapsulation is used only on ESP packets. A NAT or NAPT can modify the unencrypted IP and UDP headers of a UDP-encapsulated ESP packet without breaking ESP authentication and without being stymied by ESP encryption. For a detailed description of the UDP encapsulation of ESP packets, see [IPsec over NAT Justification for UDP Encapsulation](http://go.microsoft.com/fwlink/p/?linkid=9856).
+UDP encapsulation solves this problem. In practice, UDP encapsulation is used only on ESP packets. A NAT or NAPT can modify the unencrypted IP and UDP headers of a UDP-encapsulated ESP packet without breaking ESP authentication and without being stymied by ESP encryption. For a detailed description of the UDP encapsulation of ESP packets, see [IPsec over NAT Justification for UDP Encapsulation](https://go.microsoft.com/fwlink/p/?linkid=9856).
 
-Microsoft supports UDP encapsulation of ESP packets on port 4500. After IKE peers initiate negotiation on port 500, detect support for NAT-traversal, and detect a NAT or NAPT along the path, they can negotiate to "float" IKE and UDP-ESP traffic to port 4500. For more information about this negotiation, see [Negotiation of NAT-Traversal in the IKE](http://go.microsoft.com/fwlink/p/?linkid=9857).
+Microsoft supports UDP encapsulation of ESP packets on port 4500. After IKE peers initiate negotiation on port 500, detect support for NAT-traversal, and detect a NAT or NAPT along the path, they can negotiate to "float" IKE and UDP-ESP traffic to port 4500. For more information about this negotiation, see [Negotiation of NAT-Traversal in the IKE](https://go.microsoft.com/fwlink/p/?linkid=9857).
 
 Floating to port 4500 for NAT traversal provides the following benefits:
 
@@ -40,8 +40,8 @@ To support UDP-ESP encapsulation, a miniport driver or the NIC (or both) must:
 -   Maintain a list of SAs that the transport has offloaded to the NIC.
 
 -   Support the following OIDs:
-    -   [OID\_TCP\_TASK\_IPSEC\_ADD\_UDPESP\_SA](https://msdn.microsoft.com/library/windows/hardware/ff569809)
-    -   [OID\_TCP\_TASK\_IPSEC\_DELETE\_UDPESP\_SA](https://msdn.microsoft.com/library/windows/hardware/ff569811)
+    -   [OID\_TCP\_TASK\_IPSEC\_ADD\_UDPESP\_SA](https://docs.microsoft.com/windows-hardware/drivers/network/oid-tcp-task-ipsec-add-udpesp-sa)
+    -   [OID\_TCP\_TASK\_IPSEC\_DELETE\_UDPESP\_SA](https://docs.microsoft.com/windows-hardware/drivers/network/oid-tcp-task-ipsec-delete-udpesp-sa)
 
  
 

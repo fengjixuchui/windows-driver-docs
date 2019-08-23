@@ -3,7 +3,6 @@ title: Using Logging to Track Important Events
 description: Using Logging to Track Important Events
 ms.assetid: 297336c2-85fb-4235-a7ab-0bbf571b8b98
 keywords: ["kernel streaming debugging, video stream stall, logging"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -13,7 +12,7 @@ ms.localizationpriority: medium
 
 In general, data is moved downstream only by triggering events, the minidriver's processing, and buffer completions. To isolate the cause of a hang or stall:
 
-- Check for mismatched **KsGate*Xxx*** calls.
+- Check for mismatched **KsGate<em>Xxx</em>** calls.
 
 - Check for omitted **Ks*Xxx*AttemptProcessing** calls.
 
@@ -44,7 +43,7 @@ LOGENTRY g_Log [LOGSIZE];
     g_Log [i].Arg [1] = (ULONG)(arg2); \
     g_Log [i].Arg [2] = (ULONG)(arg3); \
 } while (0)
-```dbgcmd
+```
 
 Then, use a simple "dc g\_Log" to view the contents of the **g\_Log** array in the debugger.
 

@@ -19,17 +19,17 @@ ms.localizationpriority: medium
 
 To participate in error source control, a PSHED plug-in must implement the following callback functions:
 
-[*SetErrorSourceInfo*](https://msdn.microsoft.com/library/windows/hardware/ff559489)
+[*SetErrorSourceInfo*](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntddk/nc-ntddk-pshed_pi_set_error_source_info)
 
-[*EnableErrorSource*](https://msdn.microsoft.com/library/windows/hardware/ff559304)
+[*EnableErrorSource*](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntddk/nc-ntddk-pshed_pi_enable_error_source)
 
-[*DisableErrorSource*](https://msdn.microsoft.com/library/windows/hardware/ff559294)
+[*DisableErrorSource*](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntddk/nc-ntddk-pshed_pi_disable_error_source)
 
 The following code example shows how to implement these callback functions.
 
 ```cpp
 //
-// The PSHED plug-in&#39;s SetErrorSourceInfo callback function
+// The PSHED plug-in's SetErrorSourceInfo callback function
 //
 NTSTATUS
   SetErrorSourceInfo(
@@ -69,7 +69,7 @@ NTSTATUS
 }
 
 //
-// The PSHED plug-in&#39;s EnableErrorSource callback function
+// The PSHED plug-in's EnableErrorSource callback function
 //
 NTSTATUS
   EnableErrorSource(
@@ -106,7 +106,7 @@ NTSTATUS
 }
 
 //
-// The PSHED plug-in&#39;s DisableErrorSource callback function
+// The PSHED plug-in's DisableErrorSource callback function
 //
 NTSTATUS
   DisableErrorSource(

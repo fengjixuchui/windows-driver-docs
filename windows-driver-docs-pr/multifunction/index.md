@@ -12,7 +12,6 @@ keywords:
 - multifunction devices WDK , installing
 - parent buses WDK multifunction devices
 - INF files WDK multifunction devices
-ms.author: windowsdriverdev
 ms.date: 04/20/2017
 ms.topic: article
 ms.prod: windows-hardware
@@ -45,17 +44,17 @@ Additionally, the following requirements must be met so that a multifunction dev
 
 The component responsible for each of these tasks depends on the multifunction standard for the device's parent bus, the extent to which the device conforms to the standard, and the capabilities of the parent bus driver.
 
-If the device complies with the multifunction standards for its bus, your driver requirements are significantly reduced. Industry-wide multifunction standards have been defined for the PC Card and PCI buses. For the applicable hardware standards and guidelines, see the [multifunction devices](http://go.microsoft.com/fwlink/p/?linkid=8758) Web site.
+If the device complies with the multifunction standards for its bus, your driver requirements are significantly reduced. Industry-wide multifunction standards have been defined for the PC Card and PCI buses. For the applicable hardware standards and guidelines, see the [multifunction devices](https://go.microsoft.com/fwlink/p/?linkid=8758) Web site.
 
-If you are designing a multifunction printer, please follow the hardware, firmware and software recommendations available in the [Multifunction Printer Design Recommendations](http://go.microsoft.com/fwlink/p/?linkid=38442) white paper.
+If you are designing a multifunction printer, please follow the hardware, firmware and software recommendations available in the [Multifunction Printer Design Recommendations](https://go.microsoft.com/fwlink/p/?linkid=38442) white paper.
 
-If you are working with a multifunction DVD/CD-ROM device used for data storage (not for audio/video playback) on a Windows XP or later operating system, you should use the system-supplied WDM DVD class driver, which treats the device as a single logical unit. For Windows 2000 and Windows 98, you should treat the device as two logical units (so it will appear with two drive letters). If the DVD capabilities are combined with some other type of function, you should treat the device as a single logical unit and supply a class driver that implements common command sets for all the features of the device. For more information, see the [DVD technology](http://go.microsoft.com/fwlink/p/?linkid=8754) Web site.
+If you are working with a multifunction DVD/CD-ROM device used for data storage (not for audio/video playback) on a Windows XP or later operating system, you should use the system-supplied WDM DVD class driver, which treats the device as a single logical unit. For Windows 2000 and Windows 98, you should treat the device as two logical units (so it will appear with two drive letters). If the DVD capabilities are combined with some other type of function, you should treat the device as a single logical unit and supply a class driver that implements common command sets for all the features of the device. For more information, see the [DVD technology](https://go.microsoft.com/fwlink/p/?linkid=8754) Web site.
 
 For a multifunction device that combines other functionality, you can use a system-supplied driver and INF file if the device complies with the multifunction standards for its bus. The system supplied multifunction driver (mf.sys) can handle the bus-level enumeration and resource allocation requirements for the device, and the system-supplied INF (mf.sys) can install the multifunction device. You need to supply only a function driver and INF file for each of the individual device functions.
 
 If the device does not comply with the standard for its bus, you might need to supply a driver equivalent to mf.sys in functionality, in addition to function drivers and INF files for the device functions.
 
-To install a multifunction device, you typically provide a base INF file for the device and an additional INF file for each of the device's functions. The base INF file typically copies the INF files for the device's individual functions. For information about how to accomplish this, see [Copying INFs](https://msdn.microsoft.com/library/windows/hardware/ff540117).
+To install a multifunction device, you typically provide a base INF file for the device and an additional INF file for each of the device's functions. The base INF file typically copies the INF files for the device's individual functions. For information about how to accomplish this, see [Copying INFs](https://docs.microsoft.com/windows-hardware/drivers/install/copying-inf-files).
 
 The following sections describe driver and installation requirements for various types of multifunction devices:
 
@@ -69,11 +68,11 @@ The following sections describe driver and installation requirements for various
 
 [Creating Resource Maps for a Multifunction Device](creating-resource-maps-for-a-multifunction-device.md)
 
-See [INF File Sections and Directives](https://msdn.microsoft.com/library/windows/hardware/ff547433) for information about INF file syntax.
+See [INF File Sections and Directives](https://docs.microsoft.com/windows-hardware/drivers/install/inf-file-sections-and-directives) for information about INF file syntax.
 
 The rest of this section describes how to support multifunction devices on Windows 2000 and later NT-based platforms only.
 
-The Windows Driver Kit (WDK) includes a separate section that describes how to support [multifunction audio devices](https://msdn.microsoft.com/library/windows/hardware/ff537574).
+The Windows Driver Kit (WDK) includes a separate section that describes how to support [multifunction audio devices](https://docs.microsoft.com/windows-hardware/drivers/audio/multifunction-audio-devices).
 
  
 

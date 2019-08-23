@@ -3,7 +3,6 @@ title: ndiskd.ndisref
 description: The ndiskd.ndisref extension displays a debug log of a tracked reference count.
 ms.assetid: 6860A567-1017-4184-B8DF-157467360FB9
 keywords: ["ndiskd.ndisref Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -95,9 +94,9 @@ REFCOUNT BLOCK
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

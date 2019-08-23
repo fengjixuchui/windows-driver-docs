@@ -19,9 +19,9 @@ ms.localizationpriority: medium
 
 
 
-Vendor-supplied font installation software is required for cartridge fonts that are not described by [font cartridge](font-cartridges.md) entries in a printer's [*GPD*](https://msdn.microsoft.com/library/windows/hardware/ff556283#wdkgloss-generic-printer-description--gpd-) file. These fonts must be described using [Unidrv font format files](customized-font-management.md#ddk-unidrv-font-format-files-gg) (.uff files). Creating .uff files is the responsibility of vendor-supplied font installers.
+Vendor-supplied font installation software is required for cartridge fonts that are not described by font cartridge file. These fonts must be described using [Unidrv font format files](customized-font-management.md#ddk-unidrv-font-format-files-gg) (.uff files). Creating .uff files is the responsibility of vendor-supplied font installers.
 
-Vendor-supplied font installers should also provide support for downloadable [*PCL*](https://msdn.microsoft.com/library/windows/hardware/ff556325#wdkgloss-pcl) soft fonts.
+Vendor-supplied font installers should also provide support for downloadable *PCL* soft fonts.
 
 The two techniques to create a customized font installer are as follows:
 
@@ -29,9 +29,9 @@ The two techniques to create a customized font installer are as follows:
 
     This plug-in must implement the following COM interface methods:
 
-    [**IPrintOemUI::FontInstallerDlgProc**](https://msdn.microsoft.com/library/windows/hardware/ff554176)
+    [**IPrintOemUI::FontInstallerDlgProc**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/prcomoem/nf-prcomoem-iprintoemui-fontinstallerdlgproc)
 
-    [**IPrintOemUI::UpdateExternalFonts**](https://msdn.microsoft.com/library/windows/hardware/ff554188)
+    [**IPrintOemUI::UpdateExternalFonts**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/prcomoem/nf-prcomoem-iprintoemui-updateexternalfonts)
 
 -   Supply a separate executable file
 

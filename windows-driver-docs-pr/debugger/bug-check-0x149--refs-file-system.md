@@ -3,7 +3,6 @@ title: Bug Check 0x149 REFS_FILE_SYSTEM
 description: The REFS_FILE_SYSTEM bug check has a value of 0x00000149. This indicates that a file system error has occurred.
 ms.assetid: 899E89E7-46CD-4143-B1DC-7959F01643CF
 keywords: ["Bug Check 0x149 REFS_FILE_SYSTEM", "REFS_FILE_SYSTEM"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The REFS\_FILE\_SYSTEM bug check has a value of 0x00000149. This indicates that a file system error has occurred.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## REFS\_FILE\_SYSTEM Parameters
 

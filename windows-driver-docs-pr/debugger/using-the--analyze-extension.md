@@ -3,7 +3,6 @@ title: Using the analyze Extension
 description: Using the analyze Extension
 ms.assetid: 0aa74153-e992-4d1c-b734-ccc60cff452c
 keywords: ["analyze extension, examples"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -123,7 +122,7 @@ IMAGE_NAME:  MyApp.exe
 DEBUG_FLR_IMAGE_TIMESTAMP:  383490a9
 ```
 
-When [**!analyze**](-analyze.md) determines the instruction that has probably caused the error, it displays it in the FOLLOWUP\_IP field. The SYMBOL\_NAME, MODULE\_NAME, IMAGE\_NAME, and DBG\_FLR\_IMAGE\_TIMESTAMP fields show the symbol, module, image name, and image timestamp corresponding to this instruction.
+When [**!analyze**](-analyze.md) determines the instruction that has probably caused the error, it displays it in the FOLLOWUP\_IP field. The SYMBOL\_NAME, MODULE\_NAME, IMAGE\_NAME, and DEBUG\_FLR\_IMAGE\_TIMESTAMP fields show the symbol, module, image name, and image timestamp corresponding to this instruction.
 
 ```dbgcmd
 STACK_COMMAND:  .ecxr ; kb
@@ -146,7 +145,7 @@ For information about the FOLLOWUP\_NAME and the Followup fields, see The Follow
 
 There are a variety of other fields that may appear:
 
--   If control was transferred to an invalid address, then the FAULTING\_IP field will contain this invalid address. Instead of the FOLLOWUP\_IP field, the FAILED\_INSTRUCTION\_ADDRESS field will show the disassembled code from this address, although this disassembly will probably be meaningless. In this situation, the SYMBOL\_NAME, MODULE\_NAME, IMAGE\_NAME, and DBG\_FLR\_IMAGE\_TIMESTAMP fields will refer to the caller of this instruction.
+-   If control was transferred to an invalid address, then the FAULTING\_IP field will contain this invalid address. Instead of the FOLLOWUP\_IP field, the FAILED\_INSTRUCTION\_ADDRESS field will show the disassembled code from this address, although this disassembly will probably be meaningless. In this situation, the SYMBOL\_NAME, MODULE\_NAME, IMAGE\_NAME, and DEBUG\_FLR\_IMAGE\_TIMESTAMP fields will refer to the caller of this instruction.
 
 -   If the processor misfires, you may see the SINGLE\_BIT\_ERROR, TWO\_BIT\_ERROR, or POSSIBLE\_INVALID\_CONTROL\_TRANSFER fields.
 

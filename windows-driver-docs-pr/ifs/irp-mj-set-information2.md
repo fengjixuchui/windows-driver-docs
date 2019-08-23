@@ -113,7 +113,7 @@ This information applies when the following operations are being performed on a 
   <p> A hard link is being created for the file. This affects oplock state if the new hard link is superseding an existing link to a different file, and the oplock exists on the link being superseded.</p>
   </li>
   <li>
-  <p> An ancestor directory of the stream on which the oplock exists is being renamed, or the ancestor directory&#39;s short name is being set.</p>
+  <p> An ancestor directory of the stream on which the oplock exists is being renamed, or the ancestor directory's short name is being set.</p>
   </li>
   </ul>
   <table>
@@ -236,7 +236,7 @@ This information applies when the following operations are being performed on a 
   <p><b>AND</b></p>
   </li>
   <li>
-  <p><a href="https://msdn.microsoft.com/library/windows/hardware/ff545765"><b>FILE_DISPOSITION_INFORMATION</b></a>.DeleteFile is <b>TRUE</b>.</p>
+  <p><a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntddk/ns-ntddk-_file_disposition_information"><b>FILE_DISPOSITION_INFORMATION</b></a>.DeleteFile is <b>TRUE</b>.</p>
   </li>
   </ul>
   </td>
@@ -266,7 +266,7 @@ This information applies when the following operations are being performed on a 
   <p><b>AND</b></p>
   </li>
   <li>
-  <p><a href="https://msdn.microsoft.com/library/windows/hardware/ff545765"><b>FILE_DISPOSITION_INFORMATION</b></a>.DeleteFile is <b>TRUE</b>.</p>
+  <p><a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntddk/ns-ntddk-_file_disposition_information"><b>FILE_DISPOSITION_INFORMATION</b></a>.DeleteFile is <b>TRUE</b>.</p>
   </li>
   </ul>
   </td>

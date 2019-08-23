@@ -3,7 +3,6 @@ title: pool extension command
 description: The pool extension displays information about a specific pool allocation or about the entire system-wide pool.
 ms.assetid: 1c224e0c-d50c-487e-8238-9be054368ac2
 keywords: ["pool", "pooltag.txt file", "pool tag", "memory, pool tag", "pool Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -41,7 +40,7 @@ Causes the display to include the pool contents, not just the pool headers.
 Causes the display to suppress pool header information for all pools, except the one that actually contains the specified *Address*.
 
 <span id="Bit_31__0x80000000_"></span><span id="bit_31__0x80000000_"></span><span id="BIT_31__0X80000000_"></span>Bit 31 (0x80000000)  
-(Windows XP and later) Suppresses the description of the pool type and pool tag in the display.
+Suppresses the description of the pool type and pool tag in the display.
 
 ### <span id="DLL"></span><span id="dll"></span>DLL
 

@@ -3,7 +3,6 @@ title: Using Debugger Extension Commands
 description: Using Debugger Extension Commands
 ms.assetid: 1db9a835-accb-41b9-9ab1-c4c9f0596aa5
 keywords: ["extension commands ( commands), using", "extension commands ( commands), default search order"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -42,30 +41,17 @@ The default search order is as follows:
 
     <table>
     <colgroup>
-    <col width="33%" />
-    <col width="33%" />
-    <col width="33%" />
+    <col width="50%" />
+    <col width="50%" />
     </colgroup>
     <thead>
     <tr class="header">
-    <th align="left">Windows Build</th>
     <th align="left">User Mode</th>
     <th align="left">Kernel Mode</th>
     </tr>
     </thead>
     <tbody>
-    <tr class="odd">
-    <td align="left"><p>Windows 2000 (free build)</p></td>
-    <td align="left"><p>w2kfre \ ntsdexts.dll</p></td>
-    <td align="left"><p>w2kfre \ kdextx86.dll</p></td>
-    </tr>
     <tr class="even">
-    <td align="left"><p>Windows 2000 (checked build)</p></td>
-    <td align="left"><p>w2kchk \ ntsdexts.dll</p></td>
-    <td align="left"><p>w2kchk \ kdextx86.dll</p></td>
-    </tr>
-    <tr class="odd">
-    <td align="left"><p>Windows XP and later</p></td>
     <td align="left"><p>winxp \ ntsdexts.dll</p></td>
     <td align="left"><p>winxp \ kdexts.dll</p></td>
     </tr>

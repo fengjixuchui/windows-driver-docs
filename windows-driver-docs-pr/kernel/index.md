@@ -3,7 +3,6 @@ title: Kernel-Mode Driver Architecture Design Guide
 description: Kernel-Mode Driver Architecture Design Guide
 ms.assetid: 21c199f3-abc3-4607-a674-eb84b6c3c25a
 keywords: ["kernel-mode drivers WDK , architecture", "kernel-mode drivers WDK"]
-ms.author: windowsdriverdev
 ms.date: 06/16/2017
 ms.topic: article
 ms.prod: windows-hardware
@@ -26,7 +25,7 @@ This section includes general concepts to help you understand kernel-mode progra
 
 -   [Driver Programming Techniques](driver-programming-techniques.md) describes techniques that you can use to program Windows kernel-mode device drivers.
 
-    **Note**  For information about programming interfaces that your driver can implement or call, see [Kernel-Mode Driver Reference](https://msdn.microsoft.com/library/windows/hardware/ff553217).
+    **Note**  For information about programming interfaces that your driver can implement or call, see [Kernel-Mode Driver Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index).
 
      
 

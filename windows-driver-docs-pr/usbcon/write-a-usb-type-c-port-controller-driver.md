@@ -1,8 +1,9 @@
 ---
 Description: 'Describes the behavior of the USB Type-C Port Controller Interface Class Extension, known as UcmTcpciCx and tasks that a client driver must perform for a USB Type-C port controller.'
 title: Write a USB Type-C port controller driver
-ms.date: 05/20/2017
+ms.date: 01/07/2019
 ms.localizationpriority: medium
+ms.custom: 19H1
 ---
 
 # Write a USB Type-C port controller driver
@@ -22,8 +23,8 @@ The UcmTcpciCx class extension is itself a client driver of UcmCx. The policy de
 
 **Official specifications**
 -   [USB Type-C Port Controller Interface Specification]
--   [USB 3.1 and USB Type-C specifications](http://go.microsoft.com/fwlink/p/?LinkId=699515)
--   [USB Power Delivery](http://go.microsoft.com/fwlink/p/?LinkID=623310)
+-   [USB 3.1 and USB Type-C specifications](https://go.microsoft.com/fwlink/p/?LinkId=699515)
+-   [USB Power Delivery](https://go.microsoft.com/fwlink/p/?LinkID=623310)
 
 Applies to:
 
@@ -50,7 +51,7 @@ Applies to:
 -   Determine the type of driver you need to write depending on whether your hardware or firmware implements PD state machine. For more information, see [Developing Windows drivers for USB Type-C connectors](developing-windows-drivers-for-usb-type-c-connectors.md).  
 
 -   Install Windows 10 for desktop editions (Home, Pro, Enterprise, and Education) on your target computer or Windows 10 Mobile with a USB Type-C connector.
--   [Install](http://go.microsoft.com/fwlink/p/?LinkID=845980) the latest Windows Driver Kit (WDK) on your development computer. The kit has the required header files and libraries for writing the client driver, specifically, you'll need:
+-   [Install](https://go.microsoft.com/fwlink/p/?LinkID=845980) the latest Windows Driver Kit (WDK) on your development computer. The kit has the required header files and libraries for writing the client driver, specifically, you'll need:
 
     -   The stub library, (UcmTcpciCxStub.lib). The library translates calls made by the client driver and pass them up to the class extension .
     -   The header file, UcmTcpciCx.h.
@@ -67,7 +68,7 @@ Applies to:
     - [Simple Peripheral Bus (SPB) Driver Design Guide]
     - [SPB driver programming reference] 
 
--   Familiarize yourself with Windows Driver Foundation (WDF). Recommended reading: [Developing Drivers with Windows Driver Foundation]( http://go.microsoft.com/fwlink/p/?LinkId=691676), written by Penny Orwick and Guy Smith.
+-   Familiarize yourself with Windows Driver Foundation (WDF). Recommended reading: [Developing Drivers with Windows Driver Foundation]( https://go.microsoft.com/fwlink/p/?LinkId=691676), written by Penny Orwick and Guy Smith.
 
 ## Behavior of the UcmTcpci class extension
 
@@ -103,7 +104,7 @@ The client driver to the UcmTcpciCx is expected to:
 
 ## 1. Register the client driver with UcmTcpciCx
 
-    Sample reference: See EvtPrepareHardware in Device.cpp
+Sample reference: See `EvtPrepareHardware` in `Device.cpp`.
 
 1.  In your EVT_WDF_DRIVER_DEVICE_ADD implementation, call UcmTcpciDeviceInitInitialize to initialize the WDFDEVICE_INIT opaque structure. The call associates the client driver with the framework.
 
@@ -111,7 +112,7 @@ The client driver to the UcmTcpciCx is expected to:
 
 ## 2. Initialize the I2C communications channel to the port controller hardware.
 
-    Sample reference: See EvtCreateDevice in Device.cpp
+Sample reference: See `EvtCreateDevice` in `Device.cpp`.
 
 In your EVT_WDF_DEVICE_PREPARE_HARDWARE implementation, read the hardware resources to open a communication channel. This is required to retrieve PD capabilities and get notified about alerts. 
 
@@ -124,7 +125,7 @@ Alerts are received as interrupts. Therefore, the driver creates a framework int
 
 ## 3. Initialize the port controller's Type-C and PD capabilities
     
-    Sample reference: See EvtDeviceD0Entry in Device.cpp
+Sample reference: See `EvtDeviceD0Entry` in `Device.cpp`.
 
 
  In your EVT_WDF_DEVICE_D0_EXIT implementation, 
@@ -139,7 +140,7 @@ Alerts are received as interrupts. Therefore, the driver creates a framework int
 
 ## 4. Set up a framework queue object for receiving requests from UcmTcpciCx
 
-    Sample reference: See EvtDeviceD0Entry in Device.cpp and HardwareRequestQueueInitialize in Queue.cpp.
+Sample reference: See `EvtDeviceD0Entry` in `Device.cpp` and `HardwareRequestQueueInitialize` in `Queue.cpp`.
 
  1. In your EVT_WDF_DEVICE_D0_EXIT implementation, create a framework queue object by calling WdfIoQueueCreate. In that call, you will need to register your callback implementation to handle IOCTL requests sent by UcmTpciCx. The client driver may use a power-managed queue. 
 
@@ -171,7 +172,7 @@ hardware request queue.
  
 ## 5. Handlle alerts from the port controller hardware
 
-    Sample reference: See ProcessAndSendAlerts in Alert.cpp.
+Sample reference: See `ProcessAndSendAlerts` in `Alert.cpp`.
 
 The client driver must handle alerts (or events) received from the port controller hardware and send them to UcmTcpciCx with data related to the event. 
 
@@ -194,17 +195,17 @@ Here is an example flow of tasks to report change in CC Status.
 
 ## 6. Process requests received from UcmTcpciCx
 
-    Sample reference: See PortControllerInterface.cpp.
+Sample reference: See `PortControllerInterface.cpp`.
 
 As part of state machine execution, UcmTcpciCx needs to send requests to the port controller. For example, it needs to set the TRANSMIT_BUFFER. This request is handed off to the client driver. The driver sets the transmit buffer with the details provided by UcmTcpciCx. Most of those requests translate into a hardware read or write by the client driver. The commands must be asynchronous because the DPM cannot block waiting for a hardware transfer to complete.
 
 UcmTcpciCx sends the commands as I/O Control Code describing the get/set operation that is required from the client driver. In the client driver's queue setup, the driver registered its queue with UcmTcpciCx.  UcmTcpciCx starts placing framework request objects in the queue it requires operation from the driver. The I/O Control codes are listed in the table in step 4.
 
-It is the client driver’s responsibility to complete requests in a timely fashion.TBD,
+It is the client driver's responsibility to complete requests in a timely fashion.
 
 The client driver calls WdfRequestComplete on the framework request object with a completion status when it has finished the requested operation. 
 
 The client driver might need to send an I/O request to another driver to perform the hardware operation. For example, in the sample, the driver sends an SPB request to the I<sup>2</sup>C-connected port controller. In that case, the driver cannot forward the framework request object it received from UcmTcpciCx because the request object might not have the correct number of stack locations in the WDM IRP. The client driver must create another framework request object and forward it to another driver. The client driver can preallocate request objects it needs during initialization, instead of creating a one every time it gets a request from UcmTcpciCx. This is possible because UcmTcpciCx guarantees that there will be only one request outstanding at any given time. 
 
 ## See Also
-[USB Type-C Port Controller Interface driver class extensions reference](https://msdn.microsoft.com/library/windows/hardware/mt805826)
+[USB Type-C Port Controller Interface driver class extensions reference](https://docs.microsoft.com/previous-versions/windows/hardware/drivers/mt805826(v=vs.85))

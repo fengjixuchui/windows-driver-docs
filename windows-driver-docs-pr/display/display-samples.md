@@ -11,7 +11,7 @@ ms.localizationpriority: medium
 
 ### <span id="display_samples"></span><span id="DISPLAY_SAMPLES"></span>
 
-Starting with Windows 8, [samples are available for download](http://go.microsoft.com/fwlink/p/?LinkId=618052) from the Hardware Dev Center. For Windows 7 and earlier, samples and documentation were included in the Windows Driver Kit (WDK) or Driver Development Kit (DDK).
+Starting with Windows 8, [samples are available for download](https://go.microsoft.com/fwlink/p/?LinkId=618052) from the Hardware Dev Center. For Windows 7 and earlier, samples and documentation were included in the Windows Driver Kit (WDK) or Driver Development Kit (DDK).
 
 <table>
 <colgroup>
@@ -34,7 +34,7 @@ Starting with Windows 8, [samples are available for download](http://go.microso
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="http://go.microsoft.com/fwlink/p/?LinkId=618052" data-raw-source="[Kernel mode display-only miniport driver](http://go.microsoft.com/fwlink/p/?LinkId=618052)">Kernel mode display-only miniport driver</a></p>
+<td align="left"><p><a href="https://go.microsoft.com/fwlink/p/?LinkId=618052" data-raw-source="[Kernel mode display-only miniport driver](https://go.microsoft.com/fwlink/p/?LinkId=618052)">Kernel mode display-only miniport driver</a></p>
 <p>Available in the Hardware Dev Center.</p></td>
 <td align="left"><p></p>
 Windows 8</td>
@@ -45,7 +45,7 @@ Windows 8</td>
 <td align="left"><p>Implements most of the device driver interfaces (DDIs) that a display-only miniport driver should provide to the Windows Display Driver Model (WDDM).</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="http://go.microsoft.com/fwlink/p/?LinkId=618052" data-raw-source="[PixLib](http://go.microsoft.com/fwlink/p/?LinkId=618052)">PixLib</a></p>
+<td align="left"><p><a href="https://go.microsoft.com/fwlink/p/?LinkId=618052" data-raw-source="[PixLib](https://go.microsoft.com/fwlink/p/?LinkId=618052)">PixLib</a></p>
 <p>Available in the Hardware Dev Center.</p></td>
 <td align="left"><p></p>
 Windows 8
@@ -63,7 +63,7 @@ Windows Server 2003
 Windows XP</td>
 <td align="left"><p>No</p></td>
 <td align="left"><p>No</p></td>
-<td align="left"><p>Demonstrates how to implement the <a href="https://msdn.microsoft.com/library/windows/hardware/ff540585" data-raw-source="[CPixel](https://msdn.microsoft.com/library/windows/hardware/ff540585)">CPixel</a> class.</p></td>
+<td align="left"><p>Demonstrates how to implement the <a href="https://docs.microsoft.com/windows-hardware/drivers/display/cpixel-support-methods-for-lightweight-mip-maps" data-raw-source="[CPixel](https://docs.microsoft.com/windows-hardware/drivers/display/cpixel-support-methods-for-lightweight-mip-maps)">CPixel</a> class.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Mirror - Mirror driver for mirroring GDI content</p></td>
@@ -103,7 +103,7 @@ Windows Server 2008
 Windows Vista</td>
 <td align="left"><p>No</p></td>
 <td align="left"><p>No</p></td>
-<td align="left"><p>Demonstrates how monitor manufacturers can avoid reflashing the monitor&#39;s EEPROM by implementing a monitor INF that overrides part of, or the entire, EDID information in software.</p></td>
+<td align="left"><p>Demonstrates how monitor manufacturers can avoid reflashing the monitor's EEPROM by implementing a monitor INF that overrides part of, or the entire, EDID information in software.</p></td>
 </tr>
 </tbody>
 </table>

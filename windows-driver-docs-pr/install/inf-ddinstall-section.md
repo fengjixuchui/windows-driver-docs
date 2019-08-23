@@ -21,7 +21,7 @@ Each per-Models *DDInstall* section contains an optional **DriverVer** directive
 
 The sections referenced by these directives contain instructions for installing driver files and writing any device-specific and/or driver-specific information into the registry.
 
-```cpp
+```ini
 [install-section-name] | 
 [install-section-name.nt] | 
 [install-section-name.ntx86] | 
@@ -89,7 +89,7 @@ This optional entry specifies one or more additional system-supplied INF files t
 
 For example, the system INF files for device drivers that depend on the system's kernel-streaming support specify this entry as follows:
 
-```cpp
+```ini
 Include= ks.inf[, [kscaptur.inf,] [ksfilter.inf]]...
 ```
 
@@ -100,7 +100,7 @@ This optional entry specifies sections within system-supplied INF files that mus
 
 For example, the INF files for device drivers that have the preceding **Include** entry specify this entry as follows:
 
-```cpp
+```ini
 Needs= KS.Registration[, KSCAPTUR.Registration | KSCAPTUR.Registration.NT, MSPCLOCK.Installation]
 ```
 
@@ -215,9 +215,13 @@ Except for devices that have no associated files to be transferred from the sour
 - An <em>install-section-name</em>**.ntx86** section that specifies the entries for device/driver installations specific to x86-based platforms.
 - An <em>install-section-name</em>**.ntia64** section that specifies the entries for device/driver installations specific to Itanium-based platforms.
 - An <em>install-section-name</em>**.ntamd64** section that specifies the entries for device/driver installations specific to x64-based platforms.
+- An <em>install-section-name</em>**.ntarm** section that specifies the entries for device/driver installations specific to ARM-based platforms.
+- An <em>install-section-name</em>**.ntarm64** section that specifies the entries for device/driver installations specific to ARM64-based platforms.
+
+
 - An *install-section-name* or <em>install-section-name</em>**.nt** section that specifies the entries for device/driver installations that are not specific to a particular hardware platform.
 
-For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 Starting with Windows 2000, an INF file that installs drivers must have [**DDInstall.Services**](inf-ddinstall-services-section.md) sections to specify device/driver registry information to be stored in the registry's **...\\CurrentControlSet\\Services** tree. Depending on the device, it can also have one or more <em>DDInstall</em>**.HW**, <em>DDInstall</em>**.CoInstallers**, <em>DDInstall</em>**.Interfaces**, and/or <em>DDInstall</em>**.LogConfigOverride** sections.
 
@@ -229,19 +233,19 @@ Any **AddReg** directive specified in a *DDInstall* section is assumed to refere
 
 Depending on the [device setup class](device-setup-classes.md) that was specified in the [**INF Version section**](inf-version-section.md), additional class-specific directives can be specified in a *DDInstall* section. For more information about class-specific directives, see the following topics:
 
--   [Building an INF File for a Windows SideShow-Compatible Device](https://msdn.microsoft.com/library/windows/hardware/ff547750)
--   [DDInstall Section in a Network INF File](https://msdn.microsoft.com/library/windows/hardware/ff546332)
--   [INF Files for Still Image Devices](https://msdn.microsoft.com/library/windows/hardware/ff542762)
--   [INF Files for WIA Devices](https://msdn.microsoft.com/library/windows/hardware/ff542770)
--   [Installation Requirements for Network Components](https://msdn.microsoft.com/library/windows/hardware/ff554949)
--   [Specifying WDF Directives in INF Files](https://msdn.microsoft.com/windows/hardware/drivers/wdf/specifying-wdf-directives-in-inf-files)
+-   [Building an INF File for a Windows SideShow-Compatible Device](https://docs.microsoft.com/windows-hardware/drivers/)
+-   [DDInstall Section in a Network INF File](https://docs.microsoft.com/windows-hardware/drivers/network/ddinstall-services-section-in-a-network-inf-file)
+-   [INF Files for Still Image Devices](https://docs.microsoft.com/windows-hardware/drivers/image/inf-files-for-still-image-devices)
+-   [INF Files for WIA Devices](https://docs.microsoft.com/windows-hardware/drivers/image/inf-files-for-wia-devices)
+-   [Installation Requirements for Network Components](https://docs.microsoft.com/windows-hardware/drivers/network/installation-requirements-for-network-components)
+-   [Specifying WDF Directives in INF Files](https://docs.microsoft.com/windows-hardware/drivers/wdf/specifying-wdf-directives-in-inf-files)
 
 Examples
 --------
 
 This example shows the expansion of the *DDInstall* sections, **Ser_Inst** and **Inp_Inst**. These sections are referenced in the example for the [**INF *Models* section**](inf-models-section.md).
 
-```cpp
+```ini
 [Ser_Inst]
 CopyFiles=Ser_CopyFiles, mouclass_CopyFiles
 
@@ -260,7 +264,7 @@ inport.sys
 
 The following example provides a general illustration of using platform extensions:
 
-```cpp
+```ini
 [Manufacturer]
 %MSFT% = Microsoft
 
@@ -290,7 +294,7 @@ The following example provides a general illustration of using platform extensio
 
 The following example shows the *DDInstall* section of an INF file that installs a system-supplied WDM driver for an audio device on various operating system platforms:
 
-```cpp
+```ini
 [WDMPNPB003_Device.NT]
 DriverVer=01/14/1999,5.0
 Include=ks.inf, wdmaudio.inf
@@ -303,7 +307,7 @@ AddReg=WDM_SB16.AddReg
 
 The following example shows the sections referenced by the preceding **Needs** entry in the system-supplied *ks.inf* and *wdmaudio.inf* files. In the preceding example, these files are specified in the **Includes** entry. When the operating system's device installer and/or media class installer process this device's <em>install-section-name</em>**.nt** section, these next two sections are also processed.
 
-```cpp
+```ini
 [KS.Registration]
 ; following AddReg= is actually a single line in the ks.inf file
 AddReg=ProxyRegistration,CategoryRegistration,\

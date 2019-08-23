@@ -3,7 +3,6 @@ title: ndiskd.netpacket
 description: The ndiskd.netpacket extension displays information about a NET_PACKET structure.
 ms.assetid: 304BA2CF-B6BC-452C-8543-9B872054AA9E
 keywords: ["ndiskd.netpacket Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -143,9 +142,9 @@ You can now combine the basic description with any of the other **!ndiskd.netpac
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

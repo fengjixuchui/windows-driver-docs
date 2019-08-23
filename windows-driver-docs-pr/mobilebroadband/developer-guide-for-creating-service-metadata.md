@@ -27,7 +27,7 @@ To create a successful service metadata package, you must complete the steps inc
 
 ### <span id="Register_your_company_with_the_Windows_Dev_Center_hardware_dashboard"></span><span id="register_your_company_with_the_windows_dev_center_hardware_dashboard"></span><span id="REGISTER_YOUR_COMPANY_WITH_THE_WINDOWS_DEV_CENTER_HARDWARE_DASHBOARD"></span>Register your company with the Windows Dev Center hardware dashboard
 
--   Your company has an active account on the Windows Dev Center hardware dashboard. If your company does not have an account on the Windows Dev Center hardware dashboard, you can create a new account and add your user account to you company. For more info, see [Administration](https://msdn.microsoft.com/library/windows/hardware/mt786447) in the Windows Dev Center hardware dashboard help.
+-   Your company has an active account on the Windows Dev Center hardware dashboard. If your company does not have an account on the Windows Dev Center hardware dashboard, you can create a new account and add your user account to you company. For more info, see [Administration](https://docs.microsoft.com/windows-hardware/drivers/dashboard/administration) in the Windows Dev Center hardware dashboard help.
 
 -   Your company has a VeriSign code signing certificate to sign the packages.
 
@@ -104,7 +104,7 @@ Use the following steps to create a service metadata package on the Windows Dev 
 
 -   [2-Create the service metadata package](#2-create-the-service-metadata-package)
 
--   [3-Insert the store manifest file into the Microsoft Store device app](#3-insert-the-store-manifest-file-into-the-uwp-device-app)
+-   [3-Insert the store manifest file into the Microsoft Store device app](#3-insert-the-store-manifest-file-into-the-microsoft-store-device-app)
 
 -   [4-Test the service metadata package](#4-test-the-service-metadata-package)
 
@@ -173,7 +173,7 @@ Service metadata is created by using the Service Metadata Wizard in the Windows 
 
     -   **Enter the name for your network that is to be used in the Windows network selection UI** – The name of you network that will be displayed to customers in Windows Connection Manager.
 
-    -   **Enter your service number** – A GUID that must match the carrier ID field in your provisioning metadata. You can create a GUID by using Visual Studio 2013. For more information on how to create a GUID, see [Create GUID (guidgen.exe)](http://go.microsoft.com/fwlink/p/?linkid=330070).
+    -   **Enter your service number** – A GUID that must match the carrier ID field in your provisioning metadata. You can create a GUID by using Visual Studio 2013. For more information on how to create a GUID, see [Create GUID (guidgen.exe)](https://go.microsoft.com/fwlink/p/?linkid=330070).
 
     -   **Upload your icon that is to be shown in the Windows network selection UI** – Click **Browse**, and then select the icon that is shown to customers in Windows Connection Manager.
 
@@ -253,7 +253,7 @@ After test signing is enabled, copy the \*.devicemetadata-ms file from the servi
 
 ### <span id="Test_a_service_metadata_package_in_preview_mode"></span><span id="test_a_service_metadata_package_in_preview_mode"></span><span id="TEST_A_SERVICE_METADATA_PACKAGE_IN_PREVIEW_MODE"></span>Test a service metadata package in preview mode
 
-If the service metadata package is in preview mode, you must create the PreviewKey registry entry on your test computer. For more info about configuring the PreviewKey registry entry, see [Creating a Preview Package](https://msdn.microsoft.com/library/windows/hardware/br230780).
+If the service metadata package is in preview mode, you must create the PreviewKey registry entry on your test computer. For more info about configuring the PreviewKey registry entry, see [Creating a Preview Package](https://docs.microsoft.com/windows-hardware/drivers/dashboard/).
 
 **Note**  
 You do not have to enable test signing to test a service metadata package that is in preview mode.
@@ -273,9 +273,9 @@ This will not work on a Windows RT device. Use the steps in the procedure named 
 
 **To set up the environment for clearing service metadata**
 
-1.  Download psexec.exe (<http://go.microsoft.com/fwlink/p/?linkid=330071>), and then extract it to a folder.
+1.  Download psexec.exe (<https://go.microsoft.com/fwlink/p/?linkid=330071>), and then extract it to a folder.
 
-2.  Download and install the Windows Driver Kit Windows 8.1 (<http://go.microsoft.com/fwlink/?LinkId=330072>).
+2.  Download and install the Windows Driver Kit Windows 8.1 (<https://go.microsoft.com/fwlink/?LinkId=330072>).
 
 3.  Navigate to where the WDK files are installed. The default location is **C:\\Program Files (x86)\\Windows Kits\\8.1\\Tools**. If your test computer is running x86, copy devcon.exe from the x86 folder into the same folder as psexec.exe. If your test computer is running x64, copy devcon.exe from the x64 folder.
 

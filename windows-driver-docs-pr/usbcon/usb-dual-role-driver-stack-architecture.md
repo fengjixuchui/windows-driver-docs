@@ -22,7 +22,7 @@ USB Dual Role controllers are now supported in Windows, starting with Windows 10
 ## Introduction
 
 
-The USB Dual Role feature makes it possible for a system to be either a USB *device* or USB *host*. The detailed specification for USB Dual Role can be found on the [usb.org](http://www.usb.org/developers/wusb/docs/presentations/2006/Taipei06_SA_SBD_DRD_Design_Considerations.pdf) website.
+The USB Dual Role feature makes it possible for a system to be either a USB *device* or USB *host*. The detailed specification for USB Dual Role can be found on the [usb.org](https://www.usb.org/developers/wusb/docs/presentations/2006/Taipei06_SA_SBD_DRD_Design_Considerations.pdf) website.
 
 The significant point here is that the dual role feature allows a mobile device, such as a phone, a phablet or a tablet, to designate itself as being a device or a host.
 
@@ -58,7 +58,7 @@ The following table shows the list of *host* class drivers that are available on
 
 The Class drivers in the table were selected based on device class telemetry, and based on key scenarios that were selected for Windows 10. We plan on including a limited number of inbox, 3rd party Host drivers, to support key devices on Windows 10 Mobile. And for Windows 10 for desktop editions, these drivers will be available either on the OEM’s website or via Windows Update (WU).
 
-For Windows 10 Mobile, the 3rd party drivers that are not included inbox will not be available on WU. The disk footprint of the USB Host stack + HID has been kept small. Which is why not all class drivers, and very few 3rd party drivers are included inbox for Windows 10 Mobile. An OEM who wishes to make 3rd party drivers available can use a Board Support Package (BSP) to add them to OS images for their mobile devices. For more information about this policy, see [Driver development for Windows Phone](http://go.microsoft.com/fwlink/p/?LinkId=761246), and scroll down to the section titled *Differences between driver development for Windows Phone and Windows*.
+For Windows 10 Mobile, the 3rd party drivers that are not included inbox will not be available on WU. The disk footprint of the USB Host stack + HID has been kept small. Which is why not all class drivers, and very few 3rd party drivers are included inbox for Windows 10 Mobile. An OEM who wishes to make 3rd party drivers available can use a Board Support Package (BSP) to add them to OS images for their mobile devices. For more information about this policy, see [Driver development for Windows Phone](https://go.microsoft.com/fwlink/p/?LinkId=761246), and scroll down to the section titled *Differences between driver development for Windows Phone and Windows*.
 
 The following table shows the *function* class drivers that are available on mobile SKUs of Windows.
 
@@ -83,7 +83,7 @@ The Microsoft USB Role Switch (URS) driver allows a system implementer to take a
 
 The URS driver is intended to provide dual-role functionality for platforms that use a single USB controller that can operate in both host and peripheral roles over a single port. The *peripheral role* is also known as a *function role*. The URS driver manages the current role of the port, and the loading and unloading of the appropriate software stacks, based on hardware events from the platform.
 
-On a system that has a USB micro-AB connector, the driver makes use of hardware interrupts that indicates the state of the ID pin on the connector. This pin is used to detect whether the controller needs to assume the host role or the function role in a connection. For more information, see the [USB On-The-Go specification](http://go.microsoft.com/fwlink/p/?LinkId=698414). On systems with a USB Type-C connector, the OEM implementer is expected to provide a connector client driver by using the [USB Type-C connector driver programming interfaces](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_usbref/#type-c-driver-reference). The client driver communicates with the Microsoft-provided USB connector Manager class extension (UcmCx) to manage all aspects of the USB Type-C connector, such as CC detection, PD messaging, and others. For role switching, the client driver communicates the state of the USB Type-C connector to the URS driver.
+On a system that has a USB micro-AB connector, the driver makes use of hardware interrupts that indicates the state of the ID pin on the connector. This pin is used to detect whether the controller needs to assume the host role or the function role in a connection. For more information, see the [USB On-The-Go specification](https://go.microsoft.com/fwlink/p/?LinkId=698414). On systems with a USB Type-C connector, the OEM implementer is expected to provide a connector client driver by using the [USB Type-C connector driver programming interfaces](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_usbref/#type-c-driver-reference). The client driver communicates with the Microsoft-provided USB connector Manager class extension (UcmCx) to manage all aspects of the USB Type-C connector, such as CC detection, PD messaging, and others. For role switching, the client driver communicates the state of the USB Type-C connector to the URS driver.
 
 The following diagram shows the USB software driver stack for a dual-role controller that uses the URS driver.
 
@@ -136,7 +136,7 @@ Here is a sample ACPI definition for a USB dual-role controller.
 
 ```Text
 //
-// You may name the device whatever you want; we don&#39;t depend on it being called &#39;URS0&#39;.
+// You may name the device whatever you want; we don't depend on it being called 'URS0'.
 //
 Device(URS0)
 {
@@ -174,12 +174,12 @@ Device(URS0)
     //
     // This child device represents the USB host controller. This device node is in effect
     // when the controller is in host mode.
-    // You may name the device whatever you want; we don&#39;t depend on it being called &#39;USB0&#39;.
+    // You may name the device whatever you want; we don't depend on it being called 'USB0'.
     //
     Device(USB0)
     {
         //
-        // The host controller device node needs to have an address of &#39;0&#39;
+        // The host controller device node needs to have an address of '0'
         //
         Name(_ADR, 0)
         Name(_CRS, ResourceTemplate() {
@@ -194,12 +194,12 @@ Device(URS0)
     //
     // This child device represents the USB function controller. This device node is in effect
     // when the controller is in device/function/peripheral mode.
-    // You may name the device whatever you want; we don&#39;t depend on it being called &#39;UFN0&#39;.
+    // You may name the device whatever you want; we don't depend on it being called 'UFN0'.
     //
     Device(UFN0)
     {
         //
-        // The function controller device node needs to have an address of &#39;1&#39;
+        // The function controller device node needs to have an address of '1'
         //
         Name(_ADR, 1)
         Name(_CRS, ResourceTemplate() {

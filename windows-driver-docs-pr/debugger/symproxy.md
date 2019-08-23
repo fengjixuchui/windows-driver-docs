@@ -3,7 +3,6 @@ title: SymProxy
 description: SymProxy
 ms.assetid: c0b122fe-4996-4659-a3f1-95831605c0b3
 keywords: ["symbols, SymProxy (symproxy.dll)", "symbol stores, HTTP", "symbol stores, SymProxy (symproxy.dll)", "SymProxy"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -82,8 +81,6 @@ This section includes:
 [Setting Up Exclusion Lists](setting-up-exclusion-lists.md)
 
 [Dealing with Unavailable Symbol Stores](dealing-with-unavailable-symbol-stores.md)
-
-[Checking and Updating Status](checking-and-updating-status.md)
 
 [Handling File Pointers](handling-file-pointers.md)
 

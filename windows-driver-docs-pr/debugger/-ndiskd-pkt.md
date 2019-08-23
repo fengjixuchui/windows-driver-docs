@@ -3,7 +3,6 @@ title: ndiskd.pkt
 description: Warning  This extension is for legacy NDIS 5.x drivers. The ndiskd.pkt extension displays information about an NDIS_PACKET structure.
 ms.assetid: 8e704173-3b09-4377-b73a-ba67a3c3c930
 keywords: ["ndiskd.pkt Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -17,11 +16,11 @@ ms.localizationpriority: medium
 # !ndiskd.pkt
 
 
-**Warning**  This extension is for legacy NDIS 5.x drivers. The [NDIS\_PACKET](https://msdn.microsoft.com/library/windows/hardware/ff557086) structure and its associated architecture have been deprecated.
+**Warning**  This extension is for legacy NDIS 5.x drivers. The [NDIS\_PACKET](https://docs.microsoft.com/previous-versions/windows/hardware/network/ff557086(v=vs.85)) structure and its associated architecture have been deprecated.
 
  
 
-The **!ndiskd.pkt** extension displays information about an [NDIS\_PACKET](https://msdn.microsoft.com/library/windows/hardware/ff557086) structure.
+The **!ndiskd.pkt** extension displays information about an [NDIS\_PACKET](https://docs.microsoft.com/previous-versions/windows/hardware/network/ff557086(v=vs.85)) structure.
 
 ```console
 !ndiskd.pkt [-packet] [-verbosity] 
@@ -42,12 +41,7 @@ Ndiskd.dll
 
 ## <span id="see_also"></span>See also
 
-
-[Windows 2000 and Windows XP Networking Design Guide](https://msdn.microsoft.com/library/windows/hardware/ff565849)
-
-[Windows 2000 and Windows XP Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff565850)
-
-[NDIS\_PACKET](https://msdn.microsoft.com/library/windows/hardware/ff557086)
+[NDIS\_PACKET](https://docs.microsoft.com/previous-versions/windows/hardware/network/ff557086(v=vs.85))
 
  
 

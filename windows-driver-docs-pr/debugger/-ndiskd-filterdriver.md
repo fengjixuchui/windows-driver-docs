@@ -3,7 +3,6 @@ title: ndiskd.filterdriver
 description: The ndiskd.filterdriver extension displays information about an NDIS filter driver. If you run this extension with no parameters, ndiskd will display a list of all filter drivers.
 ms.assetid: 9FE3E885-98BC-4FCC-9E1C-DBECD070F92A
 keywords: ["ndiskd.filterdriver Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -108,9 +107,9 @@ HANDLERS
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

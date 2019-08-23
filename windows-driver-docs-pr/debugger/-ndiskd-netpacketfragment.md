@@ -3,7 +3,6 @@ title: ndiskd.netpacketfragment
 description: The ndiskd.netpacketfragment extension displays information about a NET_PACKET_FRAGMENT structure.
 ms.assetid: 2075D682-45F5-414D-A8ED-0494B3550C77
 keywords: ["ndiskd.netpacketfragment Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -88,9 +87,9 @@ By clicking on the handle for the first fragment or by entering the **!ndiskd.ne
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

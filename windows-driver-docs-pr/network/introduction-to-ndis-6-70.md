@@ -26,7 +26,7 @@ NDIS forms the core foundation for the network driver platform on Windows. For a
 
 The following network driver features have been deprecated along with the release of NDIS 6.70:
 
-- [TCP Chimney Offload](ndis-tcp-chimney-offload.md)
+- [TCP Chimney Offload](https://docs.microsoft.com/previous-versions/windows/hardware/network/ndis-tcp-chimney-offload)
 - [IPsec Offload Version 2](ipsec-offload-version-2.md)
 
 ## Implementing an NDIS 6.70 driver
@@ -74,5 +74,5 @@ For more information about NetAdapterCx data structures, see [NetAdapterCx](../n
 
 The following data structures are new in NDIS 6.70.
 
-- [NDIS_STATUS_WWAN_DEVICE_CAPS_EX](https://msdn.microsoft.com/library/windows/hardware/mt782396)
+- [NDIS_STATUS_WWAN_DEVICE_CAPS_EX](https://docs.microsoft.com/windows-hardware/drivers/network/ndis-status-wwan-device-caps-ex)
 

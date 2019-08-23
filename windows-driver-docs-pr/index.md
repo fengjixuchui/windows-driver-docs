@@ -4,7 +4,6 @@ description: This section describes how to get the WDK and samples and start bui
 services: wdk
 layout: LandingPage
 ms.assetid: 5502AAF9-2400-4338-A646-C746B29F9A44
-ms.author: windowsdriverdev
 ms.date: 04/20/2017
 ms.topic: landing-page
 ms.prod: windows-hardware
@@ -22,7 +21,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_get-started.svg" alt="A button that links to the topic: Getting Started with the Windows Driver Kit. The button has a picture of a rocket taking off." />
                             </div>
                         </div>
                             <div class="cardText">
@@ -39,7 +38,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                     <div class="card">
                         <div class="cardImageOuter">
                             <div class="cardImage"> 
-                                <img src="https://docs.microsoft.com/media/common/i_api-reference.svg" alt="" />
+                                <img src="https://docs.microsoft.com/media/common/i_api-reference.svg" alt="Icon for WDK DDI reference topics: a circle with a monitor and a power button" />
                             </div>
                         </div>
                         <div class="cardText">
@@ -59,11 +58,11 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_whats-new.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_whats-new.svg" alt="Icon for What's New in Driver Kit docs: a bullhorn">
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>What&#39;s new</h3>
+                        <h3>What's new</h3>
                         <p><a href="/windows-hardware/drivers/what-s-new-in-driver-development">New APIs and features</a></p>
                     </div>
                 </div>
@@ -76,7 +75,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_download-install.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_download-install.svg" alt="Icon for Download and Install: a monitor showing a blue gear near a downward pointing arrow">
                         </div>
                     </div>
                     <div class="cardText">
@@ -85,7 +84,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                             <a href="https://go.microsoft.com/fwlink/p/?LinkId=698539">Visual Studio 2017</a>
                         </p>
                         <p>
-                            <a href="https://developer.microsoft.com/windows/hardware/windows-driver-kit">Windows Driver Kit (WDK)</a>
+                            <a href="https://docs.microsoft.com/windows-hardware/drivers/download-the-wdk">Windows Driver Kit (WDK)</a>
                         </p>                        
                     </div>
                 </div>
@@ -98,13 +97,13 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_code-samples.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_code-samples.svg" alt="Icon for Code Samples: curly brackets around three blue rectangles, stacked on each other">
                         </div>
                     </div>
                     <div class="cardText">
                         <h3>Code samples</h3>
                         <p>
-                            <a href="http://go.microsoft.com/fwlink/p/?LinkId=534087">Universal Windows driver samples</a>
+                            <a href="https://github.com/Microsoft/Windows-driver-samples">Universal Windows driver samples</a>
                         </p>
                     </div>
                 </div>
@@ -117,7 +116,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_guidelines.svg" alt="Icon for Programming Guides: A book, Two pages with unnumbered lists. Above one page, a check mark; above the other, an X">
                         </div>
                     </div>
                     <div class="cardText">
@@ -145,7 +144,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_build.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_build.svg" alt="Icon for Testing and Deploying Drivers: a crane, lifting a package">
                         </div>
                     </div>
                     <div class="cardText">
@@ -172,7 +171,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_upgrade.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_upgrade.svg" alt="Icon for Submission: a circle filled white over blue, with an arrow pointing upward">
                         </div>
                     </div>
                     <div class="cardText">
@@ -194,7 +193,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_architecture.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_architecture.svg" alt="Icon for Driver Models and Technologies: a flow chart with a blue diamond linking to two white rectangles and one white circle">
                         </div>
                     </div>
                     <div class="cardText">
@@ -219,7 +218,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="https://docs.microsoft.com/media/common/i_link.svg" alt="">
+                            <img src="https://docs.microsoft.com/media/common/i_link.svg" alt="Icon for Related Links: two links from a chain">
                         </div>
                     </div>
                     <div class="cardText">
@@ -245,7 +244,7 @@ Windows Driver Kit (WDK) 10 is integrated with Microsoft Visual Studio 2017 and 
 
 <p><b>Run-time requirements for WDK 10</b></p>
 
-WDK requires Visual Studio. For more information, see [Visual Studio 2017 System Requirements](https://www.visualstudio.com/productinfo/vs2017-system-requirements-vs).
+WDK requires Visual Studio. For more information, see [Visual Studio 2017 System Requirements](https://docs.microsoft.com/visualstudio/productinfo/vs2017-system-requirements-vs).
 
 EWDK additionally requires .NET 4.6.1. For information about .NET requirements, see [.NET Framework system requirements](https://docs.microsoft.com/dotnet/framework/get-started/system-requirements). 
 

@@ -3,7 +3,6 @@ title: Bug Check 0x12E INVALID_MDL_RANGE
 description: The INVALID_MDL_RANGE bug check has a value of 0x0000012E.
 ms.assetid: 911192DC-17B8-4D75-A96E-2E310B30348F
 keywords: ["Bug Check 0x12E INVALID_MDL_RANGE", "INVALID_MDL_RANGE"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -29,7 +28,9 @@ IoBuildPartialMdl(
         IN ULONG Length
 ```
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## INVALID\_MDL\_RANGE Parameters
 

@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 Each per-Models <em>DDInstall</em>**.Events** section contains one or more [**INF AddEventProvider directives**](inf-addeventprovider-directive.md) that reference additional INF-writer-defined sections in an INF file. This section is supported for Windows 10 version 1809 and later.
 
-```cpp
+```ini
 [install-section-name.Events] |
 [install-section-name.nt.Events] |
 [install-section-name.ntx86.Events] |
@@ -33,7 +33,7 @@ AddEventProvider={ProviderGUID},event-provider-install-section
 [Needs=inf-section-name[,inf-section-name]...] 
 ```
 
-You can provide a <em>DDInstall</em>**.Events** section with at least one **AddEventProvider** directive to register [Event Tracing for Windows](https://msdn.microsoft.com/library/windows/desktop/aa363668) (ETW) providers.
+You can provide a <em>DDInstall</em>**.Events** section with at least one **AddEventProvider** directive to register [Event Tracing for Windows](https://docs.microsoft.com/windows/desktop/ETW/about-event-tracing) (ETW) providers.
 
 ## Entries
 
@@ -57,14 +57,14 @@ Remarks
 
 The specified *DDInstall* section must be referenced in a device/models-specific entry under the per-manufacturer *Models* section of the INF file. The case-insensitive extensions to the *install-section-name* shown in the formal syntax statement can be inserted into such a <em>DDInstall</em>**.Events** section name in cross-platform INF files.
 
-For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 Examples
 --------
 
 This example shows the <em>install-section-name</em>**.Events** section and its event-provider-install-sections in the INF file.
 
-```cpp
+```ini
 [Device_Inst.NT.Events]
 AddEventProvider={071acb53-ccfb-42e0-9a68-5336b7301507},foo_Event_Provider_Inst
 AddEventProvider={6d3fd9ef-bcbb-42d7-9fbd-1bf2d926b394},bar_Event_Provider_Inst

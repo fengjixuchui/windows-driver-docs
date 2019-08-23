@@ -3,7 +3,6 @@ title: Debugging a Stack Overflow
 description: Debugging a Stack Overflow
 ms.assetid: fc67effa-88c9-4915-a5a8-8c094595c6c5
 keywords: ["stack overflow", "call stack, debugging a stack overflow"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -91,7 +90,7 @@ The stack information is contained in the TEB (Thread Environment Block) at 0x7F
 7ffdc000   009fdef0 00a00000 009fc000 00000000 
 ```
 
-To interpret this, you need to look up the definition of the TEB data structure. If you had complete symbols, you could use [**dt TEB**](dt--display-type-.md) to do this. But in this case, you will need to look at the ntpsapi.h file in the Microsoft Windows SDK. For Windows XP and later versions of Windows, this file contains the following information:
+To interpret this, you need to look up the definition of the TEB data structure. If you had complete symbols, you could use [**dt TEB**](dt--display-type-.md) to do this. But in this case, you will need to look at the ntpsapi.h file in the Microsoft Windows SDK. This file contains the following information:
 
 ```cpp
 typedef struct _TEB {

@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 
 A **ControlFlags** section identifies devices for which Windows should take certain unique actions during installation.
 
-```cpp
+```ini
 [ControlFlags]
 
 ExcludeFromSelect=* | 
@@ -32,6 +32,9 @@ ExcludeFromSelect=device-identification-string[,device-identification-string] ..
 [ExcludeFromSelect.ntx86=device-identification-string[,device-identification-string] ...] | 
 [ExcludeFromSelect.ntia64=device-identification-string[,device-identification-string] ...]  |  (Windows XP and later versions of Windows)
 [ExcludeFromSelect.ntamd64=device-identification-string[,device-identification-string] ...]  |  (Windows XP and later versions of Windows)
+[ExcludeFromSelect.ntarm=device-identification-string[,device-identification-string] ...]  |  (Windows XP and later versions of Windows)
+[ExcludeFromSelect.ntarm64=device-identification-string[,device-identification-string] ...]  |  (Windows XP and later versions of Windows)
+
 [CopyFilesOnly=device-identification-string[,device-identification-string] ...]
 [InteractiveInstall=device-identification-string[,device-identification-string] ... ]
 [RequestAdditionalSoftware=*] | 
@@ -63,7 +66,15 @@ Do not display these devices on Itanium-based computers that are running Windows
 <a href="" id="-ntamd64"></a>**.ntamd64**  
 Do not display these devices on x64-based computers that are running Windows XP or later versions of Windows.
 
-For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+<a href="" id="-ntarm"></a>**.ntarm**  
+Do not display these devices on ARM-based computers that are running Windows XP or later versions of Windows.
+
+<a href="" id="-ntarm64"></a>**.ntarm64**  
+Do not display these devices on ARM64-based computers that are running Windows XP or later versions of Windows.
+
+
+
+For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 <a href="" id="copyfilesonly"></a>**CopyFilesOnly**  
 Installs only the INF-specified files for the given devices because the device hardware is not accessible or available yet.
@@ -118,7 +129,7 @@ Examples
 
 This example of the **ControlFlags** section in the system mouse class installer INF suppresses the display of devices/models that cannot be installed on x86 platforms.
 
-```cpp
+```ini
 [ControlFlags]
 ; Exclude all bus mice and InPort mice for x86 platforms
 ExcludeFromSelect.ntx86=*PNP0F0D,*PNP0F11,*PNP0F00,*PNP0F02,*PNP0F15
@@ -128,7 +139,7 @@ ExcludeFromSelect=UNKNOWN_MOUSE
 
 The following INF file fragment shows two devices: one that is fully PnP-capable and requires no user intervention during installation and another that requires its own driver and cannot use any other driver. Specifying **InteractiveInstall** for the second device forces Windows to install this device in a user's context (a user who has administrative rights). This includes prompting the user for the location of the driver files (INF file, driver file, and so on) as required.
 
-```cpp
+```ini
 ; ...
 [Manufacturer]
 %Mfg% = ModelsSection

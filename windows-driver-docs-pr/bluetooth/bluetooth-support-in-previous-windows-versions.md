@@ -10,7 +10,7 @@ ms.localizationpriority: medium
 
 
 **Note**  
-Looking for drivers for your Bluetooth audio device? See [Fix connections to Bluetooth audio devices and wireless displays](http://go.microsoft.com/fwlink/p/?LinkID=623629).
+Looking for drivers for your Bluetooth audio device? See [Fix connections to Bluetooth audio devices and wireless displays](https://go.microsoft.com/fwlink/p/?LinkID=623629).
 
  
 
@@ -158,7 +158,7 @@ Windows support for different versions of the Bluetooth specification depends on
 Windows 8.1 includes the following enhancements to the Bluetooth stack and related software:
 
 -   Inbox radio management control for Bluetooth version 4.0 radios.
--   Windows Runtime API support for [**RFCOMM**](https://msdn.microsoft.com/library/windows/apps/dn263529) and [**GATT**](https://msdn.microsoft.com/library/windows/apps/dn297685) protocol access.
+-   Windows Runtime API support for [**RFCOMM**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm) and [**GATT**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile) protocol access.
 
 ## <span id="What_s_new_in_Windows_8_"></span><span id="what_s_new_in_windows_8_"></span><span id="WHAT_S_NEW_IN_WINDOWS_8_"></span>What’s new in Windows 8?
 
@@ -214,7 +214,7 @@ Windows Vista includes the following enhancements to the Bluetooth stack and re
 </tr>
 <tr class="odd">
 <td align="left"><p>03F0</p></td>
-<td align="left"><p>011D&amp;Rev_0017</p></td>
+<td align="left"><p>011D&Rev_0017</p></td>
 <td align="left"><p>Hewlett Packard nc4200</p></td>
 </tr>
 <tr class="even">
@@ -244,7 +244,7 @@ Windows Vista includes the following enhancements to the Bluetooth stack and re
 </tr>
 <tr class="odd">
 <td align="left"><p>049F</p></td>
-<td align="left"><p>0086&amp;Rev_1393</p></td>
+<td align="left"><p>0086&Rev_1393</p></td>
 <td align="left"><p>Hewlett Packard nx7000</p></td>
 </tr>
 <tr class="even">
@@ -274,7 +274,7 @@ Windows Vista includes the following enhancements to the Bluetooth stack and re
 </tr>
 <tr class="odd">
 <td align="left"><p>0DB0</p></td>
-<td align="left"><p>6855&amp;Rev_2000</p></td>
+<td align="left"><p>6855&Rev_2000</p></td>
 <td align="left"><p>Message signaled interrupt (MSI) Bluetooth device</p></td>
 </tr>
 <tr class="even">
@@ -406,7 +406,7 @@ Windows included in-box support for the following Bluetooth profiles:
 ## <span id="Windows_Phone_8_PICS_report"></span><span id="windows_phone_8_pics_report"></span><span id="WINDOWS_PHONE_8_PICS_REPORT"></span>Windows Phone 8 PICS report
 
 
-The Profile/Protocol Implementation Conformance Statements (PICS) report for Windows Phone 8 is available from the Bluetooth SIG [PICS values](http://go.microsoft.com/fwlink/p/?LinkId=246801) webpage.
+The Profile/Protocol Implementation Conformance Statements (PICS) report for Windows Phone 8 is available from the Bluetooth SIG [PICS values](https://go.microsoft.com/fwlink/p/?LinkId=246801) webpage.
 
 ## <span id="Do_users_have_to_re-pair_their_Bluetooth_devices_after_they_upgrade_a_system_to_Windows_8.1_"></span><span id="do_users_have_to_re-pair_their_bluetooth_devices_after_they_upgrade_a_system_to_windows_8.1_"></span><span id="DO_USERS_HAVE_TO_RE-PAIR_THEIR_BLUETOOTH_DEVICES_AFTER_THEY_UPGRADE_A_SYSTEM_TO_WINDOWS_8.1_"></span>Do users have to re-pair their Bluetooth devices after they upgrade a system to Windows 8.1?
 
@@ -418,7 +418,7 @@ Therefore, pairing information is preserved if users upgrade from Windows 8 to 
 ## <span id="what_programming_interfaces_were_introduced_in_windows_8.1_"></span><span id="WHAT_PROGRAMMING_INTERFACES_WERE_INTRODUCED_IN_WINDOWS_8.1_"></span>What programming interfaces were introduced in Windows 8.1?
 
 
-Windows 8.1 introduces new Windows Runtime APIs for accessing the [**RFCOMM**](https://msdn.microsoft.com/library/windows/apps/dn263529) (over standard Bluetooth) and [**GATT**](https://msdn.microsoft.com/library/windows/apps/dn297685) (over Bluetooth Low Energy).
+Windows 8.1 introduces new Windows Runtime APIs for accessing the [**RFCOMM**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.Rfcomm) (over standard Bluetooth) and [**GATT**](https://docs.microsoft.com/uwp/api/Windows.Devices.Bluetooth.GenericAttributeProfile) (over Bluetooth Low Energy).
 
 ## <span id="What_programming_interfaces_were_introduced_in_Windows_8_"></span><span id="what_programming_interfaces_were_introduced_in_windows_8_"></span><span id="WHAT_PROGRAMMING_INTERFACES_WERE_INTRODUCED_IN_WINDOWS_8_"></span>What programming interfaces were introduced in Windows 8?
 
@@ -428,7 +428,7 @@ Windows 8 introduces new APIs for accessing Bluetooth Smart peripherals via Blu
 ## <span id="What_programming_interfaces_were_introduced_in_Windows_7_"></span><span id="what_programming_interfaces_were_introduced_in_windows_7_"></span><span id="WHAT_PROGRAMMING_INTERFACES_WERE_INTRODUCED_IN_WINDOWS_7_"></span>What programming interfaces were introduced in Windows 7?
 
 
-Windows 7 introduced new Ex versions of previous APIs to provide enhanced functionality. For example, the BluetoothAuthenticateDeviceEx function lets out-of-band data be passed into the function call for the device that is being authenticated. Similarly, the [**BluetoothRegisterForAuthenticationEx**](https://msdn.microsoft.com/library/windows/desktop/cc766820) function includes pin request and numeric comparison functionality. Also, the [**BluetoothSendAuthenticationResponseEx**](https://msdn.microsoft.com/library/windows/desktop/cc766821) function is called when an authentication request to send the numeric comparison response is received. For more information about the new Ex versions of these APIs, see [Bluetooth Functions](https://msdn.microsoft.com/library/windows/desktop/aa362927).
+Windows 7 introduced new Ex versions of previous APIs to provide enhanced functionality. For example, the BluetoothAuthenticateDeviceEx function lets out-of-band data be passed into the function call for the device that is being authenticated. Similarly, the [**BluetoothRegisterForAuthenticationEx**](https://docs.microsoft.com/windows/desktop/api/bluetoothapis/nf-bluetoothapis-bluetoothregisterforauthenticationex) function includes pin request and numeric comparison functionality. Also, the [**BluetoothSendAuthenticationResponseEx**](https://docs.microsoft.com/windows/desktop/api/bluetoothapis/nf-bluetoothapis-bluetoothsendauthenticationresponseex) function is called when an authentication request to send the numeric comparison response is received. For more information about the new Ex versions of these APIs, see [Bluetooth Functions](https://docs.microsoft.com/windows/desktop/Bluetooth/bluetooth-functions).
 
 ## <span id="What_programming_interfaces_were_introduced_in_Windows_Vista_"></span><span id="what_programming_interfaces_were_introduced_in_windows_vista_"></span><span id="WHAT_PROGRAMMING_INTERFACES_WERE_INTRODUCED_IN_WINDOWS_VISTA_"></span>What programming interfaces were introduced in Windows Vista?
 

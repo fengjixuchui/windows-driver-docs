@@ -43,7 +43,7 @@ The WSD `Value` construct allows you to extend the bidi communications schema wi
 </tr>
 <tr class="odd">
 <td><p><strong>type</strong></p></td>
-<td><p>The type of data in the <code>Value</code> construct, a value in the <a href="https://msdn.microsoft.com/library/windows/hardware/ff545211" data-raw-source="[&lt;strong&gt;BIDI_TYPE&lt;/strong&gt;](https://msdn.microsoft.com/library/windows/hardware/ff545211)"><strong>BIDI_TYPE</strong></a> enumeration.</p></td>
+<td><p>The type of data in the <code>Value</code> construct, a value in the <a href="https://docs.microsoft.com/windows-hardware/drivers/ddi/content/winspool/ne-winspool-bidi_type" data-raw-source="[&lt;strong&gt;BIDI_TYPE&lt;/strong&gt;](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/winspool/ne-winspool-bidi_type)"><strong>BIDI_TYPE</strong></a> enumeration.</p></td>
 </tr>
 <tr class="even">
 <td><p><strong>xmllang</strong></p></td>
@@ -54,7 +54,7 @@ The WSD `Value` construct allows you to extend the bidi communications schema wi
 
  
 
-The XPath language is implemented in Windows and provides a convenient way to specify elements in an XML file. See the XML Developer's Guide in the Windows SDK and [XPath Reference](http://go.microsoft.com/fwlink/p/?linkid=33165) for more information.
+The XPath language is implemented in Windows and provides a convenient way to specify elements in an XML file. See the XML Developer's Guide in the Windows SDK and [XPath Reference](https://go.microsoft.com/fwlink/p/?linkid=33165) for more information.
 
 The **xmllang** attribute is used only when the type attribute of the `Value` construct is either "BIDI\_STRING" or "BIDI\_TEXT".
 

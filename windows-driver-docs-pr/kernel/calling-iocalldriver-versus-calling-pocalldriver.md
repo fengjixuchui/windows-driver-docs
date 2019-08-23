@@ -13,13 +13,13 @@ ms.localizationpriority: medium
 
 
 
-Beginning with Windows Vista, a driver should call [**IoCallDriver**](https://msdn.microsoft.com/library/windows/hardware/ff548336) instead of [**PoCallDriver**](https://msdn.microsoft.com/library/windows/hardware/ff559654), to pass power IRPs to the next-lower driver. In Windows Server 2003, Windows XP, and Windows 2000, a driver must call **PoCallDriver**, not **IoCallDriver**, to pass power IRPs to the next-lower driver. Note, however, that drivers that use the same code to run both in Windows Vista and in earlier Windows versions, must call **PoCallDriver**, not **IoCallDriver**.
+Beginning with Windows Vista, a driver should call [**IoCallDriver**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-iocalldriver) instead of [**PoCallDriver**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-pocalldriver), to pass power IRPs to the next-lower driver. In Windows Server 2003, Windows XP, and Windows 2000, a driver must call **PoCallDriver**, not **IoCallDriver**, to pass power IRPs to the next-lower driver. Note, however, that drivers that use the same code to run both in Windows Vista and in earlier Windows versions, must call **PoCallDriver**, not **IoCallDriver**.
 
-Beginning with Windows Vista, [**PoRequestPowerIrp**](https://msdn.microsoft.com/library/windows/hardware/ff559734) and **IoCallDriver** ensure that the power manager properly synchronizes power IRPs throughout the system. In Windows Server 2003, Windows XP, and Windows 2000, **PoRequestPowerIrp**, **PoCallDriver**, and [**PoStartNextPowerIrp**](https://msdn.microsoft.com/library/windows/hardware/ff559776), ensure that the power manager properly synchronizes power IRPs throughout the system.
+Beginning with Windows Vista, [**PoRequestPowerIrp**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-porequestpowerirp) and **IoCallDriver** ensure that the power manager properly synchronizes power IRPs throughout the system. In Windows Server 2003, Windows XP, and Windows 2000, **PoRequestPowerIrp**, **PoCallDriver**, and [**PoStartNextPowerIrp**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/ntifs/nf-ntifs-postartnextpowerirp), ensure that the power manager properly synchronizes power IRPs throughout the system.
 
 The system limits the number of active power IRPs as follows:
 
--   No more than one system power IRP ([**IRP\_MN\_SET\_POWER**](https://msdn.microsoft.com/library/windows/hardware/ff551744), [**IRP\_MN\_QUERY\_POWER**](https://msdn.microsoft.com/library/windows/hardware/ff551699)) can be active for each physical device object ([PDO](https://msdn.microsoft.com/library/windows/hardware/ff556325#wdkgloss-pdo)) at any given time.
+-   No more than one system power IRP (**IRP\_MN\_SET\_POWER**) at any given time.
 
 -   No more than one device set-power IRP (**IRP\_MN\_SET\_POWER)** can be active for each PDO at any given time.
 

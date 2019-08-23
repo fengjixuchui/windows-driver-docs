@@ -3,7 +3,6 @@ title: .cxr (Display Context Record)
 description: The .cxr command displays the context record saved at the specified address. It also sets the register context.
 ms.assetid: 0e882639-6029-4512-8d46-050228e95cb6
 keywords: ["Display Context Record (.cxr) command", "context record", ".cxr (Display Context Record) Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -30,7 +29,7 @@ The **.cxr** command displays the context record saved at the specified address.
 Can be any combination of the following options:
 
 <span id="_f_Size"></span><span id="_f_size"></span><span id="_F_SIZE"></span>**/f** **** *Size*  
-Forces the context size to equal the value of *Size*, in bytes. This can be useful when the context does not match the actual target -- for example, when using an x86 context on a 64-bit target during [*WOW64*](https://msdn.microsoft.com/library/windows/hardware/ff556347#wdkgloss-wow64) debugging. If an invalid or inconsistent size is specified, the error "Unable to convert context to canonical form" will be displayed.
+Forces the context size to equal the value of *Size*, in bytes. This can be useful when the context does not match the actual target -- for example, when using an x86 context on a 64-bit target during *WOW64* debugging. If an invalid or inconsistent size is specified, the error "Unable to convert context to canonical form" will be displayed.
 
 <span id="_w"></span><span id="_W"></span>**/w**  
 Writes the current context to memory, and displays the address of the location where it was written.

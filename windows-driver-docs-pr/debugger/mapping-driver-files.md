@@ -3,7 +3,6 @@ title: Mapping Driver Files
 description: Mapping Driver Files
 ms.assetid: 9a13a6a9-b585-4be1-b7c8-da65fa3ba6c6
 keywords: ["mapping driver files", "driver replacement map", "driver replacement map, overview", "driver replacement map, file format", "driver replacement map, replacing boot drivers", "boot driver replacement"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -118,7 +117,7 @@ You can enable the bcdedit bootdebug option to view early boot information that 
 bcdedit -bootdebug on
 ```
 
-For more information, see [BCDEdit Options Reference](https://msdn.microsoft.com/library/windows/hardware/ff542205).
+For more information, see [BCDEdit Options Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/index).
 
 If the kernel debugger exits, no more driver replacement occurs. However, any drivers that have already been replaced do not revert to their old binaries, because the driver files are actually overwritten.
 

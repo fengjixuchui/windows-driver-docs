@@ -9,7 +9,7 @@ ms.localizationpriority: medium
 # NDIS 6.30 Backward Compatibility
 
 
-NDIS 6.30 adds backward compatibility features to those that apply to NDIS 6.20 and NDIS 6.0 drivers. For information about NDIS 6.20 compatibility issues, see [NDIS 6.20 Backward Compatibility](ndis-6-20-backward-compatibility.md). For information about NDIS 6.0 compatibility issues, see [NDIS 6.0 Backward Compatibility](ndis-6-0-backward-compatibility.md).
+NDIS 6.30 adds backward compatibility features to those that apply to NDIS 6.20 and NDIS 6.0 drivers. For information about NDIS 6.20 compatibility issues, see [NDIS 6.20 Backward Compatibility](ndis-6-20-backward-compatibility.md). For information about NDIS 6.0 compatibility issues, see [NDIS 6.0 Backward Compatibility](https://docs.microsoft.com/previous-versions/windows/hardware/network/ndis-6-0-backward-compatibility).
 
 For more information about NDIS 6.30 features, see [Introduction to NDIS 6.30](introduction-to-ndis-6-30.md).
 
@@ -21,7 +21,7 @@ The following features are not supported in Windows 8 and later:
 -   TCP chimney offload is no longer supported for virtual machines. However, it is still supported for native use.
 -   [IPsec task offload version 1](ipsec-offload-version-1.md). All drivers that support IPsec task offload should be updated to support [IPsec task offload version 2](ipsec-offload-version-2.md).
 -   Filter intermediate drivers. Instead, use the NDIS 6.*x* filter driver interface. For more information about filter drivers, see [NDIS Filter Drivers](ndis-filter-drivers.md).
--   802.11 drivers that emulate 802.3. NDIS 802.11 drivers must support the native 802.11 interface. For more information about native 802.11, see [Native 802.11 Wireless LAN](https://msdn.microsoft.com/library/windows/hardware/ff560689).
+-   802.11 drivers that emulate 802.3. NDIS 802.11 drivers must support the native 802.11 interface. For more information about native 802.11, see [Native 802.11 Wireless LAN](https://docs.microsoft.com/previous-versions/windows/hardware/wireless/ff560689(v=vs.85)).
 -   NDIS WAN drivers. NDIS WAN drivers must be ported to the NDIS 6.0 CoNDIS WAN driver model. For more information about CoNDIS WAN, see [WAN Miniport Drivers](wan-miniport-drivers.md).
 
 ## Features that have been removed

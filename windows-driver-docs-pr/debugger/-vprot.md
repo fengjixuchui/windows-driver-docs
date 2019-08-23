@@ -3,7 +3,6 @@ title: vprot
 description: The vprot extension displays virtual memory protection information.
 ms.assetid: 7ee863ef-abfd-4ee7-9bac-34472e60f3fa
 keywords: ["memory, memory protection", "vprot Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -54,7 +53,7 @@ Ntsdexts.dll</td>
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-To view memory protection information for all memory ranges owned by the target process, use [**!vadump**](-vadump.md). For information about memory protection, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+To view memory protection information for all memory ranges owned by the target process, use [**!vadump**](-vadump.md). For information about memory protection, see *Microsoft Windows Internals* by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

@@ -23,13 +23,17 @@ ms.localizationpriority: medium
 
 A **RenFiles** directive references an INF-writer-defined section elsewhere in the INF file, which causes that list of files to be renamed in the context of operations on the section in which the referring **RenFiles** directive is specified.
 
-```cpp
+```ini
 [DDInstall] | 
 [DDInstall.CoInstallers] | 
 [ClassInstall32] | 
 [ClassInstall32.ntx86] | 
 [ClassInstall32.ntia64] |  (Windows XP and later versions of Windows)
 [ClassInstall32.ntamd64]  (Windows XP and later versions of Windows)
+[ClassInstall32.ntarm]  (Windows 8 and later versions of Windows)
+[ClassInstall32.ntarm64]  (Windows 10 and later versions of Windows)
+
+
   
 Renfiles=file-list-section[,file-list-section]...
 ```
@@ -41,7 +45,7 @@ A **RenFiles** directive can be specified within any of the sections shown in th
 
 Each named section referenced by a **RenFiles** directive has one or more entries of the following form:
 
-```cpp
+```ini
 [file-list-section]
  
 new-dest-file-name,old-source-file-name 
@@ -68,7 +72,7 @@ Remarks
 
 Any *file-list-section* name must be unique to the INF file, but it can be referenced by [**CopyFiles**](inf-copyfiles-directive.md), **DelFiles**, or **RenFiles** directives elsewhere in the same INF. Such an INF-writer-defined section name must follow the general rules for defining section names. For more information about these rules, see [General Syntax Rules for INF Files](general-syntax-rules-for-inf-files.md).
 
-The **RenFiles** directive does not support decorating a *file-list-section* name with a system-defined platform extension (**.nt**, **.ntx86**, **.ntia64**, or **.ntamd64**).
+The **RenFiles** directive does not support decorating a *file-list-section* name with a system-defined platform extension (**.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, or **.ntarm64**).
 
 The [**DestinationDirs**](inf-destinationdirs-section.md) section of the INF file controls the destination for all file-rename operations, regardless of the section that contains a particular **RenFiles** directive. The following rules describe the file-rename operation:
 
@@ -84,7 +88,7 @@ Examples
 
 This example shows a section referenced by a **RenFiles** directive.
 
-```cpp
+```ini
 [RenameOldFilesSec]
 devfile41.sav, devfile41.sys
 ```

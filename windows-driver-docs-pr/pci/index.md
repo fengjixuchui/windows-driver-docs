@@ -13,20 +13,16 @@ keywords:
 - power management WDK PCI
 - querying power management capability data
 - headers WDK PCI
-ms.author: windowsdriverdev
 ms.date: 04/20/2017
 ms.topic: article
 ms.prod: windows-hardware
 ms.technology: windows-devices
+author: EliotSeattle
 ---
 
 # PCI driver programming guide
 
-
-## Supported PCIe features in Windows
-
-
-The following table summarizes the PCIe features that are supported by different versions of Windows. For details, see the specified sections in the [official PCIe specification](http://www.pcisig.com/specifications/pciexpress/review_zone/).
+The following table summarizes the PCIe features that are supported by different versions of Windows. For details, see the specified sections in the [official PCIe specification](http://pcisig.com/specifications/review-zone).
 
 <table>
 <colgroup>
@@ -52,14 +48,14 @@ The following table summarizes the PCIe features that are supported by different
 </tr>
 <tr class="odd">
 <td><p>ACPI additions for FW latency optimizations</p>
-<p>See <a href="http://go.microsoft.com/fwlink/p/?LinkId=787058" data-raw-source="[ACPI Additions for FW Latency Optimizations]( http://go.microsoft.com/fwlink/p/?LinkId=787058)">ACPI Additions for FW Latency Optimizations</a></p></td>
+<p>See <a href="https://go.microsoft.com/fwlink/p/?LinkId=787058" data-raw-source="[ACPI Additions for FW Latency Optimizations]( https://go.microsoft.com/fwlink/p/?LinkId=787058)">ACPI Additions for FW Latency Optimizations</a></p></td>
 <td><p>Windows 10</p></td>
 </tr>
 <tr class="even">
 <td><p>ATS/PRI</p>
 <ul>
-<li><a href="http://go.microsoft.com/fwlink/p/?LinkId=787061" data-raw-source="[ATS specification](http://go.microsoft.com/fwlink/p/?LinkId=787061)">ATS specification</a></li>
-<li><a href="http://go.microsoft.com/fwlink/p/?LinkId=787060" data-raw-source="[Errata for the PCI Express&#174; Base Specification Revision 3.1, Single Root I/O Virtualization and Sharing Revision 1.1, Address Translation and Sharing Revision 1.1, and M.2 Specification Revision 1.0](http://go.microsoft.com/fwlink/p/?LinkId=787060)">Errata for the PCI Express® Base Specification Revision 3.1, Single Root I/O Virtualization and Sharing Revision 1.1, Address Translation and Sharing Revision 1.1, and M.2 Specification Revision 1.0</a></li>
+<li><a href="https://go.microsoft.com/fwlink/p/?LinkId=787061" data-raw-source="[ATS specification](https://go.microsoft.com/fwlink/p/?LinkId=787061)">ATS specification</a></li>
+<li><a href="https://go.microsoft.com/fwlink/p/?LinkId=787060" data-raw-source="[Errata for the PCI Express&#174; Base Specification Revision 3.1, Single Root I/O Virtualization and Sharing Revision 1.1, Address Translation and Sharing Revision 1.1, and M.2 Specification Revision 1.0](https://go.microsoft.com/fwlink/p/?LinkId=787060)">Errata for the PCI Express® Base Specification Revision 3.1, Single Root I/O Virtualization and Sharing Revision 1.1, Address Translation and Sharing Revision 1.1, and M.2 Specification Revision 1.0</a></li>
 </ul></td>
 <td><p>Windows 10</p></td>
 </tr><td><p>Optimized Buffer Flush/Fill (OBFF)</p>
@@ -93,35 +89,22 @@ The following table summarizes the PCIe features that are supported by different
 </tr>
 <tr class="even">
 <td><p>Single Root I/O Virtualization (SR-IOV)</p>
-<p>See <a href="https://msdn.microsoft.com/library/windows/hardware/hh440235" data-raw-source="[Single Root I/O Virtualization (SR-IOV)](https://msdn.microsoft.com/library/windows/hardware/hh440235)">Single Root I/O Virtualization (SR-IOV)</a>.</p></td>
+<p>See <a href="https://docs.microsoft.com/windows-hardware/drivers/network/single-root-i-o-virtualization--sr-iov-" data-raw-source="[Single Root I/O Virtualization (SR-IOV)](https://docs.microsoft.com/windows-hardware/drivers/network/single-root-i-o-virtualization--sr-iov-)">Single Root I/O Virtualization (SR-IOV)</a>.</p></td>
 <td><p>Windows 8</p>
 <p>Windows Server 2012</p></td>
 </tr>
 </tbody>
 </table>
 
-
-
-
-
 ## In this section
 
-
--   [PCI Power Management and Device Drivers](https://msdn.microsoft.com/library/windows/hardware/dn607302)
--   [Accessing PCI Device Configuration Space](https://msdn.microsoft.com/library/windows/hardware/ff536890)
--   [I/O Resource Usage Reduction](https://msdn.microsoft.com/library/windows/hardware/ff537424)
--   [Order of Resources in Start-Device IRP](https://msdn.microsoft.com/library/windows/hardware/ff537445)
--   [PCI Express FAQ for Graphics](https://msdn.microsoft.com/library/windows/hardware/dn653979)
--   [PCI Sample](https://msdn.microsoft.com/library/windows/hardware/hh450892)
-
+- [PCI Power Management and Device Drivers](https://docs.microsoft.com/windows-hardware/drivers/pci/pci-power-management-and-device-drivers)
+- [Accessing PCI Device Configuration Space](https://docs.microsoft.com/windows-hardware/drivers/pci/accessing-pci-device-configuration-space)
+- [I/O Resource Usage Reduction](https://docs.microsoft.com/windows-hardware/drivers/pci/i-o-resource-usage-reduction)
+- [Order of Resources in Start-Device IRP](https://docs.microsoft.com/windows-hardware/drivers/pci/order-of-resources-in-start-device-irp)
+- [PCI Express FAQ for Graphics](https://docs.microsoft.com/windows-hardware/drivers/pci/pci-express-faq-for-graphics)
+- [PCI Sample](https://docs.microsoft.com/windows-hardware/drivers/pci/pci-sample)
 
 ## See Also
--   [Official PCIe specification](http://www.pcisig.com/specifications/pciexpress/review_zone/)
 
- 
-
- 
-
-
-
-
+- [Official PCIe specification](http://pcisig.com/specifications/review-zone)

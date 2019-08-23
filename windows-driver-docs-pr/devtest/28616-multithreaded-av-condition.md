@@ -3,7 +3,9 @@ title: C28616
 description: Warning C28616 Multithreaded AV condition.
 ms.assetid: 77be6a23-18dc-420c-9359-ab91f216c73b
 ms.date: 04/20/2017
-ms.localizationpriority: medium
+ms.localizationpriority: medium 
+f1_keywords: 
+  - "C28616"
 ---
 
 # C28616
@@ -31,7 +33,7 @@ When T1 is rescheduled, it will reference **m\_cref** on line 9. Thus it will ac
   5         delete this;
   6         return NULL;
   7     }
-  8     /* this.m_cRef isn&#39;t thread safe */
+  8     /* this.m_cRef isn't thread safe */
   9     return m_cRef;
  10 }
 ```

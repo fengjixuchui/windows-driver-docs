@@ -41,11 +41,11 @@ When a SCSI miniport driver commits one of the following violations, Driver Veri
 
 -   The bus reset hold period ends, but the miniport driver still has outstanding requests.
 
-See [**Bug Check 0xF1**](https://msdn.microsoft.com/library/windows/hardware/ff560365) (SCSI\_VERIFIER\_DETECTED\_VIOLATION) for a complete list of the bug check parameters.
+See [**Bug Check 0xF1**](https://docs.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xf1--scsi-verifier-detected-violation) (SCSI\_VERIFIER\_DETECTED\_VIOLATION) for a complete list of the bug check parameters.
 
 In addition to these violations, SCSI Verification also monitors the miniport driver's memory access for improper use. Two common memory violations made by miniport drivers are accessing an SRB extension after a request completes, and accessing an SRB's **DataBuffer** when the miniport driver has not specified **MapBuffers**.
 
-Memory violations of this sort will usually result in [**Bug Check 0xD1**](https://msdn.microsoft.com/library/windows/hardware/ff560244) (DRIVER\_IRQL\_NOT\_LESS\_OR\_EQUAL) being issued.
+Memory violations of this sort will usually result in [**Bug Check 0xD1**](https://docs.microsoft.com/windows-hardware/drivers/debugger/bug-check-0xd1--driver-irql-not-less-or-equal) (DRIVER\_IRQL\_NOT\_LESS\_OR\_EQUAL) being issued.
 
 ### <span id="activating_this_option"></span><span id="ACTIVATING_THIS_OPTION"></span>Activating This Option
 
@@ -82,7 +82,7 @@ The effects of each bit are as follows:
 <tr class="odd">
 <td align="left"><p>0</p></td>
 <td align="left"><p>0x1</p></td>
-<td align="left"><p>Driver Verifier will monitor the miniport driver&#39;s memory access and check for improper use of memory buffers.</p></td>
+<td align="left"><p>Driver Verifier will monitor the miniport driver's memory access and check for improper use of memory buffers.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>28</p></td>

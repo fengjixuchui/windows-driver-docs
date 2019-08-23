@@ -2,7 +2,6 @@
 title: Getting Started with WinDbg (User-Mode)
 description: WinDbg is a kernel-mode and user-mode debugger that is included in Debugging Tools for Windows. Here we provide hands-on exercises that will help you get started using WinDbg as a user-mode debugger.
 ms.assetid: 8C2D2D0C-7E54-4711-A6FD-970E040F1C50
-ms.author: domars
 ms.date: 10/09/2017
 ms.localizationpriority: medium
 ---
@@ -30,7 +29,7 @@ After you have installed the debugging tools, locate the installation directorie
 
 4.  Near the bottom of the WinDbg window, in the command line, enter this command:
 
-    [.sympath srv\*](https://go.microsoft.com/fwlink/p?linkid=399238).
+    [.sympath srv\*](https://go.microsoft.com/fwlink/p?linkid=399238)
 
     The output is similar to this:
 
@@ -81,6 +80,11 @@ After you have installed the debugging tools, locate the installation directorie
     [g](https://go.microsoft.com/fwlink/p?linkid=399388)
 
     Notepad runs until it comes to the **WinMain** function, and then breaks in to the debugger.
+    ```dbgcmd
+    Breakpoint 0 hit
+    notepad!WinMain:
+    00007ff6`32825f64 488bc4          mov     rax,rsp
+    ```
 
     To see a list of code modules that are loaded in the Notepad process, enter this command:
 
@@ -121,9 +125,6 @@ After you have installed the debugging tools, locate the installation directorie
     The output is similar to this:
 
     ```dbgcmd
-    Breakpoint 0 hit
-    notepad!WinMain:
-    00007ff6`32825f64 488bc4          mov     rax,rsp
     0:000> k
     Child-SP          RetAddr           Call Site
     00000048`4e0cf6a8 00007ff6`3282122f notepad!WinMain
@@ -223,20 +224,18 @@ void main ()
 }
 ```
 
-For this exercise, we will assume that the built application (MyApp.exe) and the symbol file (MyApp.pdb) are in C:\\MyApp\\x64\\Debug. We will also assume that the application source code is in C:\\MyApp\\MyApp.
+For this exercise, we will assume that the built application (MyApp.exe) and the symbol file (MyApp.pdb) are in C:\\MyApp\\x64\\Debug. We will also assume that the application source code is in C:\\MyApp\\MyApp and that the target machine compiled MyApp.exe.
 
 1.  Open WinDbg.
 
 2.  On the **File** menu, choose **Open Executable**. In the Open Executable dialog box, navigate to C:\\MyApp\\x64\\Debug. For **File name**, enter MyApp.exe. Click **Open**.
 3.  Enter these commands:
 
-    [.sympath srv\*](https://go.microsoft.com/fwlink/p?linkid=399238)
+    [.symfix](https://docs.microsoft.com/windows-hardware/drivers/debugger/-symfix--set-symbol-store-path-)
 
-    .sympath+ C:\\MyApp\\x64\\Debug
+    [.sympath](https://docs.microsoft.com/windows-hardware/drivers/debugger/-sympath--set-symbol-path-)+ C:\\MyApp\\x64\\Debug
 
-    [.srcpath C:\\MyApp\\MyApp](https://go.microsoft.com/fwlink/p?linkid=399395)
-
-    Now WinDbg knows where to find symbols and source code for your application.
+    Now WinDbg knows where to find symbols and source code for your application. In this case, the source code location doesn't need to be set with [.srcpath](https://docs.microsoft.com/windows-hardware/drivers/debugger/-srcpath---lsrcpath--set-source-path-) because the symbols have fully qualified paths to the source files.
 
 4.  Enter these commands:
 

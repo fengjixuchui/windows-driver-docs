@@ -3,7 +3,6 @@ title: ndiskd.nwadapter
 description: The ndiskd.nwadapter extension displays information about one or more nwifi ADAPT structures. If you run this extension with no parameters, ndiskd will display a list of all nwifi ADAPT structures.
 ms.assetid: 6CDB8F35-B686-45FD-A940-A770D4D62E51
 keywords: ["ndiskd.nwadapter Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -36,9 +35,9 @@ Ndiskd.dll
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

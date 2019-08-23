@@ -133,7 +133,7 @@ With the addition of the executor concept to non-Windows Mobile devices in Windo
 |  | OID_WWAN_SLOT_INFO_STATUS |
 
 > [!NOTE]
-> [OID_WWAN_RADIO_STATE](https://msdn.microsoft.com/library/windows/hardware/ff569832) has been updated for Windows 10, version 1703 as well. See OID_WWAN_RADIO_STATE for more information.
+> [OID_WWAN_RADIO_STATE](https://docs.microsoft.com/windows-hardware/drivers/network/oid-wwan-radio-state) has been updated for Windows 10, version 1703 as well. See OID_WWAN_RADIO_STATE for more information.
 
 ## MBIM Interface Update for Multi-SIM Operations
 
@@ -205,7 +205,7 @@ The InformationBuffer shall be null and InformationBufferLength shall be zero.
 
 Not applicable.
 
-##### Reponse
+##### Response
 
 The following MBIM_SYS_CAPS_INFO structure shall be used in the InformationBuffer.
 

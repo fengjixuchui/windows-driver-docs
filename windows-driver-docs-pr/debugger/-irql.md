@@ -3,7 +3,6 @@ title: irql extension command
 description: The irql extension displays the interrupt request level (IRQL) of a processor on the target computer before the debugger break.
 ms.assetid: 52dd3b9f-c03c-4b90-a01b-25289de67f5a
 keywords: ["IRQL", "Interrupt Request Level", "irql Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -65,7 +64,7 @@ Remarks
 
 When the target computer breaks into the debugger, the IRQL changes, but the IRQL that was effective just before the debugger break is saved. The **!irql** extension displays the saved IRQL.
 
-Similarly, when a bug check occurs and a crash dump file is created, the IRQL saved in the crash dump file is the one immediately prior to the bug check, not the IRQL at which the [**KeBugCheckEx**](https://msdn.microsoft.com/library/windows/hardware/ff551961) routine was executed.
+Similarly, when a bug check occurs and a crash dump file is created, the IRQL saved in the crash dump file is the one immediately prior to the bug check, not the IRQL at which the [**KeBugCheckEx**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-kebugcheckex) routine was executed.
 
 In both cases, the current IRQL is raised to DISPATCH\_LEVEL, except on x86 architectures. Thus, if more than one such event occurs, the IRQL displayed will also be DISPATCH\_LEVEL, making it useless for debugging purposes.
 

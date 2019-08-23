@@ -2,7 +2,6 @@
 title: Remote Debugging Using Visual Studio
 description: The procedure covers Remote Debugging Using Visual Studio.
 ms.assetid: 9FA347BF-878E-46C8-8459-DC73A8B1EB26
-ms.author: domars
 ms.date: 05/11/2018
 ms.localizationpriority: medium
 ---
@@ -14,7 +13,7 @@ ms.localizationpriority: medium
 >
 
 
-The procedures shown in this topic require that you have the Windows Driver Kit integrated into Visual Studio. To get the integrated environment, first install Microsoft Visual Studio, and then install the Windows Driver Kit (WDK). For more information, see [Windows Driver Development](https://msdn.microsoft.com/library/windows/hardware/ff557573).
+The procedures shown in this topic require that you have the Windows Driver Kit integrated into Visual Studio. To get the integrated environment, first install Microsoft Visual Studio, and then install the Windows Driver Kit (WDK). For more information, see [Windows Driver Development](https://docs.microsoft.com/windows-hardware/drivers/).
 
 To perform remote debugging using Visual Studio:
 

@@ -3,7 +3,6 @@ title: x (Examine Symbols)
 description: The x command displays the symbols in all contexts that match the specified pattern.
 ms.assetid: 8c71c2ca-4a9d-43e4-91b3-f05b5475316d
 keywords: ["x (Examine Symbols) Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -141,7 +140,7 @@ The preceding commands also force the debugger to reload symbol information from
 0:000> x mymodule!*start* 
 ```
 
-A few symbols always contain the string "start". Therefore, the preceding command always displays some output to verify that the command works. But the preceding command avoids the excessive display length of **x mymodule!\\***.
+A few symbols always contain the string "start". Therefore, the preceding command always displays some output to verify that the command works. But the preceding command avoids the excessive display length of **x mymodule!\***.
 
 The display shows the starting address of each symbol and the full symbol name. If the symbol is a function name, the display also includes a list of its argument types. If the symbol is a global variable, its current value is displayed.
 

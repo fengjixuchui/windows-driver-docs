@@ -3,7 +3,6 @@ title: ndiskd.cxadapter
 description: The ndiskd.cxadapter extension displays information about a NETADAPTER object.
 ms.assetid: 5BE91B1C-9795-4E2C-834A-B7424FF1FCDB
 keywords: ["ndiskd.cxadapter Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -185,9 +184,9 @@ DATAPATH QUEUES
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

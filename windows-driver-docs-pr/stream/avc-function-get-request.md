@@ -80,7 +80,7 @@ Ignored in input. On output, the **CommandType** member is set to one of the val
 Ignored for requests.
 
 <span id="SubunitAddr"></span><span id="subunitaddr"></span><span id="SUBUNITADDR"></span>**SubunitAddr**  
-Used only when registering to receive unit commands. Set this to the address of nonpaged memory containing the Unit Address encoded according to Section 5.3.3 of the **AV/C** Digital Interface Command Set General Specification, Rev 3.0 (0xff). This specification can be found at the [1394 Trade Association](http://go.microsoft.com/fwlink/p/?linkid=8728) website. Note that for subunit requests, on completion this points to memory containing the subunit address for this virtual subunit instance. The caller may access this nonpaged memory, but must not attempt to free it.
+Used only when registering to receive unit commands. Set this to the address of nonpaged memory containing the Unit Address encoded according to Section 5.3.3 of the **AV/C** Digital Interface Command Set General Specification, Rev 3.0 (0xff). This specification can be found at the [1394 Trade Association](https://go.microsoft.com/fwlink/p/?linkid=8728) website. Note that for subunit requests, on completion this points to memory containing the subunit address for this virtual subunit instance. The caller may access this nonpaged memory, but must not attempt to free it.
 
 <span id="AlternateOpcodes"></span><span id="alternateopcodes"></span><span id="ALTERNATEOPCODES"></span>**AlternateOpcodes**  
 Used only when registering to receive unit commands. Set this to the address of nonpaged memory containing the list of unit opcodes supported by the caller. The first byte of the opcode list is the count of opcodes to follow (equivalent to the number of bytes). The total length of the memory containing the alternate opcode list is **AlternateOpcodes**\[0\]+1.
@@ -124,7 +124,7 @@ This function code may be called at IRQL &lt;= DISPATCH\_LEVEL.
 
 ### See Also
 
-[**AVC\_FUNCTION\_SEND\_RESPONSE**](avc-function-send-response.md), [**AvcResponseCode**](https://msdn.microsoft.com/library/windows/hardware/ff554105), [**AVC\_FUNCTION**](https://msdn.microsoft.com/library/windows/hardware/ff554145), [**RtlZeroMemory**](https://msdn.microsoft.com/library/windows/hardware/ff563610)
+[**AVC\_FUNCTION\_SEND\_RESPONSE**](avc-function-send-response.md), [**AvcResponseCode**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/avc/ne-avc-_tagavcresponsecode), [**AVC\_FUNCTION**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/avc/ne-avc-_tagavc_function), [**RtlZeroMemory**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nf-wdm-rtlzeromemory)
 
  
 

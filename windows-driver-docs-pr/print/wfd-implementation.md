@@ -17,7 +17,7 @@ For a WFD-WSD device to get the seamless connectivity experience as described in
 -   The device must support Vertical pairing and send the relevant DPWS (WSD) data in the WPS messages (formats described in "Implementing Vertical Pairing Data Blob" below)
 -   All logical devices in the physical device MUST use the same PnP-X Container ID in its PnP-X extension
     -   For details on implementing PnP-X Container IDs for Network Connected Devices, see [Overview of Container IDs](https://docs.microsoft.com/windows-hardware/drivers/install/overview-of-container-ids).
-    -   For general information on PnP-X extensions, see the [PnP-X: Plug and Play Extensions for Windows Specification](https://msdn.microsoft.com/windows/hardware/gg463082).
+    -   For general information on PnP-X extensions, see the [PnP-X: Plug and Play Extensions for Windows Specification](https://docs.microsoft.com/previous-versions/gg463082(v=msdn.10)).
 
 Since the WFD Container ID will match the UUID of the printer, PnP-X Container ID will not be required in the device metadata. However, it is still recommended that the device supports PnP-X metadata in the device metadata and advertise a PnP-X Container ID as part of the PnP-X metadata in the device metadata. This Container ID should match the WFD Container ID.
 
@@ -29,7 +29,7 @@ Having the same container ID at WFD layer as well as WSD layer ensures the follo
 
 If a WFD-WSD device does not conform to the above requirements, then the connectivity experience described in this implementation will not apply to those devices.
 
-Devices should implement Persistent Groups and Concurrent Connection-Multiple Groups as specified in the [Wi-Fi Alliance - Wi-Fi Direct Industry Whitepaper](http://go.microsoft.com/fwlink/p/?LinkId=784967).
+Devices should implement Persistent Groups and Concurrent Connection-Multiple Groups as specified in the [Wi-Fi Alliance - Wi-Fi Direct Industry Whitepaper](https://go.microsoft.com/fwlink/p/?LinkId=784967).
 
 ## How to Publish Container UUID over Wi-Fi Direct for Printers
 
@@ -136,13 +136,13 @@ Two specific TLV types are defined for Rally Vertical Pairing. These TLV types a
 <td><p>Vertical Pairing Identifier (Communicates the internal topology of the device)</p></td>
 <td><p>0x1001</p></td>
 <td><p>0x0002</p></td>
-<td><p>See &quot;VERTICAL PAIRING IDENTIFIER TLV&quot; below.</p></td>
+<td><p>See "VERTICAL PAIRING IDENTIFIER TLV" below.</p></td>
 </tr>
 <tr class="even">
 <td><p>Transport UUID (The device’s transport UUID value)</p></td>
 <td><p>0x1002</p></td>
 <td><p>0x0010</p></td>
-<td><p>See &quot;TLV definition for Container UUID&quot; above.</p></td>
+<td><p>See "TLV definition for Container UUID" above.</p></td>
 </tr>
 </tbody>
 </table>

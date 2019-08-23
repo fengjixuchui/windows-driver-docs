@@ -3,7 +3,6 @@ title: Bug Check 0x1E KMODE_EXCEPTION_NOT_HANDLED
 description: The KMODE_EXCEPTION_NOT_HANDLED bug check has a value of 0x0000001E. This indicates that a kernel-mode program generated an exception which the error handler did not catch.
 ms.assetid: 4a30b770-b2c4-4fdd-b431-95f2b40ef5f7
 keywords: ["Bug Check 0x1E KMODE_EXCEPTION_NOT_HANDLED", "KMODE_EXCEPTION_NOT_HANDLED"]
-ms.author: domars
 ms.date: 08/23/2018
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The KMODE\_EXCEPTION\_NOT\_HANDLED bug check has a value of 0x0000001E. This indicates that a kernel-mode program generated an exception which the error handler did not catch.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## KMODE\_EXCEPTION\_NOT\_HANDLED Parameters
 
@@ -60,7 +61,7 @@ The KMODE\_EXCEPTION\_NOT\_HANDLED bug check has a value of 0x0000001E. This ind
 Cause
 -----
 
-This is a common bug check. To interpret it, you must identify which exception was generated.
+To interpret this bug check, you must identify which exception was generated.
 
 Common exception codes include:
 
@@ -76,21 +77,13 @@ Common exception codes include:
 
     A memory access violation occurred. (Parameter 4 of the bug check is the address that the driver attempted to access.)
 
-For a complete list of exception codes, see [NTSTATUS Values](https://msdn.microsoft.com/library/cc704588.aspx). The exception codes are also listed in the ntstatus.h file located in the inc directory of the [Windows Driver Kit](https://docs.microsoft.com/windows-hardware/drivers/).
+For a complete list of exception codes, see [NTSTATUS Values](https://docs.microsoft.com/openspecs/windows_protocols/ms-erref/596a1078-e883-4972-9bbc-49e60bebca55). The exception codes are also listed in the ntstatus.h file located in the inc directory of the [Windows Driver Kit](https://docs.microsoft.com/windows-hardware/drivers/).
 
 
-Resolution
+Remarks
 ----------
 
 **If you are not equipped to debug this problem**, you can use some basic troubleshooting techniques described in [**Blue Screen Data**](blue-screen-data.md). If a driver is identified in the bug check message, disable the driver or check with the manufacturer for driver updates.
-
-**If you plan to debug this problem**, you may find it difficult to obtain a stack trace. Parameter 2 (the exception address) should pinpoint the driver or function that caused this problem.
-
-If exception code 0x80000003 occurs, this indicates that a hard-coded breakpoint or assertion was hit, but the system was started with the **/NODEBUG** switch. This problem should rarely occur. If it occurs repeatedly, make sure a kernel debugger is connected and the system is started with the **/DEBUG** switch.
-
-If exception code 0x80000002 occurs, the trap frame will supply additional information.
-
-If the specific cause of the exception is unknown, the following should be considered:
 
 **Hardware incompatibility**
 
@@ -105,6 +98,18 @@ If a driver is listed by name within the bug check message, disable or remove th
 Check the System Log in Event Viewer for additional error messages that might help pinpoint the device or driver that is causing bug check 0x1E. You should also run hardware diagnostics, especially the memory scanner, supplied by the system manufacturer. For details on these procedures, see the owner's manual for your computer.
 
 The error that generates this message can occur after the first restart during Windows Setup, or after Setup is finished. A possible cause of the error is a system BIOS incompatibility. BIOS problems can be resolved by upgrading the system BIOS version.
+
+Resolution
+----------
+
+**If you plan to debug this problem**, you may find it difficult to obtain a stack trace. Parameter 2 (the exception address) should pinpoint the driver or function that caused this problem.
+
+If exception code 0x80000003 occurs, this indicates that a hard-coded breakpoint or assertion was hit, but the system was started with the **/NODEBUG** switch. This problem should rarely occur. If it occurs repeatedly, make sure a kernel debugger is connected and the system is started with the **/DEBUG** switch.
+
+If exception code 0x80000002 occurs, the trap frame will supply additional information.
+
+If the specific cause of the exception is unknown, the following should be considered:
+
 
 **To get a stack trace if the normal stack tracing procedures fail**
 
@@ -183,7 +188,9 @@ fe40cf4c 80133184 ff6ce388 00000000 00000000 QIC117!_kdi_ThreadRun@4+0xa9
 fe40cf7c 8013cb8e fe43a44c ff6ce388 00000000 NT!_PspSystemThreadStartup@8+0x40
 ```
 
- 
+**Time Travel Trace**
+
+If the bug check can be reproduced on demand, investigate the possibility of taking a time travel trace using WinDbg Preview. For more information, see [Time Travel Debugging - Overview](time-travel-debugging-overview.md).
 
  
 

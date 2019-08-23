@@ -3,7 +3,6 @@ title: ready
 description: The ready extension displays summary information about each thread in the system in a READY state.
 ms.assetid: 1dc94ceb-7d06-4874-999c-059c86f51ea0
 keywords: ["thread, ready threads", "ready Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -36,10 +35,10 @@ Causes the display to include the thread's wait states.
 If this is included without Bit 1 (0x2), this has no effect. If this is included along with Bit 1, the thread is displayed with a stack trace.
 
 <span id="Bit_3__0x8_"></span><span id="bit_3__0x8_"></span><span id="BIT_3__0X8_"></span>Bit 3 (0x8)  
-(Windows XP and later) Causes the display of each function to include the return address, the stack pointer, and (on Itanium systems) the **bsp** register value. The display of function arguments is suppressed.
+Causes the display of each function to include the return address, the stack pointer, and (on Itanium systems) the **bsp** register value. The display of function arguments is suppressed.
 
 <span id="Bit_4__0x10_"></span><span id="bit_4__0x10_"></span><span id="BIT_4__0X10_"></span>Bit 4 (0x10)  
-(Windows XP and later) Causes the display of each function to include only the return address; arguments and stack pointers are suppressed.
+Causes the display of each function to include only the return address; arguments and stack pointers are suppressed.
 
 ### <span id="DLL"></span><span id="dll"></span>DLL
 
@@ -64,7 +63,7 @@ If this is included without Bit 1 (0x2), this has no effect. If this is included
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about thread scheduling and the READY state, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about thread scheduling and the READY state, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

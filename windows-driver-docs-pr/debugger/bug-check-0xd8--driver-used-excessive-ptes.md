@@ -3,7 +3,6 @@ title: Bug Check 0xD8 DRIVER_USED_EXCESSIVE_PTES
 description: The DRIVER_USED_EXCESSIVE_PTES bug check has a value of 0x000000D8. This indicates that there are no more system page table entries (PTE) remaining.
 ms.assetid: a11212eb-8dd7-49f3-9b23-237ed88b9cff
 keywords: ["Bug Check 0xD8 DRIVER_USED_EXCESSIVE_PTES", "DRIVER_USED_EXCESSIVE_PTES"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The DRIVER\_USED\_EXCESSIVE\_PTES bug check has a value of 0x000000D8. This indicates that there are no more system page table entries (PTE) remaining.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## DRIVER\_USED\_EXCESSIVE\_PTES Parameters
 

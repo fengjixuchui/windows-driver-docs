@@ -21,7 +21,7 @@ Before you can submit the files for logo certification, you must package the fil
 
 **To create a device metadata experience package**
 
-1. Sign in to the Dashboard from either the Windows Dev Center or the Hardware Dev Center using the Microsoft account associated with this service.
+1. Sign in to the Dashboard from the Partner Center using the Microsoft account associated with this service.
 
 2. On the left side of the window, click **Device metadata**, and then click **Create experience**.
 
@@ -53,7 +53,7 @@ Before you can submit the files for logo certification, you must package the fil
    </tr>
    <tr class="even">
    <td><p>Preview package</p></td>
-   <td><p>Select this if you want to submit all your selected packages as preview packages. For more information, see <a href="https://msdn.microsoft.com/library/windows/hardware/br230780.aspx" data-raw-source="[Creating a Preview Package](https://msdn.microsoft.com/library/windows/hardware/br230780.aspx)">Creating a Preview Package</a>.</p></td>
+   <td><p>Select this if you want to submit all your selected packages as preview packages. For more information, see <a href="https://docs.microsoft.com/windows-hardware/drivers/dashboard/" data-raw-source="[Creating a Preview Package](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)">Creating a Preview Package</a>.</p></td>
    </tr>
    <tr class="odd">
    <td><p>Bind to logo submissions</p></td>
@@ -74,13 +74,13 @@ Before you can submit the files for logo certification, you must package the fil
 ## <span id="related_topics"></span>Related topics
 
 
-[Manage Device Metadata Experiences](https://msdn.microsoft.com/library/windows/hardware/br230797.aspx)
+[Manage Device Metadata Experiences](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)
 
-[Submit a Bulk Metadata Package](https://msdn.microsoft.com/library/windows/hardware/hh801895.aspx)
+[Submit a Bulk Metadata Package](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)
 
-[Errors and Solutions When Submitting Device Metadata Experiences](https://msdn.microsoft.com/library/windows/hardware/br230786.aspx)
+[Errors and Solutions When Submitting Device Metadata Experiences](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)
 
-[Device Metadata Business Rules](https://msdn.microsoft.com/library/windows/hardware/br230767.aspx)
+[Device Metadata Business Rules](https://docs.microsoft.com/windows-hardware/drivers/dashboard/)
 
  
 

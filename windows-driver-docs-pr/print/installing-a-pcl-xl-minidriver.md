@@ -22,7 +22,7 @@ In Windows XP and later, ntprint.inf has the following \[PCLXL.OEM\] section:
 CopyFiles=PCLXL,@PCL5ERES.DLL
 ```
 
-The [**INF CopyFiles directive**](https://msdn.microsoft.com/library/windows/hardware/ff546346) copies all of the files listed in the \[PCLXL\] section, as well as pcl5eres.dll, to the default destination directory. The \[PCLXL\] section also appears in ntprint.inf and lists the files to be copied.
+The [**INF CopyFiles directive**](https://docs.microsoft.com/windows-hardware/drivers/install/inf-copyfiles-directive) copies all of the files listed in the \[PCLXL\] section, as well as pcl5eres.dll, to the default destination directory. The \[PCLXL\] section also appears in ntprint.inf and lists the files to be copied.
 
 ```cpp
 [PCLXL]
@@ -33,7 +33,7 @@ PJL.GPD
 P6DISP.GPD
 ```
 
-Pclxl.dll contains the PCL XL [*UFMs*](https://msdn.microsoft.com/library/windows/hardware/ff556343#wdkgloss-unidrv-font-metrics--ufm-) and various resource strings. The other GPDs listed in this section are the PCL XL (PCL-6) support files.
+Pclxl.dll contains the PCL XL *UFMs* and various resource strings. The other GPDs listed in this section are the PCL XL (PCL-6) support files.
 
 To install a PCL XL printer minidriver, an OEM should add a section similar to the following in the printer-specific INF. This INF loads before ntprint.inf does.
 

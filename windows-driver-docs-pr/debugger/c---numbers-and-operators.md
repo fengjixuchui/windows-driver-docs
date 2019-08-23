@@ -3,7 +3,6 @@ title: C++ Numbers and Operators
 description: C++ Numbers and Operators
 ms.assetid: e5d3ac7f-fd79-48bb-b927-9ad72570dcbe
 keywords: ["expressions, C++ expression syntax", "C++ expressions, numbers", "C++ expressions, operators", "numerical expressions, C++", "operators, C++", "precedence rules (C++)", "methods", "methods, syntax", "members of classes"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -114,7 +113,7 @@ You can use the following operators. The operators in each cell take precedence 
 <p><strong>!</strong> <em>Value</em></p>
 <p><em>Value</em></p>
 <p><strong>+</strong> <em>Value</em></p>
-<p><strong>&amp;</strong> <em>LValue</em></p>
+<p><strong>&</strong> <em>LValue</em></p>
 <p><strong><em></strong> <em>Value</em></p></td>
 <td align="left"><p>Typecast (always performed)</p>
 <p>Size of expression</p>
@@ -171,7 +170,7 @@ You can use the following operators. The operators in each cell take precedence 
 <p>Not equal (comparison)</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><em>Value</em> <strong>&amp;</strong> <em>Value</em></p></td>
+<td align="left"><p><em>Value</em> <strong>&</strong> <em>Value</em></p></td>
 <td align="left"><p>Bitwise AND</p></td>
 </tr>
 <tr class="even">
@@ -183,7 +182,7 @@ You can use the following operators. The operators in each cell take precedence 
 <td align="left"><p>Bitwise OR</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><em>Value</em> <strong>&amp;&amp;</strong> <em>Value</em></p></td>
+<td align="left"><p><em>Value</em> <strong>&&</strong> <em>Value</em></p></td>
 <td align="left"><p>Logical AND</p></td>
 </tr>
 <tr class="odd">
@@ -199,7 +198,7 @@ You can use the following operators. The operators in each cell take precedence 
 <p><em>LValue</em> <strong>-=</strong> <em>Value</em></p>
 <p><em>LValue</em> <strong>&lt;&lt;=</strong> <em>Value</em></p>
 <p><em>LValue</em> <strong>&gt;&gt;=</strong> <em>Value</em></p>
-<p><em>LValue</em> <strong>&amp;=</strong> <em>Value</em></p>
+<p><em>LValue</em> <strong>&=</strong> <em>Value</em></p>
 <p><em>LValue</em> <strong>|=</strong> <em>Value</em></p>
 <p><em>LValue</em> <strong>^=</strong> <em>Value</em></p></td>
 <td align="left"><p>Assign</p>

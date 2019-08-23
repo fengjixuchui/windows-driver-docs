@@ -3,7 +3,6 @@ title: Memory Access
 description: Memory Access
 ms.assetid: a5265f2c-61b9-4f0f-8cff-05da26010c6a
 keywords: ["Debugger Engine, memory access", "memory access"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -14,7 +13,7 @@ ms.localizationpriority: medium
 ## <span id="ddk_memory_access_dbx"></span><span id="DDK_MEMORY_ACCESS_DBX"></span>
 
 
-The [debugger engine](introduction.md#debugger-engine) provides [*interfaces*](https://msdn.microsoft.com/library/windows/hardware/ff556290#wdkgloss-interface) to directly read from and write to the target's main memory, registers, and other data spaces.
+The debugger engine to directly read from and write to the target's main memory, registers, and other data spaces.
 
 In user-mode debugging, only the virtual memory and registers can be accessed; the physical memory and other data spaces cannot be accessed.
 

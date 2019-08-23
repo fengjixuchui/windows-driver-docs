@@ -3,7 +3,6 @@ title: Bug Check 0x41 MUST_SUCCEED_POOL_EMPTY
 description: The MUST_SUCCEED_POOL_EMPTY bug check has a value of 0x00000041. This indicates that a kernel-mode thread has requested too much must-succeed pool.
 ms.assetid: 10aafcf4-6af0-41b5-803c-578369bdd810
 keywords: ["Bug Check 0x41 MUST_SUCCEED_POOL_EMPTY", "MUST_SUCCEED_POOL_EMPTY"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The MUST\_SUCCEED\_POOL\_EMPTY bug check has a value of 0x00000041. This indicates that a kernel-mode thread has requested too much must-succeed pool.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## MUST\_SUCCEED\_POOL\_EMPTY Parameters
 
@@ -60,7 +61,7 @@ The MUST\_SUCCEED\_POOL\_EMPTY bug check has a value of 0x00000041. This indicat
 Cause
 -----
 
-In Microsoft Windows 2000, only a small amount of must-succeed pool is permitted. In Windows XP and later, no driver is permitted to request must-succeed pool.
+No driver is permitted to request must-succeed pool.
 
 If a must-succeed request cannot be filled, this bug check is issued.
 

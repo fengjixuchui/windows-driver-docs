@@ -29,13 +29,13 @@ The USB Type-C connector, introduced by the USB-IF, defined in the USB 3.1 speci
 
 **Official specifications**
 
-[USB 3.1 and USB Type-C specifications](http://go.microsoft.com/fwlink/p/?LinkId=699515)
+[USB 3.1 and USB Type-C specifications](https://go.microsoft.com/fwlink/p/?LinkId=699515)
 
-[USB Power Delivery](http://go.microsoft.com/fwlink/p/?LinkID=623310)
+[USB Power Delivery](https://go.microsoft.com/fwlink/p/?LinkID=623310)
 
-[Billboard Devices specification](http://go.microsoft.com/fwlink/p/?linkid=620207)
+[Billboard Devices specification](https://go.microsoft.com/fwlink/p/?linkid=620207)
 
-[UCSI Specification](http://go.microsoft.com/fwlink/p/?LinkId=703713)
+[UCSI Specification](https://go.microsoft.com/fwlink/p/?LinkId=703713)
 
 ## Hardware design
 USB Type-C connector is reversible and symmetric.
@@ -48,7 +48,7 @@ The main component are: the USB Type-C connector and its port or PD controller t
 - [Hardware design for a USB Type-C system with an embedded controller](ucsi.md)
 
 Consider recommendations for the design and development of USB components, including minimum hardware requirements, Windows Hardware Compatibility Program requirements, and other recommendations that build on those requirements.
-[Hardware component guidelines USB](https://msdn.microsoft.com/library/windows/hardware/dn915125)
+[Hardware component guidelines USB](https://docs.microsoft.com/windows-hardware/design/component-guidelines/universal-serial-bus--usb-)
 
 ## Choose a driver model
 
@@ -89,7 +89,7 @@ Attend Power Delivery and USB Type-C compliance workshops hosted by the standard
 
 
 -   [FAQ: USB Type-C connector on a Windows system](faq--usb-type-c-connector-on-a-windows-system.md)
--   [Troubleshoot messages in UI](http://go.microsoft.com/fwlink/?LinkId=526894) 
+-   [Troubleshoot messages in UI](https://go.microsoft.com/fwlink/?LinkId=526894) 
 
  
 

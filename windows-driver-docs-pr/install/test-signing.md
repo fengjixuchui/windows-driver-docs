@@ -46,7 +46,7 @@ Instead of using the above two methods to bypass driver signing enforcement requ
 *Excerpt from* [How to Test-Sign a Driver Package](how-to-test-sign-a-driver-package.md):
 
 <a href="" id="signing-computer"></a>**Signing computer**  
-This is the computer that is used to test-sign a driver package for Windows Vista and later versions of Windows. This computer must be running Windows XP SP2 or later versions of Windows. In order to use the [driver signing tools](https://msdn.microsoft.com/library/windows/hardware/ff552958), this computer must have the Windows Vista and later versions of the Windows Driver Kit (WDK) installed. This can also be the development computer.
+This is the computer that is used to test-sign a driver package for Windows Vista and later versions of Windows. This computer must be running Windows XP SP2 or later versions of Windows. In order to use the [driver signing tools](https://docs.microsoft.com/windows-hardware/drivers/devtest/tools-for-signing-drivers), this computer must have the Windows Vista and later versions of the Windows Driver Kit (WDK) installed. This can also be the development computer.
 
 <a href="" id="test-computer"></a>**Test computer**  
 This is the computer that is used to install and test the test-signed driver package. This computer must be running Windows Vista or later versions of Windows.
@@ -102,7 +102,7 @@ You may choose the most general, “Developer Command Prompt for VS2013”. The 
 
     -   The **-ss** option specifies the name of the certificate store that contains the test certificate (*PrivateCertStore*).
 
-    -   The **-n CN=** option specifies the name of the certificate, Contoso.com(Test). This name is used with the [**SignTool**](https://msdn.microsoft.com/library/windows/hardware/ff551778) tool to identify the certificate.
+    -   The **-n CN=** option specifies the name of the certificate, Contoso.com(Test). This name is used with the [**SignTool**](https://docs.microsoft.com/windows-hardware/drivers/devtest/signtool) tool to identify the certificate.
 
     -   *ContosoTest.cer* is the file name that contains a copy of the test certificate, Contoso.com(Test). The certificate file is used to add the certificate to the Trusted Root Certification Authorities certificate store and the Trusted Publishers certificate store.
 
@@ -227,7 +227,7 @@ tstamd64.cat specifies the name of the catalog file, which will be digitally-sig
 
 7.  *Modified excerpt from* [Test-Signing a Driver through an Embedded Signature](test-signing-a-driver-through-an-embedded-signature.md):
 
-    -   In 64-bit versions of Windows Vista and later versions of Windows, the [kernel-mode code signing requirements](kernel-mode-code-signing-requirements--windows-vista-and-later-.md) state that a [*boot-start driver*](https://msdn.microsoft.com/library/windows/hardware/ff556272#wdkgloss-boot-start-driver) must have an embedded signature. This is required regardless of whether the driver's driver package has a digitally-signed catalog file.
+    -   In 64-bit versions of Windows Vista and later versions of Windows, the kernel-mode code signing requirements must have an embedded signature. This is required regardless of whether the driver's driver package has a digitally-signed catalog file.
 
     Below is the command to embed sign a kernel mode driver binary file.
 
@@ -277,7 +277,7 @@ The following procedure describes the steps to use on either machine to test the
     CertMgr.exe /add CertificateFileName.cer /s /r localMachine trustedpublisher
     ```
 
-    Where (*excerpts from* [**CertMgr**](https://msdn.microsoft.com/library/windows/hardware/ff543411)):
+    Where (*excerpts from* [**CertMgr**](https://docs.microsoft.com/windows-hardware/drivers/devtest/certmgr)):
 
     /add CertificateName
 
@@ -394,7 +394,7 @@ Dpinst and Pnputil pre installs the driver package, whereas with Devcon and Wind
      ISAPNP\PNP0501 - Hardware ID
      *PNP*          - Hardware ID with wildcards  (* matches anything)
      @ISAPNP\*\*    - Instance ID with wildcards  (@ prefixes instance ID)
-     &#39;*PNP0501      - Hardware ID with apostrophe (&#39; prefixes literal match - matches exactly as typed, including the asterisk.)
+     '*PNP0501      - Hardware ID with apostrophe (' prefixes literal match - matches exactly as typed, including the asterisk.)
     ```
 
     After a device has been removed, to remove the driver, two commands are necessary. Use the first command with “dp_enum” switch to find the driver inf file name corresponding to the driver package installed in the computer.

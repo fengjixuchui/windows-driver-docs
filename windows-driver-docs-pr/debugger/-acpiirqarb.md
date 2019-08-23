@@ -3,7 +3,6 @@ title: acpiirqarb
 description: The acpiirqarb extension displays the contents of the ACPI IRQ arbiter structure, which contains the configuration of I/O devices to system interrupt controller inputs and processor IDT entries.
 ms.assetid: c57884cd-c70c-4091-871d-c2a35db8d73f
 keywords: ["acpiirqarb Windows Debugging"]
-ms.author: domars
 ms.date: 09/17/2018
 topic_type:
 - apiref
@@ -25,22 +24,9 @@ The **!acpiirqarb** extension displays the contents of the Advanced Configuratio
 
 ### <span id="DLL"></span><span id="dll"></span>DLL
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><p><strong>Windows 2000</strong></p></td>
-<td align="left"><p>Unavailable</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><strong>Windows XP and later</strong></p></td>
-<td align="left"><p>Kdexts.dll</p></td>
-</tr>
-</tbody>
-</table>
+
+<p>Kdexts.dll</p>
+
 
  
 

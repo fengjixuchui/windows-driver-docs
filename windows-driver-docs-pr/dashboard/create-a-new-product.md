@@ -1,8 +1,6 @@
 ---
 title: Create a new product
 description: Use this method in the Microsoft Hardware API to create a new hardware product.
-author: balapv
-ms.author: balapv
 ms.date: 04/05/2018
 ms.topic: article
 ms.localizationpriority: medium
@@ -43,8 +41,8 @@ The following example demonstrates the JSON request body for creating a new prod
 
 ```json
 {
-  "ProductName": "Test_Network_Product2-R",
-  "TestHarness": "Attestation",
+  "productName": "Test_Network_Product2-R",
+  "testHarness": "Attestation",
   "announcementDate": "2018-01-01T00:00:00",
   "deviceMetadataIds": [],
   "firmwareVersion": "980",

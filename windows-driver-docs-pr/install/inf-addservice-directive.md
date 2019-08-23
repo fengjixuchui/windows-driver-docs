@@ -23,7 +23,7 @@ ms.localizationpriority: medium
 
 An **AddService** directive is used within an [**INF *DDInstall*.Services section**](inf-ddinstall-services-section.md) or [**INF DefaultInstall.Services section**](inf-defaultinstall-services-section.md). It specifies characteristics of the services associated with drivers, such as how and when the services are loaded, and any dependencies on other underlying legacy drivers or services. Optionally, this directive also sets up event-logging services for the device.
 
-```cpp
+```ini
 [DDInstall.Services] 
  
 AddService=ServiceName,[flags],service-install-section
@@ -46,7 +46,13 @@ Move the named service's tag to the front of its group order list, thereby ensur
 <a href="" id="0x00000002--spsvcinst-assocservice-"></a>**0x00000002** (SPSVCINST_ASSOCSERVICE)  
 Assign the named service as the PnP function driver (or legacy driver) for the device being installed by this INF file.
 
-Do not specify this flag when installing filter drivers or other driver components not directly associated with a device. Set this flag for only one driver for each [**INF *DDInstall*.Services section**](inf-ddinstall-services-section.md).
+To indicate that a service is the function driver for a device, the service should specify the **SPSVCINST_ASSOCSERVICE** flag in the **AddService** directive.  For a service such as a filter driver or other driver component, the flag should not be used.
+
+Every device driver INF should have exactly one associated service.  The INF does not require an associated service if it is an Extension or uses the Include/Needs directives to inherit the associated service from another INF.  For devices that do not require a function driver, the NULL driver can be specified as follows:
+
+```
+AddService = ,2.
+```
 
 <a href="" id="0x00000008--spsvcinst-noclobber-displayname-"></a>**0x00000008** (SPSVCINST_NOCLOBBER_DISPLAYNAME)  
 Do not overwrite the given service's (optional) friendly name if this service already exists in the system.
@@ -98,7 +104,7 @@ Each INF-writer-created section name must be unique within the INF file and must
 
 An **AddService** directive must reference a named *service-install-section* elsewhere in the INF file. Each such section has the following form:
 
-```cpp
+```ini
 [service-install-section]
  
 [DisplayName=name]
@@ -152,7 +158,7 @@ Indicates a driver started during operating system initialization.
 
 This value should be used by PnP drivers that do device detection during initialization but are not required to load the system.
 
-For example, a PnP driver that can also detect a legacy device should specify this value in its INF so that its [*DriverEntry*](https://msdn.microsoft.com/library/windows/hardware/ff544113) routine is called to find the legacy device, even if that device cannot be enumerated by the PnP manager.
+For example, a PnP driver that can also detect a legacy device should specify this value in its INF so that its [*DriverEntry*](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wdm/nc-wdm-driver_initialize) routine is called to find the legacy device, even if that device cannot be enumerated by the PnP manager.
 
 <a href="" id="0x2--service-auto-start-"></a>**0x2** (SERVICE_AUTO_START)  
 Indicates a driver started by the service control manager during system startup.
@@ -226,7 +232,7 @@ A *depend-on-item-name* can specify a load order group on which this device/driv
 <a href="" id="security--security-descriptor-string-"></a>**Security**="*security-descriptor-string*"  
 Specifies a security descriptor, to be applied to the service. This security descriptor specifies the permissions that are required to perform such operations as starting, stopping, and configuring the service. The *security-descriptor-string* value is a string with tokens to indicate the DACL (**D:**) security component.
 
-For information about security descriptor strings, see [Security Descriptor Definition Language (Windows)](https://msdn.microsoft.com/library/windows/desktop/aa379567). For information about the format of security descriptor strings, see Security Descriptor Definition Language (Windows).
+For information about security descriptor strings, see [Security Descriptor Definition Language (Windows)](https://docs.microsoft.com/windows/desktop/SecAuthZ/security-descriptor-definition-language). For information about the format of security descriptor strings, see Security Descriptor Definition Language (Windows).
 
 For more information about how to specify security descriptors, see [Creating Secure Device Installations](creating-secure-device-installations.md).
 
@@ -235,7 +241,7 @@ For more information about how to specify security descriptors, see [Creating Se
 The operating system loads drivers according to the *service-install-section*  **StartType** value, as follows:
 
 -   During the system boot start phase, the operating system loads all **0x0** (SERVICE_BOOT_START) drivers.
--   During the system start phase, the operating system first loads all WDM and PnP drivers for which the PnP manager finds device nodes ([*devnodes*](https://msdn.microsoft.com/library/windows/hardware/ff556277#wdkgloss-devnode)) in the registry **..\\Enum** tree (whether their INF files specify **0x01** for SERVICE_SYSTEM_START or **0x03** for SERVICE_DEMAND_START).Then the operating system loads all remaining SERVICE_SYSTEM_START drivers.
+-   During the system start phase, the operating system first loads all WDM and PnP drivers for which the PnP manager finds device nodes (*devnodes*) in the registry **..\\Enum** tree (whether their INF files specify **0x01** for SERVICE_SYSTEM_START or **0x03** for SERVICE_DEMAND_START).Then the operating system loads all remaining SERVICE_SYSTEM_START drivers.
 -   During the system auto-start phase, the operating system loads all remaining SERVICE_AUTO_START drivers.
 
 For more information about **Dependencies**, see [Specifying Driver Load Order](specifying-driver-load-order.md).
@@ -262,7 +268,7 @@ Depending on the boot scenario, you can use the **BootFlags** registry value to 
 
 The *service-install-section* has the following general form:
 
-```cpp
+```ini
 [service-install-section]
 AddReg=add-registry-section
 ...
@@ -275,7 +281,7 @@ HKR,,BootFlags,0x00010003,0x14 ; CM_SERVICE_USB3_DISK_BOOT_LOAD|CM_SERVICE_USB_D
 
 An **AddService** directive can also reference an *event-log-install-section* elsewhere in the INF file. Each such section has the following form:
 
-```cpp
+```ini
 [event-log-install-section]
  
 AddReg=add-registry-section[, add-registry-section]... 
@@ -286,7 +292,7 @@ AddReg=add-registry-section[, add-registry-section]...
 
 For a typical device/driver INF file, the *event-log-install-section* uses only the **AddReg** directive to set up an event-logging message file for the driver. An **HKR** specification in an *add-registry-section* designates the **HKLM\\System\\CurrentControlSet\\Services\\EventLog\\**<em>EventLogType</em>**\\**<em>EventName</em> registry key. This event-logging *add-registry-section* has the following general form:
 
-```cpp
+```ini
 [drivername_EventLog_AddReg]
 HKR,,EventMessageFile,0x00020000,"path\IoLogMsg.dll;path\driver.sys"
 HKR,,TypesSupported,0x00010001,7 
@@ -313,7 +319,7 @@ Examples
 
 This example shows the service-install and event-log-install sections referenced by the **AddService** directive as already shown earlier in the example for [***DDInstall*.Services**](inf-ddinstall-services-section.md).
 
-```cpp
+```ini
 [sermouse_Service_Inst]
 DisplayName    = %sermouse.SvcDesc%
 ServiceType    = 1                   ; = SERVICE_KERNEL_DRIVER

@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 ## <span id="ddk_handling_pnp_paging_requests_kg"></span><span id="DDK_HANDLING_PNP_PAGING_REQUESTS_KG"></span>
 
 
-A storage filter driver must handle PnP paging requests ([**IRP\_MJ\_PNP**](https://msdn.microsoft.com/library/windows/hardware/ff550772) with [**IRP\_MN\_DEVICE\_USAGE\_NOTIFICATION**](https://msdn.microsoft.com/library/windows/hardware/ff550841) and **Parameters.UsageNotification.Type** set to **DeviceUsageTypePaging**) if the function driver it is filtering handles this IRP.
+A storage filter driver must handle PnP paging requests ([**IRP\_MJ\_PNP**](https://docs.microsoft.com/windows-hardware/drivers/kernel/irp-mj-pnp) with [**IRP\_MN\_DEVICE\_USAGE\_NOTIFICATION**](https://docs.microsoft.com/windows-hardware/drivers/kernel/irp-mn-device-usage-notification) and **Parameters.UsageNotification.Type** set to **DeviceUsageTypePaging**) if the function driver it is filtering handles this IRP.
 
 The following items must be added to the DeviceExtension of the Filter DO:
 
@@ -106,7 +106,7 @@ case DeviceUsageTypePaging: {
             // succeeded the addition of the paging 
             // file, it is illegal to fail the 
             // request. It is also the time to 
-            // clear the Filter DO&#39;s 
+            // clear the Filter DO's 
             //DO_POWER_PAGABLE flag.
  
             DeviceObject->Flags &= ~DO_POWER_PAGABLE; 

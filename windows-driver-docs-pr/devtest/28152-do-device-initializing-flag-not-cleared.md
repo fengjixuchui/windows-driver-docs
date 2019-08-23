@@ -6,7 +6,9 @@ keywords:
 - warnings listed WDK PREfast for Drivers
 - errors listed WDK PREfast for Drivers
 ms.date: 04/20/2017
-ms.localizationpriority: medium
+ms.localizationpriority: medium 
+f1_keywords: 
+  - "C28152"
 ---
 
 # C28152
@@ -22,7 +24,7 @@ The **AddDevice** routine must contain code similar to the following to clear th
 FunctionalDeviceObject->Flags &= ~DO_DEVICE_INITIALIZING;
 ```
 
-For more information about **AddDevice** routines, see [AddDevice Routines in Function or Filter Drivers](https://msdn.microsoft.com/library/windows/hardware/ff540529)
+For more information about **AddDevice** routines, see [AddDevice Routines in Function or Filter Drivers](https://docs.microsoft.com/windows-hardware/drivers/kernel/adddevice-routines-in-function-or-filter-drivers)
 
  
 

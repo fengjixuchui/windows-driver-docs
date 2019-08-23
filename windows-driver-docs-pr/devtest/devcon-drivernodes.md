@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 # DevCon DriverNodes
 
 
-Lists all [driver packages](https://msdn.microsoft.com/library/windows/hardware/ff539954) that are compatible with the device, along with their version and ranking. Valid only on the local computer.
+Lists all [driver packages](https://docs.microsoft.com/windows-hardware/drivers/install/components-of-a-driver-package) that are compatible with the device, along with their version and ranking. Valid only on the local computer.
 
 ```
     devcon drivernodes {* | ID [ID ...] | =class [ID [ID ...]]} 
@@ -34,13 +34,13 @@ Specifies all or part of a hardware ID, compatible ID, or device instance ID of 
 
 The following special characters modify the ID parameter.
 
-<table>
-<colgroup>
-<col width="50%" />
-<col width="50%" />
-</colgroup>
-<thead>
-<tr class="header">
+<table>  
+<colgroup>  
+<col width="50%" />  
+<col width="50%" />  
+</colgroup>  
+<thead>  
+<tr class="header">  
 <th align="left">Character</th>
 <th align="left">Description</th>
 </tr>
@@ -55,16 +55,16 @@ The following special characters modify the ID parameter.
 <td align="left"><p>Indicates a device instance ID, for example, <strong><xref href="ROOT\FTDISK\0000" data-throw-if-not-resolved="False" data-raw-source="@ROOT\FTDISK\0000"></xref></strong>.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>&#39;</strong></p>
+<td align="left"><p><strong>'</strong></p>
 <p>(single quote)</p></td>
-<td align="left"><p>Matches the string literally (exactly as it appears). Precede a string with a single quote to indicate that an asterisk is part of the ID name and is not a wildcard character, for example, <strong>&#39;*PNP0600</strong>, where *PNP0600 (including the asterisk) is the hardware ID.</p></td>
+<td align="left"><p>Matches the string literally (exactly as it appears). Precede a string with a single quote to indicate that an asterisk is part of the ID name and is not a wildcard character, for example, <strong>'*PNP0600</strong>, where *PNP0600 (including the asterisk) is the hardware ID.</p></td>
 </tr>
 </tbody>
 </table>
 
 
 
-<span id="________class______"></span><span id="________CLASS______"></span> **=**<em>class</em>   
+<span id="________class______"></span><span id="________CLASS______"></span> **=**_class_   
 Specifies the device setup class of the devices. The equal sign (**=**) identifies the string as a class name.
 
 You can also specify hardware IDs, compatible IDs, device instance IDs, or ID patterns following the class name. Type a space between each ID or pattern. DevCon finds devices in the class that match the specified IDs.

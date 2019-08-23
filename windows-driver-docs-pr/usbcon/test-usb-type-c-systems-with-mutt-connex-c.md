@@ -20,8 +20,8 @@ ms.localizationpriority: medium
 
 **Official specifications and procedures**
 
--   [USB 3.1 and USB Type-C specifications]( http://go.microsoft.com/fwlink/p/?LinkId=620208)
--   [xHCI interoperability test procedures](http://go.microsoft.com/fwlink/p/?LinkId=623257)
+-   [USB 3.1 and USB Type-C specifications]( https://go.microsoft.com/fwlink/p/?LinkId=620208)
+-   [xHCI interoperability test procedures](https://go.microsoft.com/fwlink/p/?LinkId=623257)
 
 **Last Updated**
 
@@ -48,17 +48,17 @@ To perform the USB Type-C interoperability test procedures by using USB Type-C C
 
 -   **Arduino Mega 2560 R3**
 
-    [Arduino Mega 2560 R3](http://go.microsoft.com/fwlink/p/?LinkId=733526) is used as the microcontroller for the test setup. This board can be purchased from the [Arduino store](http://go.microsoft.com/fwlink/p/?LinkId=733526).
+    [Arduino Mega 2560 R3](https://go.microsoft.com/fwlink/p/?LinkId=733526) is used as the microcontroller for the test setup. This board can be purchased from the [Arduino store](https://go.microsoft.com/fwlink/p/?LinkId=733526).
 
     ![arduino](images/arduino.png)
 
 -   **Power adapter for the microcontroller**.
 
-    For information about compatible adapters for the Arduino Mega 2560 R3 board, [see this site](http://go.microsoft.com/fwlink/p/?LinkID=733660).
+    For information about compatible adapters for the Arduino Mega 2560 R3 board, [see this site](https://go.microsoft.com/fwlink/p/?LinkID=733660).
 
 -   **USB Type-C ConnEx**
 
-    The shield has one male USB Type-C port (labeled **J1**) to which the SUT is connected. The shield also has four other USB ports (labeled **J2**, **J3**, **J4**, **J6**) to which devices can be attached that act as peripherals to the SUT. The shield monitors amperage and voltage being drawn from the SUT. You can buy this board from [MCCI](http://go.microsoft.com/fwlink/p/?LinkId=733488) or [JJG Technologies]( http://go.microsoft.com/fwlink/p/?linkid=618287).
+    The shield has one male USB Type-C port (labeled **J1**) to which the SUT is connected. The shield also has four other USB ports (labeled **J2**, **J3**, **J4**, **J6**) to which devices can be attached that act as peripherals to the SUT. The shield monitors amperage and voltage being drawn from the SUT. You can buy this board from [MCCI](https://go.microsoft.com/fwlink/p/?LinkId=733488) or [JJG Technologies]( https://go.microsoft.com/fwlink/p/?linkid=618287).
 
     ![USB Type-C ConnEx](images/connexc-top.png)
 
@@ -72,7 +72,7 @@ To perform the USB Type-C interoperability test procedures by using USB Type-C C
 
 -   **USB charger**
 
-    USB Type-C that supports USB Type-C current requirements and optionally [USB Power Delivery](http://go.microsoft.com/fwlink/p/?LinkID=623310). You also need a USB Micro-B charger for **J6**.
+    USB Type-C that supports USB Type-C current requirements and optionally [USB Power Delivery](https://go.microsoft.com/fwlink/p/?LinkID=623310). You also need a USB Micro-B charger for **J6**.
 
 -   **Proxy controller**
 
@@ -102,7 +102,7 @@ Make sure you meet these requirements:
 
 -   Your SUT must have the version of the Windows operating system with which you want to test interoperability.
 -   The proxy controller must be running Windows 10.
--   [![download the mutt software package](images/download.png)](http://go.microsoft.com/fwlink/p/?LinkId=786621) and install the latest MUTT software package on the proxy controller.
+-   [![download the mutt software package](images/download.png)](https://go.microsoft.com/fwlink/p/?LinkId=786621) and install the latest MUTT software package on the proxy controller.
 -   The package is a suite of tools used to run tests with USB Type-C ConnEx .
 
     It includes utilities to update the firmware, switch between the peripheral ports, and send requests to simulate test cases. It also contains test driver packages that test the functionality of the buses, its controller, and devices connected to the bus.
@@ -117,7 +117,7 @@ Here are the tools in MUTT software package that are specific to USB Type-C Conn
 
 | Tool                          | Description                                                                                          |
 |-------------------------------|------------------------------------------------------------------------------------------------------|
-| [ConnExUtil.exe](#connexutil) | Command line tool for exercising USB Type-C ConnEx features.                                             |
+| [ConnExUtil.exe](#connexutilexe) | Command line tool for exercising USB Type-C ConnEx features.                                             |
 | [CxLoop.cmd](#cxloop)         | Connects and disconnects each port once.                                                             |
 | [CxStress.cmd](#cxstress)     | Randomized stress script.                                                                            |
 | [CxPower.cmd](#cxpower)       | Captures power data (voltage and amperage) over a period of time and sends the output to a CSV file. |
@@ -381,28 +381,28 @@ After capture is complete, this data may be post processed into charts showing p
 ##  About test cases
 
 
-The USB Type-C interoperability test procedures are divided into two sections: functional testing (FT) and stress testing (ST). Each test section describes the test case and identifies the category that applies to the test. The product must be tested against the entire applicable category. Certain test cases contain links to relevant hints and tips for additional information. This section is focused on USB Type-C functionality and experience. A USB Type-C solution may contains other USB components such as a USB hub or USB controller. Detailed testing of USB hubs and controllers is covered in both the USB-IF's [xHCI interoperability test procedures](http://go.microsoft.com/fwlink/p/?LinkId=623257) and the Windows Hardware Certification Kit.
+The USB Type-C interoperability test procedures are divided into two sections: functional testing (FT) and stress testing (ST). Each test section describes the test case and identifies the category that applies to the test. The product must be tested against the entire applicable category. Certain test cases contain links to relevant hints and tips for additional information. This section is focused on USB Type-C functionality and experience. A USB Type-C solution may contains other USB components such as a USB hub or USB controller. Detailed testing of USB hubs and controllers is covered in both the USB-IF's [xHCI interoperability test procedures](https://go.microsoft.com/fwlink/p/?LinkId=623257) and the Windows Hardware Certification Kit.
 
-These test cases are based on the ConnExUtil commands and example scripts [Scripts for controlling the USB Type-C ConnEx board](#scripts). The test cases refer to the scripts. Customize the scripts as required for your test scenario.
+These test cases are based on the ConnExUtil commands and example scripts [Scripts for controlling the USB Type-C ConnEx board](#scripts-for-controlling-the-usb-type-c-connex-board). The test cases refer to the scripts. Customize the scripts as required for your test scenario.
 
-<a href="" id="device-enumeration"></a>[Device Enumeration](#ft1)  
+<a href="" id="device-enumeration"></a>[Device Enumeration](#ft-case-1-device-enumeration)  
 Confirms that core aspects of device enumeration are functional.
 
-<a href="" id="alternate-mode-negotiation"></a>[Alternate Mode Negotiation](#ft2)  
+<a href="" id="alternate-mode-negotiation"></a>[Alternate Mode Negotiation](#ft-case-2-alternate-mode-negotiation)  
 Confirms supported alternate modes.
 
-<a href="" id="charging-and-power-delivery--pd-"></a>[Charging and power delivery (PD)](#ft3)  
+<a href="" id="charging-and-power-delivery--pd-"></a>[Charging and power delivery (PD)](#ft-case-3-charging-and-power-delivery-pd)  
 Confirms charging with USB Type-C.
 
-<a href="" id="role-swap"></a>[Role Swap](#ft4)  
+<a href="" id="role-swap"></a>[Role Swap](#ft-case-4-role-swap)  
 Confirms role swap.
 
 The stress testing section describes procedures for stress and edge case scenarios, which test device stability over a period of time. Stress testing does require a custom device (the SuperMUTT) for legacy USB validation (non USB Type-C). Additional testing and automation can be achieved with the upcoming USB Type-C test device.
 
-<a href="" id="device-enumeration"></a>[Device Enumeration](#st1)  
+<a href="" id="device-enumeration"></a>[Device Enumeration](#st-case-1-device-enumeration)  
 Confirms that core aspects of device enumeration are functional.
 
-<a href="" id="charging-and-power-delivery--pd-"></a>[Charging and power delivery (PD)](#st2)  
+<a href="" id="charging-and-power-delivery--pd-"></a>[Charging and power delivery (PD)](#st-case-2-charging-and-power-delivery-pd)  
 Confirms charging with USB Type-C.
 
 ## FT Case 1: Device Enumeration
@@ -428,7 +428,7 @@ Confirms charging with USB Type-C.
 6.  At an elevated Command prompt, run the CXLOOP.CMD script. When script pauses, confirm the newly activated peripheral is operational.
 7.  Reverse the orientation of USB Type-C cable and repeat step 5 - 7.
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## FT Case 2: Alternate Mode Negotiation
 
@@ -453,7 +453,7 @@ For configuration images related to step 2 -4, see [Get started...](#config).
 6.  At an elevated Command prompt, run the CXLOOP.CMD script. When script pauses, confirm the newly activated peripheral is operational.
 7.  Reverse the orientation of USB Type-C cable and repeat step 5 - 7.
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## FT Case 3: Charging and power delivery (PD)
 
@@ -491,7 +491,7 @@ For configuration images related to step 2 -4, see [Get started...](#config).
 
     Confirm the device is receiving current.
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## FT Case 4: Role Swap
 
@@ -521,7 +521,7 @@ For configuration images related to step 2 -4, see [Get started...](#config).
 
 9.  Perform necessary steps to swap data roles and confirm current roles of each system have changed.
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## ST Case 1: Device Enumeration
 
@@ -547,9 +547,9 @@ For configuration images related to step 2 -4, see [Get started...](#config).
 
     Terminate the script by pressing Ctrl-C.
 
-7.  Perform the steps described in [FT Case 1: Device Enumeration](#ft1).
+7.  Perform the steps described in [FT Case 1: Device Enumeration](#ft-case-1-device-enumeration).
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## ST Case 2: Charging and power delivery (PD)
 
@@ -575,9 +575,9 @@ For configuration images related to step 2 -4, see [Get started...](#config).
 
     Terminate the script by pressing Ctrl-C.
 
-7.  Perform the steps described in [FT Case 3: Charging and power delivery (PD)](#ft3).
+7.  Perform the steps described in [FT Case 3: Charging and power delivery (PD)](#ft-case-3-charging-and-power-delivery-pd).
 
-For configuration images related to step 2 -4, see [Get started...](#config).
+For configuration images related to step 2 -4, see [Get started...](#get-started).
 
 ## Additional test resources
 

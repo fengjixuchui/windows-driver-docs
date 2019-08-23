@@ -17,7 +17,7 @@ ms.localizationpriority: medium
 
 
 
-Each time you specify a [printer command](printer-commands.md) in a [*GPD*](https://msdn.microsoft.com/library/windows/hardware/ff556283#wdkgloss-generic-printer-description--gpd-) file for a Unidrv minidriver, you can use one of the following two methods:
+Each time you specify a printer command file for a Unidrv minidriver, you can use one of the following two methods:
 
 -   Place the command string in the GPD file.
 
@@ -31,7 +31,7 @@ To place a command string in a GPD file, you need to include a \*Cmd attribute w
 
 To provide code that dynamically generates a command string, you must do the following:
 
--   Provide a rendering plug-in that implements the [**IPrintOemUni::CommandCallback**](https://msdn.microsoft.com/library/windows/hardware/ff554216) method.
+-   Provide a rendering plug-in that implements the [**IPrintOemUni::CommandCallback**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/prcomoem/nf-prcomoem-iprintoemuni-commandcallback) method.
 
 -   Include a \*CallbackID command attribute and, optionally, a \*Params attribute, within the command's \*Command entry in the GPD file.
 

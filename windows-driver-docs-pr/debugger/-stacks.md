@@ -3,7 +3,6 @@ title: stacks
 description: The stacks extension displays information about the kernel stacks.
 ms.assetid: f0777609-4785-4a6b-a6f5-9efaeb608df7
 keywords: ["stacks Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -63,7 +62,7 @@ Kdexts.dll
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about kernel stacks, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about kernel stacks, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

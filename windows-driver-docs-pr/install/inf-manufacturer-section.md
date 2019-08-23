@@ -19,7 +19,7 @@ ms.localizationpriority: medium
 
 The **Manufacturer** section identifies the manufacturer of one or more devices that can be installed by using the INF file.
 
-```cpp
+```ini
 [Manufacturer]
 
 manufacturer-identifier
@@ -34,7 +34,7 @@ manufacturer-identifier
 <a href="" id="manufacturer-identifier"></a>*manufacturer-identifier*  
 Uniquely identifies a manufacturer and an INF section that contains information that identifies a manufacturer's device models. Each *manufacturer-identifier* entry must exist on a separate line and use the following format:
 
-```cpp
+```ini
 manufacturer-name |
 %strkey%=models-section-name |
 %strkey%=models-section-name [,TargetOSVersion] [,TargetOSVersion] ...  (Windows XP and later versions of Windows)
@@ -52,11 +52,14 @@ Specifies a token, unique within the INF file that represents the name of a manu
 Specifies an INF-writer-defined name for the per-manufacturer [**INF *Models* section**](inf-models-section.md) within the INF file. This value must be unique within the INF file and must follow the general rules for defining section names. For more information about these rules, see [General Syntax Rules for INF Files](general-syntax-rules-for-inf-files.md).
 
 <a href="" id="targetosversion"></a>*TargetOSVersion*  
-For Windows XP and later versions of Windows, this specifies one or more target operating system versions with which various INF ***Models*** sections can be used. Windows chooses the INF ***Models*** section that most closely matches the operating system version on which it is executing.
+Specifies one or more target operating system versions with which various INF ***Models*** sections can be used. Windows chooses the INF ***Models*** section that most closely matches the operating system version on which it is executing.
+
+**Note**: In the C++ code above, multiple TargetOSVersions are listed in one entry.  This is the correct way to add multiple TargetOSVersions.  Do not represent each target as a separate entry.  See related info in Example 3 below.
+
 
 For a description of the *TargetOSVersion* decoration, see the following **Remarks** section.
 
-**Important**  Starting with Windows Server 2003 SP1, INF files must decorate models-section-name entries in the **INF Manufacturer section**, along with the associated INF ***Models*** section names, with .ntia64 or .ntamd64 platform extensions to specify non-x86 target operating system versions. These platform extensions are not required in INF files for x86-based target operating system versions or non-PnP driver INF files (such as file system driver INF files for x64-based architectures).
+**Important**:  Starting with Windows Server 2003 SP1, INF files must decorate models-section-name entries in the **INF Manufacturer section**, as well as the associated INF ***Models*** section names, with .ntia64 or .ntamd64 platform extensions to specify non-x86 target operating system versions. These platform extensions are not required in INF files for x86-based target operating system versions or non-PnP driver INF files, such as file system driver INF files for x64-based architectures.
 
  
 
@@ -71,15 +74,15 @@ If an INF file specifies one or more entries in the *manufacturer-name* format, 
 
 You can think of each system-supplied INF file's **Manufacturer** section as a table of contents, because this section sets up the installation of every manufacturer's device models for a [device setup class](device-setup-classes.md). Each entry in an INF file's **Manufacturer** section specifies both an easily localizable %*strkey*% token for the name of a manufacturer and a unique-to-the-INF per-manufacturer ***Models*** section name.
 
-For Windows XP and later versions of Windows, *models-section-name* entries in the **Manufacturer** section can be decorated to specify target operating system versions. Different [**INF *Models* sections**](inf-models-section.md) can be specified for different versions of the operating system. The specified versions indicate operating system versions with which the INF ***Models*** sections is used. If no versions are specified, Windows uses a specified ***Models*** section for all versions of all operating systems.
+The *models-section-name* entries in the **Manufacturer** section can be decorated to specify target operating system versions. Different [**INF *Models* sections**](inf-models-section.md) can be specified for different versions of the operating system. The specified versions indicate operating system versions with which the INF ***Models*** sections is used. If no versions are specified, Windows uses a specified ***Models*** section for all versions of all operating systems.
 
 For Windows XP to Windows 10, version 1511, the format of *TargetOSVersion* decoration is as follows:
 
-```cpp
+```ini
 nt[Architecture][.[OSMajorVersion][.[OSMinorVersion][.[ProductType][.SuiteMask]]]]
 ```
 Starting with Windows 10, version 1607 (Build 14310 and later), the format of the *TargetOSVersion* decoration is as follows:
-```cpp
+```ini
 nt[Architecture][.[OSMajorVersion][.[OSMinorVersion][.[ProductType][.[SuiteMask][.[BuildNumber]]]]]
 ```
 
@@ -89,7 +92,7 @@ Each field is defined as follows:
 Specifies the target operating system is NT-based. Windows 2000 and later versions of Windows are all NT-based.
 
 <a href="" id="architecture"></a>*Architecture*  
-Identifies the hardware platform. If specified, this must be **x86**, **ia64**, **amd64**, or **arm**.
+Identifies the hardware platform. If specified, this must be **x86**, **ia64**, **amd64**, **arm**, or **arm64**.
 
 Prior to Windows Server 2003 SP1, if *Architecture* is not specified, the associated INF ***Models*** section can be used with any hardware platform.
 
@@ -239,7 +242,7 @@ Examples
 
 This example shows a **Manufacturer** section typical to an INF for a single IHV.
 
-```cpp
+```ini
 [Manufacturer]
 %Mfg%=Contoso        ; Models section == Contoso
 
@@ -252,7 +255,7 @@ Mfg = "Contoso, Ltd."
 
 The next example shows part of a **Manufacturer** section typical to an INF for a device-class-specific installer:
 
-```cpp
+```ini
 [Manufacturer]
 %CONTOSO%=Contoso_Section
 ; several entries omitted here for brevity
@@ -262,7 +265,7 @@ The next example shows part of a **Manufacturer** section typical to an INF for 
 
 The following example shows a **Manufacturer** section that is specific to x86 platforms, Windows XP and later:
 
-```cpp
+```ini
 [Manufacturer]
 %foo%=foosec,NTx86.5.1
 
@@ -271,7 +274,7 @@ The following example shows a **Manufacturer** section that is specific to x86 p
 
 The following example shows a **Manufacturer** section that is specific to x64 platforms, Windows 10 build 14393 and later:
 
-```cpp
+```ini
 [Manufacturer]
 %foo%=foosec,NTamd64.10.0...14393
 
@@ -282,7 +285,7 @@ The following two examples show skeletal INF files with a variety of OS-specific
 
 Example 1:
 
-```cpp
+```ini
 [Manufacturer]
 %MyName% = MyName,NTx86.5.1
 .
@@ -301,7 +304,7 @@ Example 1:
 
 Example 2:
 
-```cpp
+```ini
 [Manufacturer]
 %MyName% = MyName,NTx86.6.0,NTx86.5.1,
 .
@@ -319,7 +322,7 @@ Example 2:
 
 Example 3:
 
-```cpp
+```ini
 [Manufacturer]
 %MyMfg% = MyMfg, NTamd64.6.1, NTamd64.10.0, NTamd64.10.0...14310
 .
@@ -333,6 +336,8 @@ Example 3:
 .
 .
 ```
+**Note**: When specifying multiple TargetOSVersions, string them together in one entry as seen in this example.  Do not represent each target as a separate entry. 
+
 ## See also
 
 

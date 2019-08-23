@@ -3,7 +3,6 @@ title: Bug Check 0xC0000218 STATUS_CANNOT_LOAD_REGISTRY_FILE
 description: The STATUS_CANNOT_LOAD_REGISTRY_FILE bug check has a value of 0xC0000218. This indicates that a registry file could not be loaded.
 ms.assetid: cdcf68fa-8beb-4e21-bc6b-7a9f4c6e9e80
 keywords: ["Bug Check 0xC0000218 STATUS_CANNOT_LOAD_REGISTRY_FILE", "STATUS_CANNOT_LOAD_REGISTRY_FILE"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -19,7 +18,9 @@ ms.localizationpriority: medium
 
 The STATUS\_CANNOT\_LOAD\_REGISTRY\_FILE bug check has a value of 0xC0000218. This indicates that a registry file could not be loaded.
 
-**Important** This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://windows.microsoft.com/windows-10/troubleshoot-blue-screen-errors).
+> [!IMPORTANT]
+> This topic is for programmers. If you are a customer who has received a blue screen error code while using your computer, see [Troubleshoot blue screen errors](https://www.windows.com/stopcode).
+
 
 ## STATUS\_CANNOT\_LOAD\_REGISTRY\_FILE Parameters
 

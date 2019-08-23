@@ -53,7 +53,7 @@ You should minimize padding in the logo resource and use only what's necessary f
 > [!NOTE]
 > The OEM logo does not appear on any screens in OOBE.
 
-For additional details on the BGRT, please see section 5.2.22 of the [Advanced Configuration and Power Interface (ACPI) Specification](https://www.uefi.org/specifications).
+For additional details on the BGRT, please see section 5.2.22 of the [Advanced Configuration and Power Interface (ACPI) Specification](https://uefi.org/specifications).
 
 ## Update text
 
@@ -149,7 +149,7 @@ The following table describes the firmware update display capsule payload.
 <td>Image</td>
 <td>N/A</td>
 <td>44</td>
-<td>A byte-array that contains the embedded bitmap to display during the firmware udpate process. The bitmap can be either a 24-bit bitmap with the pixel format 0xRRGGBB or a 32-bit bitmap with the pixel format 0xrrRRGGBB, where ‘rr’ is reserved.</td>
+<td>A byte-array that contains the embedded bitmap to display during the firmware update process. The bitmap can be either a 24-bit bitmap with the pixel format 0xRRGGBB or a 32-bit bitmap with the pixel format 0xrrRRGGBB, where ‘rr’ is reserved.</td>
 </tr>
 </tbody>
 </table>

@@ -13,13 +13,13 @@ Applications can receive information from sensors in two ways: synchronously, by
 
 Sensor drivers can raise **state change events**, which notify applications about a transition in the device to a new operational condition, and other kinds of event notifications. Your driver should raise separate events for each sensor that your device provides.
 
-**Note**  Do not use [**IWDFDevice::PostEvent**](https://msdn.microsoft.com/library/windows/hardware/ff558835) to raise sensor events. The sensor platform will not forward such events to the connected client programs.
+**Note**  Do not use [**IWDFDevice::PostEvent**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/wudfddi/nf-wudfddi-iwdfdevice-postevent) to raise sensor events. The sensor platform will not forward such events to the connected client programs.
 
  
 
 ## State Change Events
 
-Sensor drivers raise state change events by calling the sensor class extension's [**ISensorClassExtension::PostStateChange**](https://msdn.microsoft.com/library/windows/hardware/ff545523) method. For example, a driver that has finished initializing a sensor will call this method to signal the new [**SensorState**](https://msdn.microsoft.com/library/windows/hardware/ff545708) value named SENSOR\_STATE\_READY.
+Sensor drivers raise state change events by calling the sensor class extension's [**ISensorClassExtension::PostStateChange**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sensorsclassextension/nf-sensorsclassextension-isensorclassextension-poststatechange) method. For example, a driver that has finished initializing a sensor will call this method to signal the new [**SensorState**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sensorsclassextension/ne-sensorsclassextension-__midl___midl_itf_windowssensorclassextension_0000_0000_0001) value named SENSOR\_STATE\_READY.
 
 ## Event Constants
 
@@ -47,7 +47,7 @@ The sensor platform defines the following **PROPERTYKEYs** to identify the param
 
 ## Other Events
 
-Sensor drivers raise all other types of events by calling the sensor class extension's [**ISensorClassExtension::PostEvent**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sensorsclassextension/nf-sensorsclassextension-isensorclassextension-postevent) method. This method provides a generic, extensible way to raise sensor events unrelated to operating state. Each call to **PostEvent** contains a pointer to [IPortableDeviceValuesCollection](http://go.microsoft.com/fwlink/p/?linkid=131487). Each [IPortableDeviceValues](http://go.microsoft.com/fwlink/p/?linkid=131486) object in this collection contains a **GUID** value for the SENSOR\_EVENT\_PARAMETER\_EVENT\_ID property, which identifies the event type, and optional data field values, which contain the event data. For example, a GPS driver that has new city data will use the SENSOR\_EVENT\_DATA\_UPDATED event ID and provide a string value for the SENSOR\_DATA\_TYPE\_CITY property key.
+Sensor drivers raise all other types of events by calling the sensor class extension's [**ISensorClassExtension::PostEvent**](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/sensorsclassextension/nf-sensorsclassextension-isensorclassextension-postevent) method. This method provides a generic, extensible way to raise sensor events unrelated to operating state. Each call to **PostEvent** contains a pointer to [IPortableDeviceValuesCollection](https://go.microsoft.com/fwlink/p/?linkid=131487). Each [IPortableDeviceValues](https://go.microsoft.com/fwlink/p/?linkid=131486) object in this collection contains a **GUID** value for the SENSOR\_EVENT\_PARAMETER\_EVENT\_ID property, which identifies the event type, and optional data field values, which contain the event data. For example, a GPS driver that has new city data will use the SENSOR\_EVENT\_DATA\_UPDATED event ID and provide a string value for the SENSOR\_DATA\_TYPE\_CITY property key.
 
 After your driver posts the event, the sensor class extension forwards the event and any associated data to the Sensor API.
 

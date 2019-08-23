@@ -3,7 +3,6 @@ title: Manifest File Format
 description: Manifest File Format
 ms.assetid: 1b0dc305-878c-4eb2-9e92-f7f7017ae4eb
 keywords: ["LogViewer, manifest, file format"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -160,12 +159,12 @@ There are 13 basic types supported by the manifest. They are listed in the follo
 <tr class="odd">
 <td align="left"><p>LPSTR</p></td>
 <td align="left"><p>Length byte plus any number of characters</p></td>
-<td align="left"><p>&quot;Quick brown fox&quot;</p></td>
+<td align="left"><p>"Quick brown fox"</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>LPWSTR</p></td>
 <td align="left"><p>Length byte plus any number of Unicode characters</p></td>
-<td align="left"><p>&quot;Jumped over the lazy dog&quot;</p></td>
+<td align="left"><p>"Jumped over the lazy dog"</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>GUID</p></td>

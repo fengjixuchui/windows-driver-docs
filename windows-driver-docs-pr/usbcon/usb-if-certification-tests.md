@@ -57,7 +57,7 @@ You can submit USB devices for Windows Certification qualification to meet the n
 
 - **USB-IF certification**
 
-  Obtain USB-IF certification from a [USB-IF authorized independent testing lab](http://www.usb.org/developers/compliance/labs/) and then submit the device for Windows Certification qualification. You can select one of the following options to obtain USB-IF certification for device or host controllers:
+  Obtain USB-IF certification from a [USB-IF authorized independent testing lab](https://www.usb.org/developers/compliance/labs/) and then submit the device for Windows Certification qualification. You can select one of the following options to obtain USB-IF certification for device or host controllers:
 
   -   Submit the device to a USB-IF authorized independent test lab for testing. For information about how to find a lab, see USB-IF authorized independent testing lab.
       **Note**  It usually takes an authorized independent test lab one to two weeks to test a single USB device for compliance to the USB specification.
@@ -70,7 +70,7 @@ You can submit USB devices for Windows Certification qualification to meet the n
 
   -   You can use the USB logo for brochures, packaging, and product information for your device.
   -   You can be listed on the USB-IF Integrators List.
-  -   Bring the device to a [USB-IF-sponsored Compliance Workshop](http://www.usb.org/developers/events/compshop/). Each year, four workshops are held in the USA, and one workshop is held in Asia.
+  -   Bring the device to a [USB-IF-sponsored Compliance Workshop](https://www.usb.org/developers/events/compshop/). Each year, four workshops are held in the USA, and one workshop is held in Asia.
 
   After a device passes the USB-IF certification tests, you receive a Test ID number (TID) from the test lab or workshop. You provide this TID number to the Windows HLK when you run the remainder of the Windows HLK tests for the device.
 
@@ -78,7 +78,7 @@ You can submit USB devices for Windows Certification qualification to meet the n
 
 - **USB-IF self-test**
 
-  Download the USB Command Verifier test tools and the USB interoperability test documents and run the required tests from the [USB-IF](http://www.usb.org/home). Then submit the device for Windows Certification qualification.
+  Download the USB Command Verifier test tools and the USB interoperability test documents and run the required tests from the [USB-IF](https://www.usb.org/). Then submit the device for Windows Certification qualification.
 
   **Note**  USB host controllers and hubs are not eligible for the USB-IF self-testing option and must obtain full USB-IF certification.
 
@@ -91,7 +91,7 @@ You can submit USB devices for Windows Certification qualification to meet the n
 
   The following steps describe how to perform the required USB-IF tests to qualify a device for Windows Certification.
 
-  1. Download the USB 3.0 Command Verifier test tool (USB30CV), and the interoperability test documents from [SuperSpeed USB Software and Hardware Tools](http://go.microsoft.com/fwlink/p/?LinkId=623333).
+  1. Download the USB 3.0 Command Verifier test tool (USB30CV), and the interoperability test documents from [SuperSpeed USB Software and Hardware Tools](https://go.microsoft.com/fwlink/p/?LinkId=623333).
   2. Run the USB-IF tests for the USB hardware as specified in the following tables:
 
      <table>
@@ -114,7 +114,7 @@ You can submit USB devices for Windows Certification qualification to meet the n
      <tr class="even">
      <td>USB 3.0</td>
      <td><p>Attach the device behind an xHCI host controller and run the Chapter 9 Tests [USB 3.0 devices] in the USB 3.0 Command Verifier test tool (USB30CV).</p>
-     <p>Run the interoperability tests as described in the <a href="http://go.microsoft.com/fwlink/p/?LinkId=623335" data-raw-source="[XHCI Interoperability Testing](http://go.microsoft.com/fwlink/p/?LinkId=623335)">XHCI Interoperability Testing</a> document. Run these tests two times: one time with the device attached behind an EHCI host controller, and one time with the device attached behind an xHCI host controller.</p></td>
+     <p>Run the interoperability tests as described in the <a href="https://go.microsoft.com/fwlink/p/?LinkId=623335" data-raw-source="[XHCI Interoperability Testing](https://go.microsoft.com/fwlink/p/?LinkId=623335)">XHCI Interoperability Testing</a> document. Run these tests two times: one time with the device attached behind an EHCI host controller, and one time with the device attached behind an xHCI host controller.</p></td>
      </tr>
      </tbody>
      </table>

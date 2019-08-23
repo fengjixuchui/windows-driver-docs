@@ -3,7 +3,6 @@ title: Controlling Exceptions and Events
 description: Controlling Exceptions and Events
 ms.assetid: cc8067f3-07de-4ee2-b028-94f9ac088891
 keywords: ["exceptions", "exceptions, overview", "exceptions, handling", "events", "events, overview", "events, handling"]
-ms.author: domars
 ms.date: 05/23/2017
 ms.localizationpriority: medium
 ---
@@ -345,17 +344,17 @@ An application can use DBG\_COMMAND\_EXCEPTION (**dbce**) to communicate with th
 <td align="left"><p>Break</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>ssessec</strong></p></td>
+<td align="left"><p><strong>sse<br>ssec</strong></p></td>
 <td align="left"><p>Single-step exception</p></td>
 <td align="left"><p>Break</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><strong>bpebpec</strong></p></td>
+<td align="left"><p><strong>bpe<br>bpec</strong></p></td>
 <td align="left"><p>Breakpoint exception</p></td>
 <td align="left"><p>Break</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><strong>ccecc</strong></p></td>
+<td align="left"><p><strong>cce<br>cc</strong></p></td>
 <td align="left"><p>CTRL+C or CTRL+BREAK</p>
 <p>This exception is triggered if the target is a console application and CTRL+C or CTRL+BREAK is passed to it.</p></td>
 <td align="left"><p>Break</p></td>
@@ -478,14 +477,14 @@ You can change the break status of the following events. Because these events ar
 <td align="left"><p><strong>ibp</strong></p></td>
 <td align="left"><p>Initial break point</p>
 <p>(This event occurs at the beginning of the debug session and after you restart the target computer.)</p></td>
-<td align="left"><p><strong>In user mode:</strong> Break. You can change this status to &quot;Ignore&quot; by using the <strong>-g</strong><a href="command-line-options.md" data-raw-source="[command-line option](command-line-options.md)">command-line option</a>.</p>
-<p><strong>In kernel mode:</strong> Ignore. You can change this status to &quot;Enabled&quot; by a variety of methods. For more information about how to change this status, see <a href="crashing-and-rebooting-the-target-computer.md" data-raw-source="[Crashing and Rebooting the Target Computer](crashing-and-rebooting-the-target-computer.md)">Crashing and Rebooting the Target Computer</a>.</p></td>
+<td align="left"><p><strong>In user mode:</strong> Break. You can change this status to "Ignore" by using the <strong>-g</strong><a href="command-line-options.md" data-raw-source="[command-line option](command-line-options.md)">command-line option</a>.</p>
+<p><strong>In kernel mode:</strong> Ignore. You can change this status to "Enabled" by a variety of methods. For more information about how to change this status, see <a href="crashing-and-rebooting-the-target-computer.md" data-raw-source="[Crashing and Rebooting the Target Computer](crashing-and-rebooting-the-target-computer.md)">Crashing and Rebooting the Target Computer</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><strong>iml</strong></p></td>
 <td align="left"><p>Initial module load</p>
 <p>(Kernel mode only)</p></td>
-<td align="left"><p>Ignore. You can change this status to &quot;Break&quot; by a variety of methods. For more information about how to change this status, see <a href="crashing-and-rebooting-the-target-computer.md" data-raw-source="[Crashing and Rebooting the Target Computer](crashing-and-rebooting-the-target-computer.md)">Crashing and Rebooting the Target Computer</a>.</p></td>
+<td align="left"><p>Ignore. You can change this status to "Break" by a variety of methods. For more information about how to change this status, see <a href="crashing-and-rebooting-the-target-computer.md" data-raw-source="[Crashing and Rebooting the Target Computer](crashing-and-rebooting-the-target-computer.md)">Crashing and Rebooting the Target Computer</a>.</p></td>
 </tr>
 </tbody>
 </table>

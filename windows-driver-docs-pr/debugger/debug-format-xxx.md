@@ -1,7 +1,6 @@
 ---
 title: DEBUG\_FORMAT\_XXX
 description: The DEBUG_FORMAT_XXX bit-flags are used by WriteDumpFile2 and WriteDumpFileWide to determine the format of a crash dump file and, for user-mode Minidumps, what information to include in the file.
-ms.author: domars
 ms.date: 08/20/2018
 topic_type:
 - apiref
@@ -115,7 +114,7 @@ The following bit-flags apply to all crash dump files.
 <p>DEBUG_FORMAT_USER_SMALL_FILTER_PATHS</p>
 </td>
 <td>
-<p>Remove the module paths, leaving only the module names.  This is useful for protecting privacy by hiding the directory structure (which may contain the user&#39;s name).</p>
+<p>Remove the module paths, leaving only the module names.  This is useful for protecting privacy by hiding the directory structure (which may contain the user's name).</p>
 </td>
 </tr>
 <tr>

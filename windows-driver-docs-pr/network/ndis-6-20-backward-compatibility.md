@@ -15,7 +15,7 @@ ms.localizationpriority: medium
 
 
 
-NDIS 6.20 adds backward compatibility features to those that apply to NDIS 6.0 drivers. For information about NDIS 6.0 compatibility issues, see [NDIS 6.0 Backward Compatibility](ndis-6-0-backward-compatibility.md). In addition to the translation features that NDIS 6.0 provides for NDIS 5.x and earlier drivers, NDIS 6.20 also provides translation for the power management interface. NDIS 6.20 drivers must support the NDIS 6.20 power management interface.
+NDIS 6.20 adds backward compatibility features to those that apply to NDIS 6.0 drivers. For information about NDIS 6.0 compatibility issues, see [NDIS 6.0 Backward Compatibility](https://docs.microsoft.com/previous-versions/windows/hardware/network/ndis-6-0-backward-compatibility). In addition to the translation features that NDIS 6.0 provides for NDIS 5.x and earlier drivers, NDIS 6.20 also provides translation for the power management interface. NDIS 6.20 drivers must support the NDIS 6.20 power management interface.
 
 NDIS 6.20 supports updated versions of the features that were added for NDIS 6.1. For more information about updates to NDIS 6.1 features, see [NDIS 6.20 Support for NDIS 6.1 Features](ndis-6-20-updates-to-ndis-6-1-features.md).
 
@@ -37,7 +37,7 @@ IrDA miniport drivers will not be supported in Microsoft Windows versions after 
 
 Filter intermediate drivers will not be supported in Microsoft Windows versions after Windows 7. You should use the NDIS 6.0 filter drivers interface. For more information about filter drivers, see [NDIS Filter Drivers](ndis-filter-drivers.md).
 
-802.11 drivers that emulate 802.3 will not be supported in Microsoft Windows versions after Windows 7. NDIS 802.11 drivers must support the native 802.11 interface. For more information about native 802.11, see [Native 802.11 Wireless LAN](https://msdn.microsoft.com/library/windows/hardware/ff560689).
+802.11 drivers that emulate 802.3 will not be supported in Microsoft Windows versions after Windows 7. NDIS 802.11 drivers must support the native 802.11 interface. For more information about native 802.11, see [Native 802.11 Wireless LAN](https://docs.microsoft.com/previous-versions/windows/hardware/wireless/ff560689(v=vs.85)).
 
 NDIS WAN drivers will not be supported in Microsoft Windows versions after Windows 7. NDIS WAN drivers must be ported to the NDIS 6.0 CoNDIS WAN driver model. For more information about CoNDIS WAN, see WAN Miniport Drivers.
 

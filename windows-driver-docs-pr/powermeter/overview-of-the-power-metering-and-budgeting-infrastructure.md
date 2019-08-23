@@ -38,12 +38,12 @@ PMB consists of the following components:
 <span id="User-Mode_Power_Service__UMPS_"></span><span id="user-mode_power_service__umps_"></span><span id="USER-MODE_POWER_SERVICE__UMPS_"></span>User-Mode Power Service (UMPS)  
 The UMPS is a user-mode service that exposes the system's power metering and budgeting information by using a set of WMI classes. This information is used by applications, such as the Windows Performance Monitor (PerfMon), for power management and reporting.
 
-The PMB WMI classes are provided by the Power WMI Provider component of the UMPS. These WMI classes comply with version *1.1.0 of the Distributed Management Task Force (DMTF) Power Supply Profile*. For more information, see to the [DMTF Power Supply Profile](http://go.microsoft.com/fwlink/p/?linkid=145048).
+The PMB WMI classes are provided by the Power WMI Provider component of the UMPS. These WMI classes comply with version *1.1.0 of the Distributed Management Task Force (DMTF) Power Supply Profile*. For more information, see to the [DMTF Power Supply Profile](https://go.microsoft.com/fwlink/p/?linkid=145048).
 
 For more information about UMPS, see [User-Mode Power Service](user-mode-power-service.md).
 
 <span id="Power_Meter_Interface__PMI__"></span><span id="power_meter_interface__pmi__"></span><span id="POWER_METER_INTERFACE__PMI__"></span>Power Meter Interface (PMI)   
-PMI is a WDM interface that is provided by a driver. By using this interface, the driver services PMI I/O request packets (IRPs) from the [Power Manager](https://msdn.microsoft.com/library/windows/hardware/ff559829) and the Power WMI Provider component of the UMPS. These IRPs are used to query and set the current power metering and budgeting information from a power meter.
+PMI is a WDM interface that is provided by a driver. By using this interface, the driver services PMI I/O request packets (IRPs) from the [Power Manager](https://docs.microsoft.com/windows-hardware/drivers/kernel/power-manager) and the Power WMI Provider component of the UMPS. These IRPs are used to query and set the current power metering and budgeting information from a power meter.
 
 Starting with Windows 7 and Windows Server 2008 R2, the operating system provides a driver (*ACPIPMI.SYS*) that implements the PMI for systems that support the ACPI 4.0 Power Metering objects. This driver enables original equipment manufacturers (OEMs) to build systems that can participate within the PMB infrastructure without having to install third-party drivers.
 

@@ -9,7 +9,7 @@ ms.date: 10/17/2018
 
 Each per-Models *DDInstall*.**Software** section contains one or more [**INF AddSoftware directives**](inf-addsoftware-directive.md) that reference additional INF-writer-defined sections in a software component INF file.  This section is supported for Windows 10 Version 1703 and later.
 
-```cpp
+```ini
 [install-section-name.Software] |
 [install-section-name.nt.Software] |
 [install-section-name.ntx86.Software] |
@@ -37,11 +37,11 @@ This directive references an INF-writer-defined *software-install-section* elsew
 	
 The specified *DDInstall* section must be referenced in a device/models-specific entry under the per-manufacturer *Models* section of the INF file. The case-insensitive extensions to the *install-section-name* shown in the formal syntax statement can be inserted into such a <em>DDInstall</em>**.Software** section name in cross-platform INF files.
 
-For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, and **.ntamd64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
+For more information about how to use the system-defined **.nt**, **.ntx86**, **.ntia64**, **.ntamd64**, **.ntarm**, and **.ntarm64** extensions, see [Creating INF Files for Multiple Platforms and Operating Systems](creating-inf-files-for-multiple-platforms-and-operating-systems.md).
 
 ## Examples
 
-```cpp
+```ini
 [ContosoCtrlPnl.NT.Software]
 AddSoftware = ContosoGrfx1CtrlPnl,, Software_Inst
 

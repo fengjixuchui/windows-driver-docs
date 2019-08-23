@@ -3,7 +3,6 @@ title: pfn
 description: The pfn extension displays information about a specific page frame or the entire page frame database.
 ms.assetid: cbdb1f04-30bc-4e12-b073-9882e4457e1a
 keywords: ["page frame", "pfn Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -52,7 +51,7 @@ Specifies the hexadecimal number of the page frame to be displayed.
 
 ### <span id="Additional_Information"></span><span id="additional_information"></span><span id="ADDITIONAL_INFORMATION"></span>Additional Information
 
-For information about page tables, page directories, and page frames, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. (This book may not be available in some languages and countries.)
+For information about page tables, page directories, and page frames, see *Microsoft Windows Internals*, by Mark Russinovich and David Solomon. 
 
 Remarks
 -------

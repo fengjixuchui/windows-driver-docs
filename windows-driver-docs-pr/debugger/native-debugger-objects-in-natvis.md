@@ -2,7 +2,6 @@
 title: Native Debugger Objects in NatVis
 description: The dx command displays a C++ expression using the NatVis extension model. For more information about NatVis, see Create custom views of native objects in the debugger.
 keywords: [Native Debugger Objects in NatVis"]
-ms.author: domars
 ms.date: 08/10/2017
 ms.localizationpriority: medium
 ---
@@ -34,7 +33,7 @@ This topic describes how you can create custom NatVis visualizers to display deb
 
 Refer to these resources for general information about working with NatVis.
 
-[Create custom views of native objects](https://msdn.microsoft.com/library/jj620914.aspx)
+[Create custom views of native objects](https://docs.microsoft.com/visualstudio/debugger/create-custom-views-of-native-objects?view=vs-2015)
 
 [Writing debugger type visualizers for C++ using .natvis files](https://code.msdn.microsoft.com/windowsdesktop/Writing-type-visualizers-2eae77a2)
 

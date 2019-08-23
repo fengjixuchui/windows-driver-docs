@@ -6,7 +6,6 @@ keywords:
 - Add Hardware IDs in the Mobile Broadband Metadata Authoring Wizard
 ms.date: 04/20/2017
 ms.localizationpriority: medium
-ms.author: eliotgra
 ---
 
 # Add Hardware IDs in the Mobile Broadband Metadata Authoring Wizard
@@ -63,7 +62,7 @@ More than one Hardware ID can be used to specify a service. For example, you can
 - If you want to match using the provider ID value on the mobile broadband modem, select **CDMA Provider ID**.
   
   > [!NOTE]
-  > We recommend using a **Provider ID** (SID), because **Provider Name** is a text value and susceptible to matching errors due to spelling variations. For more information, see [WWAN\_REGISTRATION\_STATE structure](http://go.microsoft.com/fwlink/p/?linkid=225972).
+  > We recommend using a **Provider ID** (SID), because **Provider Name** is a text value and susceptible to matching errors due to spelling variations. For more information, see [WWAN\_REGISTRATION\_STATE structure](https://go.microsoft.com/fwlink/p/?linkid=225972).
 
   - Enter the **Provider ID**, which is the System Identification Number (SID) assigned to an operator by 3GPP2.
   
@@ -75,7 +74,7 @@ More than one Hardware ID can be used to specify a service. For example, you can
 - If you want to match by using the provider name on the mobile broadband modem, select **CDMA Provider Name** in addition to or instead of a Provider ID.
 
   > [!NOTE]
-  > If all of the mobile broadband hardware you provide to customers uses Provider ID values, you don't need to add **Provider Name** information in your device metadata package. **Provider Name** is only checked for matching purposes if the Provider ID is blank or has a value of zero. For more information, see [WWAN\_REGISTRATION\_STATE structure](http://go.microsoft.com/fwlink/p/?linkid=225972).
+  > If all of the mobile broadband hardware you provide to customers uses Provider ID values, you don't need to add **Provider Name** information in your device metadata package. **Provider Name** is only checked for matching purposes if the Provider ID is blank or has a value of zero. For more information, see [WWAN\_REGISTRATION\_STATE structure](https://go.microsoft.com/fwlink/p/?linkid=225972).
 
   - Enter the **Provider Name**. This case-sensitive value is used to generate Hardware IDs. If you have mobile broadband hardware that represents the **Provider Name** in various ways, enter each variation separately, accounting for all capitalization and spelling combinations of the operator’s name.
 
@@ -83,6 +82,6 @@ More than one Hardware ID can be used to specify a service. For example, you can
 
 4. Click **OK** to return to the **Associations** tab.
 
-For detailed information about the Hardware ID for each service style, see [Service Metadata Package Schema Reference for Windows 8](https://msdn.microsoft.com/library/windows/hardware/dn973175).
+For detailed information about the Hardware ID for each service style, see [Service Metadata Package Schema Reference for Windows 8](https://docs.microsoft.com/windows-hardware/drivers/mobilebroadband/service-metadata-package-schema-reference).
 
-For more information about matching, see [Delivering experiences for MVNOs](https://msdn.microsoft.com/library/windows/hardware/dn973075).
+For more information about matching, see [Delivering experiences for MVNOs](https://docs.microsoft.com/windows-hardware/drivers/mobilebroadband/delivering-experiences-for-mvnos).

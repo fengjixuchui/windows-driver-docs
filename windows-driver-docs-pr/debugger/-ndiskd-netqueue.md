@@ -3,7 +3,6 @@ title: ndiskd.netqueue
 description: The ndiskd.netqueue extension displays information about a NETTXQUEUE or NETRXQUEUE object.
 ms.assetid: 101F29AA-5CEE-41F8-A3EC-AA2E74B8E074
 keywords: ["ndiskd.netqueue Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -95,9 +94,9 @@ By clicking on the NETTXQUEUE's handle or entering the **!ndiskd.netqueue -handl
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 

@@ -3,7 +3,6 @@ title: ndiskd.ndisrwlock
 description: The ndiskd.ndisrwlock extension displays information about an NDIS_RW_LOCK_EX lock structure.
 ms.assetid: 853CBAFE-3899-4983-BFC7-933D3BC7ADA1
 keywords: ["ndiskd.ndisrwlock Windows Debugging"]
-ms.author: domars
 ms.date: 05/23/2017
 topic_type:
 - apiref
@@ -17,7 +16,7 @@ ms.localizationpriority: medium
 # !ndiskd.ndisrwlock
 
 
-The **!ndiskd.ndisrwlock** extension displays information about an [**NDIS\_RW\_LOCK\_EX**](https://msdn.microsoft.com/library/windows/hardware/ff567279) lock structure.
+The **!ndiskd.ndisrwlock** extension displays information about an [**NDIS\_RW\_LOCK\_EX**](https://docs.microsoft.com/previous-versions/windows/hardware/drivers/ff567279(v=vs.85)) lock structure.
 
 ```console
 !ndiskd.ndisrwlock [-handle <x>] 
@@ -79,9 +78,9 @@ NDIS READ-WRITE LOCK
 ## <span id="see_also"></span>See also
 
 
-[Network Driver Design Guide](https://msdn.microsoft.com/windows/hardware/drivers/network/index)
+[Network Driver Design Guide](https://docs.microsoft.com/windows-hardware/drivers/network/index)
 
-[Windows Vista and Later Networking Reference](https://msdn.microsoft.com/library/windows/hardware/ff571081)
+[Windows Vista and Later Networking Reference](https://docs.microsoft.com/windows-hardware/drivers/ddi/content/_netvista/)
 
 [Debugging the Network Stack](https://go.microsoft.com/fwlink/p/?linkid=845311)
 
@@ -89,7 +88,7 @@ NDIS READ-WRITE LOCK
 
 [**!ndiskd.help**](-ndiskd-help.md)
 
-[**NDIS\_RW\_LOCK\_EX**](https://msdn.microsoft.com/library/windows/hardware/ff567279)
+[**NDIS\_RW\_LOCK\_EX**](https://docs.microsoft.com/previous-versions/windows/hardware/drivers/ff567279(v=vs.85))
 
  
 
