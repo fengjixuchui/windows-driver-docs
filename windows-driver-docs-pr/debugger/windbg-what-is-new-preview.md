@@ -10,6 +10,8 @@ ms.localizationpriority: medium
 
 # WinDbg Preview - What's New
 
+![Small logo on windbg preview](images/windbgx-preview-logo.png)
+
 This topic provides information on what's new in the WinDbg Preview debugger.
 
 ## 1.0.1912.11001
@@ -32,7 +34,7 @@ This topic provides information on what's new in the WinDbg Preview debugger.
 
 **Improvements to TTD Calls objects** - [Calls queries](https://docs.microsoft.com/windows-hardware/drivers/debugger/time-travel-debugging-calls-objects) now include parameter names, types, and values. When querying across traces for function calls you can get fully typed parameters and their values making it easy to filter down results by parameters.
 
-**Support for Open Enclave** - WinDbg Preview can now debug Open Enclave (OE) applications, you can find directions for how to do this in the [Open Enclave documentation](https://github.com/openenclave/openenclave/blob/master/docs/GettingStartedDocs/GettingStarted.Windows.md).
+**Support for Open Enclave** - WinDbg Preview can now debug Open Enclave (OE) applications, you can find directions for how to do this in the [Open Enclave documentation](https://github.com/openenclave/openenclave/blob/master/docs/GettingStartedDocs/Windows_windbg.md).
 
 **VS Code Extension** - To make it easier to develop for Open Enclave, we’ve released a basic VS Code extension to enable a quicker inner loop. Variables, Watch, and Call Stack windows all work as well as breakpoints and source windows, any deeper debugging will need to use the console window.
  
@@ -277,8 +279,8 @@ This version adds Time Travel Tracing. Time Travel Debugging, allows you to reco
 
 This version was the first release of WinDbg Preview. For general information on the features available in WinDbg Preview, [Debugging Using WinDbg Preview](debugging-using-windbg-preview.md).
 
----
- 
 ## See Also
 
-[Debugging Using WinDbg Preview](debugging-using-windbg-preview.md)
+[WinDbg Preview – Installation](windbg-install-preview.md)
+
+[WinDbg Preview – Command line startup options](windbg-command-line-preview.md)
