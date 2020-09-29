@@ -1146,6 +1146,8 @@
     href: controlling-the-target.md
   - name: "Enabling Postmortem Debugging"
     href: enabling-postmortem-debugging.md
+  - name: "Open Enclave debugging"
+    href: open-enclave-debugging.md
   - name: "Using the Debugger Command Window"
 # Auto-expanded node
     items: 
@@ -1784,6 +1786,8 @@
       href: symbols-and-symbol-files.md
     - name: "Public and Private Symbols"
       href: public-and-private-symbols.md
+    - name: "Portable PDB Symbols"
+      href: symbols-portable-pdb.md
   - name: "Accessing Symbols for Debugging"
 # Auto-expanded node
     items: 
@@ -1855,8 +1859,6 @@
       href: symstore-transactions.md
     - name: "File System References and Symbol Files"
       href: file-system-references-and-symbol-files.md
-    - name: "SymStore Compressed Files"
-      href: symstore-compressed-files.md
     - name: "Symbol Storage Format"
       href: symbol-storage-format.md
   - name: "How the Debugger Recognizes Symbols"
