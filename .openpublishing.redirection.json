@@ -1,6 +1,96 @@
 {
     "redirections":  [
         {
+            "source_path":  "windows-driver-docs-pr/network/ndis-version-guide.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/overview-of-ndis-versions",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/standard-wmi-oids-and-status-indications.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/standard-miniport-driver-oids-registered-with-wmi",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/ndis-wmi-guids.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/guid-ndis-status-link-state",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/ndis-selective-suspend-implementation-guidelines.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/managing-irp-resources-for-ndis-selective-suspend",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/priority-levels-and-flow-control.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/ieee-802-1p-priority-levels",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/overview-of-ndis-qos-for-data-center-bridging.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/ndis-qos-for-data-center-bridging",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/managing-ndis-qos-capabilities.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/registering-ndis-qos-capabilities",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/managing-ndis-qos--parameters.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/overview-of-ndis-qos-parameters",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/ndis-miniport-drivers.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/roadmap-for-developing-ndis-miniport-drivers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/inspecting-packet-and-stream-data.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/packet-inspection-points",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/ndis-core-functionality2.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/roadmap-for-developing-ndis-miniport-drivers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/wireless-networking2.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/wifi-universal-driver-model",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/mobile-broadband--mb--design-guide.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/roadmap-to-develop-mb-miniport-drivers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/splitting-frames-other-than-tcp-and-udp.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/splitting-icmp-frames-and-other-upper-layer-protocol-frames",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/filtering-conditions.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/filtering-condition-identifiers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/metadata-fields.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/metadata-field-identifiers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/filtering-layer-identifiers.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/management-filtering-layer-identifiers",
+            "redirect_document_id":  false
+        },
+        {
+            "source_path":  "windows-driver-docs-pr/network/ndis-tcp-ip-offload-status-indications.md",
+            "redirect_URL":  "/windows-hardware/drivers/network/ndis-status-task-offload-current-config",
+            "redirect_document_id":  false
+        },
+        {
             "source_path":  "windows-driver-docs-pr/network/ndis-wake-reason-status-indications.md",
             "redirect_URL":  "/windows-hardware/drivers/network/overview-of-ndis-wake-reason-statue-indications",
             "redirect_document_id":  false
@@ -5068,7 +5158,7 @@
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbb-device-mbim-parameters-init.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nf-mbbcx-mbb_mbim_parameters_init",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nf-mbbcx-mbb_mbim_parameters_init",
                              "redirect_document_id":  false
                          },
                          {
@@ -5163,52 +5253,52 @@
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbbrequestgetactivityid.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nf-mbbcx-mbbrequestgetcorrelationid",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nf-mbbcx-mbbrequestgetcorrelationid",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbbrequestcomplete.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nf-mbbcx-mbbrequestcomplete",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nf-mbbcx-mbbrequestcomplete",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbbrequestcompletewithinformation.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nf-mbbcx-mbbrequestcompletewithinformation",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nf-mbbcx-mbbrequestcompletewithinformation",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/evt-mbb-device-send-mbim-fragment.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nc-mbbcx-evt_mbb_device_send_mbim_fragment",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nc-mbbcx-evt_mbb_device_send_mbim_fragment",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/evt-mbb-device-receive-mbim-fragment.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nc-mbbcx-evt_mbb_device_receive_mbim_fragment",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nc-mbbcx-evt_mbb_device_receive_mbim_fragment",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/evt-mbb-device-send-service-session-data.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nc-mbbcx-evt_mbb_device_send_service_session_data",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nc-mbbcx-evt_mbb_device_send_service_session_data",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/evt-mbb-device-create-adapter.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/nc-mbbcx-evt_mbb_device_create_adapter",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/nc-mbbcx-evt_mbb_device_create_adapter",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbb-device-config.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/ns-mbbcx-_mbb_device_config",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/ns-mbbcx-_mbb_device_config",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbb-device-mbim-parameters.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/ns-mbbcx-_mbb_device_mbim_parameters",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/ns-mbbcx-_mbb_device_mbim_parameters",
                              "redirect_document_id":  false
                          },
                          {
                              "source_path":  "windows-driver-docs-pr/netcx/mbb-mbim-version.md",
-                             "redirect_URL":  "/windows-hardware/drivers/ddi/_netvista/ne-mbbcx-_mbb_mbim_version",
+                             "redirect_URL":  "/windows-hardware/drivers/ddi/mbbcx/ne-mbbcx-_mbb_mbim_version",
                              "redirect_document_id":  false
                          },
                          {
@@ -8179,6 +8269,101 @@
                         {
                             "source_path":  "windows-driver-docs-pr/wdf/handling-dma-operations-in-kmdf-drivers.md",
                             "redirect_url":  "/windows-hardware/drivers/wdf/introduction-to-dma-in-windows-driver-framework",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/implementing-plug-and-play.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/introduction-to-plug-and-play",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/install/device-and-driver-installation-advanced-topics.md",
+                            "redirect_url":  "/windows-hardware/drivers/install/creating-secure-device-installations",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/install/inf-files.md",
+                            "redirect_url":  "/windows-hardware/drivers/install/overview-of-inf-files",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/completing-irps-in-dispatch-routines.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/how-to-complete-an-irp-in-a-dispatch-routine",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/driver-programming-techniques.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/using-nt-and-zw-versions-of-the-native-system-services-routines",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/errors-in-buffered-i-o.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/failure-to-check-the-size-of-buffers",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/introduction-to-windows-drivers.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/overview-of-windows-components",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/making-driver-code-or-data-pageable.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/detecting-code-that-can-be-pageable",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/miscellaneous-driver-programming-techniques.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/using-ntstatus-values",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/object-security.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/access-rights",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/removing-a-device.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/understanding-when-remove-irps-are-issued",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/kernel/rules-for-handling-power-irps.md",
+                            "redirect_url":  "/windows-hardware/drivers/kernel/calling-iocalldriver-versus-calling-pocalldriver",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/ifs/tracking-per-stream-context-in-a-legacy-file-system-filter-driver.md",
+                            "redirect_url":  "/windows-hardware/drivers/ifs/file-streams--stream-contexts--and-per-stream-contexts",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/ifs/using-extra-create-parameters-with-an-irp-mj-create-operation.md",
+                            "redirect_url":  "/windows-hardware/drivers/ifs/using-ecps-to-process-irp-mj-create-operations-in-a-file-system-minifilter",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/sensors/sensor-properties2.md",
+                            "redirect_url":  "/windows-hardware/drivers/sensors/common-sensor-properties",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/storage/storport-driver.md",
+                            "redirect_url":  "/windows-hardware/drivers/storage/storport-driver-overview",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/network/operations-on-vcs.md",
+                            "redirect_url":  "/windows-hardware/drivers/network/creating-a-vc",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/network/overview-of-virtualized-networking.md",
+                            "redirect_url":  "/windows-hardware/drivers/network/overview-of-hyper-v",
+                            "redirect_document_id":  false
+                        },
+                        {
+                            "source_path":  "windows-driver-docs-pr/sensors/introduction-to-the-sensor-and-location-platform-in-windows.md",
+                            "redirect_url":  "/windows-hardware/drivers/sensors/index",
                             "redirect_document_id":  false
                         }
                      ]

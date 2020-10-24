@@ -300,7 +300,7 @@ Not applicable.
 
 ### Status codes
 
-This CID uses Generic Status Codes (see Use of Status Codes in Section 9.4.5 of [the public USB MBIM standard](https://go.microsoft.com/fwlink/p/?linkid=842064)).
+This CID uses Generic Status Codes (see Use of Status Codes in Section 9.4.5 of [the public USB MBIM standard](https://www.usb.org/document-library/mobile-broadband-interface-model-v10-errata-1-and-adopters-agreement)).
 
 ## <a name="mbim_cid_location_info_status"></a>MBIM_CID_LOCATION_INFO_STATUS
 
@@ -350,7 +350,7 @@ This event is sent if the value of *Location Area Code*/*Tracking Area Code* cha
 
 ### Status codes
 
-This CID uses Generic Status Codes (see Use of Status Codes in Section 9.4.5 of [the public USB MBIM standard](https://go.microsoft.com/fwlink/p/?linkid=842064)).
+This CID uses Generic Status Codes (see Use of Status Codes in Section 9.4.5 of [the public USB MBIM standard](https://www.usb.org/document-library/mobile-broadband-interface-model-v10-errata-1-and-adopters-agreement)).
 
 ## <a name="oid_wwan_base_stations_info"></a>OID_WWAN_BASE_STATIONS_INFO
 
